@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>На все 360°</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="panel">
+			<div>
+				<ul class="nav">
+					<li class="active"><a href="#">О проекте</a></li>
+					<li><a href="#">Обратная связь</a></li>
+					<li><a href="#">Помощь</a></li>
+				</ul>
+				<ul class="user">
+					<li><a href="enter">Войти</a></li>
+					<li><a href="registration">Регистрация</a></li>
+				</ul>
+				<p class="favorite">
+					<a href="#">Избранное</a>
+				</p>
+				<ul class="language">
+					<li>
+						<a href="#">RU</a>
+						<ul>
+							<li data-short="RU">Русский</li>
+							<li data-short="EN">English</li>
+							<li data-short="EE">Eesti</li>
+							<li data-short="DE">Deutch</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="city">
+					<p><a href="#">Петропавловск-Камчатский</a></p>
+					<h6><span>(4152) 55-66-77</span></h6>
+					<div>
+						<h3>Правильно?</h3>
+						<p>ли мы определили Ваш город?</p>
+						<button><span>Да, молодцы</span></button>
+						<h5><a href="#">Сменить город</a></h5>
+					</div>
+				</div>
+				<div class="drop enter">
+					<p class="email"><input type="text" placeholder="E-mail"></p>
+					<p class="password"><input type="password" placeholder="Пароль"></p>
+					<button><span>Войти</span></button>
+					<h5><a href="#">Забыли пароль?</a></h5>
+					<div>
+						<h6>Регистрация через социальные сети:</h6>
+						<ul>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="drop registration">
+					<p class="email"><input type="text" placeholder="Введите e-mail"></p>
+					<p class="password"><input type="password" placeholder="Укажите пароль"><span class="eye"></span></p>
+					<button class="active"><span>Регистрация</span></button>
+					<div>
+						<h6>Регистрация через социальные сети:</h6>
+						<ul>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<img src="./img/logo.png" width="220" height="66" class="logo" alt="">
+			<div class="search">
+				<div>
+					<p><input type="text" placeholder="Поиск по сайту"></p>
+					<button></button>
+				</div>
+				<h6>например, <span>где переночевать</span></h6>
+			</div>
+			<div class="add">
+				<button><span>Добавить заведение</span></button>
+				<p><a href="#">Владельцам заведений</a></p>
+			</div>
+		</div>
+		<div class="catalog">
+			<ul class="menu">
+				<li class="active">
+					<a href="#">
+						<h5><span>Заведения</span></h5>
+						<p>Загляни в заведения города прямо на сайте</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Афиша</span></h5>
+						<p>Будь в курсе грядущих мероприятий города</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Акции</span></h5>
+						<p>Не пропусти выгодные предложения в городе</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>События</span></h5>
+						<p>Посети события, которые были в городе</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Недвижимость</span></h5>
+						<p>Раздел не в тему, но пока пусть будет</p>
+					</a>
+				</li>
+			</ul>
+			<div>
+				<div>
+					<div class="lb">
+						<div class="nav">
+							<ul>
+								<li><a href="#">Гостиницы</a></li>
+								<li><a href="#">Рестораны и кафе</a></li>
+								<li><a href="#">Бани и сауны</a></li>
+								<li><a href="#">Магазины и ТЦ</a></li>
+								<li><a href="#">Развелечения</a></li>
+								<li><a href="#">Фитнес-центры</a></li>
+								<li><a href="#">Санатории и базы отдыха</a></li>
+								<li><a href="#">Автосалоны</a></li>
+								<li><a href="#">Учебные заведения</a></li>
+								<li><a href="#">Медицинские учреждения</a></li>
+								<li><a href="#">Салоны красоты</a></li>
+								<li><a href="#">Услуги и сервис</a></li>
+								<li><a href="#">Культура и искусство</a></li>
+							</ul>
+							<ul>
+								<li class="icon1"><a href="#">Маршруты и экскурсии</a></li>
+								<li class="icon2"><a href="#">Прогулка по городу</a></li>
+							</ul>
+						</div>
+						<div class="significant">
+							<h2><strong><em></em></strong> <span>мест города,</span> которые просто должен посетить каждый</h2>
+							<ul>
+								<li>посмотреть на город с <a href="#">колеса обозрения</a></li>
+								<li>купить пива после 22-00 в магазине <a href="#">«Наливай-ка»</a></li>
+								<li>прогуляться по <a href="#">Потоку</a> после 23-00 в нетрезвом виде</li>
+								<li>встретить рассвет с веселой компанией в <a href="#">вытрезвителе №15</a></li>
+								<li>посетить <a href="#">Травмпункт №3</a> после вытрезвителя №15</li>
+								<li>подправить свою улыбку в <a href="#">Стоматологической поликлинике №2</a></li>
+								<li>прикупить костыль в магазине <a href="#">Прикольных подарков</a></li>
+							</ul>
+						</div>
+						<div class="banner">
+							<a href="#">
+								<h5>Французская кухня в «Ля бурже»</h5>
+								<img src="./pic/banner_l.jpg" width="220" height="120" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="rb">
+						<div class="slider">
+							<h2>Рекомендуем посетить <a href="#">Как сюда попасть?</a></h2>
+							<div>
+								<div class="container">
+									<div>
+										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+										<div>
+											<h3>Золотая подкова, загородный клуб</h3>
+											<p>шоссе Ленточный бор, 31</p>
+										</div>
+										<img src="./pic/slide1.jpg" width="1088" height="500" alt="">
+									</div>
+									<div>
+										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+										<div>
+											<h3>Золотая подкова, загородный клуб</h3>
+											<p>шоссе Ленточный бор, 31</p>
+										</div>
+										<img src="./pic/slide2.jpg" width="1088" height="500" alt="">
+									</div>
+									<div>
+										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+										<div>
+											<h3>Золотая подкова, загородный клуб</h3>
+											<p>шоссе Ленточный бор, 31</p>
+										</div>
+										<img src="./pic/slide1.jpg" width="1088" height="500" alt="">
+									</div>
+									<div>
+										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+										<div>
+											<h3>Золотая подкова, загородный клуб</h3>
+											<p>шоссе Ленточный бор, 31</p>
+										</div>
+										<img src="./pic/slide2.jpg" width="1088" height="500" alt="">
+									</div>
+									<div>
+										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+										<div>
+											<h3>Золотая подкова, загородный клуб</h3>
+											<p>шоссе Ленточный бор, 31</p>
+										</div>
+										<img src="./pic/slide1.jpg" width="1088" height="500" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="list">
+							<div class="nav">
+								<h3>3D-туры</h3>
+								<ul>
+									<li class="active"><a href="#"><span>Новые</span></a></li>
+									<li><a href="#"><span>Популярные</span></a></li>
+									<li class="newest"><a href="#"><span>Недавно открывшиеся</span></a></li>
+								</ul>
+							</div>
+							<div class="tab">
+								<ul>
+									<li>
+										<span class="status open"></span>
+										<div class="information">
+											<div>
+												<img src="./pic/list1.jpg" width="160" height="120" alt="">
+												<h5>3</h5>
+											</div>
+											<h2><a href="#">Алтай – Пригород, скорые поезда</a></h2>
+											<p>Услуги и сервис, Скорые поезда</p>
+											<ul>
+												<li data-benefit="1"></li>
+												<li data-benefit="2"></li>
+												<li data-benefit="3"></li>
+												<li data-benefit="4"></li>
+											</ul>
+											<h6><strong>пл. Победы, 10</strong></h6>
+										</div>
+									</li>
+									<li>
+										<span class="status open"></span>
+										<div class="information">
+											<div>
+												<img src="./pic/list2.jpg" width="160" height="120" alt="">
+												<h5>10</h5>
+											</div>
+											<h2><a href="#">Барнаул, гостиница</a></h2>
+											<p>Гостиницы, бизнес-отели</p>
+											<ul>
+												<li data-benefit="1"></li>
+												<li data-benefit="2"></li>
+												<li data-benefit="3"></li>
+												<li data-benefit="4"></li>
+												<li data-benefit="5"></li>
+												<li data-benefit="6"></li>
+												<li data-benefit="7"></li>
+												<li data-benefit="8"></li>
+												<li data-benefit="9"></li>
+												<li data-benefit="10"></li>
+												<li data-benefit="11"></li>
+											</ul>
+											<h6><strong>пр. Красноармейский, 135</strong></h6>
+										</div>
+									</li>
+									<li>
+										<span class="status close" data-timer="откроется через 1 час"></span>
+										<div class="information">
+											<div>
+												<img src="./pic/list3.jpg" width="160" height="120" alt="">
+												<h5>10</h5>
+											</div>
+											<h2><a href="#">Fit-it, фитнес-клуб</a></h2>
+											<p>Фитнес-центры, Тренажерные залы</p>
+											<ul>
+												<li data-benefit="1"></li>
+												<li data-benefit="2"></li>
+												<li data-benefit="3"></li>
+												<li data-benefit="4"></li>
+											</ul>
+											<h6><strong>ул. Островского 68е (с торца)</strong></h6>
+										</div>
+									</li>
+									<li>
+										<span class="status open"></span>
+										<div class="information">
+											<div>
+												<img src="./pic/list4.jpg" width="160" height="120" alt="">
+												<h5>13</h5>
+											</div>
+											<h2><a href="#">Арбуз, хостел</a></h2>
+											<p>Гостиницы, хостелы</p>
+											<ul>
+												<li data-benefit="1"></li>
+												<li data-benefit="2"></li>
+												<li data-benefit="3"></li>
+												<li data-benefit="4"></li>
+												<li data-benefit="5"></li>
+												<li data-benefit="6"></li>
+												<li data-benefit="7"></li>
+												<li data-benefit="8"></li>
+												<li data-benefit="9"></li>
+												<li data-benefit="10"></li>
+												<li data-benefit="11"></li>
+											</ul>
+											<h6><strong>ул. Северо-Западная, 48д</strong></h6>
+										</div>
+									</li>
+									<li>
+										<span class="status close" data-timer="откроется через 1 час"></span>
+										<div class="information">
+											<div>
+												<img src="./pic/list5.jpg" width="160" height="120" alt="">
+												<h5>11</h5>
+											</div>
+											<h2><a href="#">Мемориальный музей Калашникова М.Т.</a></h2>
+											<p>Культура и искусство, Музеи</p>
+											<ul>
+												<li data-benefit="1"></li>
+											</ul>
+											<h6><strong>с. Курья, Алтайский край</strong></h6>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="blog">
+			<div>
+				<h2>Как провести свой день</h2>
+				<ul>
+					<li>
+						<div>
+							<img src="./pic/blog1.jpg" width="218" height="219" alt="">
+							<h5>51</h5>
+						</div>
+						<h6>09 декабря 2013</h6>
+						<p><a href="#">Банда «НА ВСЕ 360» отдохнула и «пробила почву» для развития в Горном Алтае</a></p>
+						<h3>Игорь Носов</h3>
+					</li>
+					<li>
+						<div>
+							<img src="./pic/blog2.jpg" width="218" height="219" alt="">
+							<h5>10</h5>
+						</div>
+						<h6>07 декабря 2013</h6>
+						<p><a href="#">Очередное расширение территории: полная капитуляция Иркутска</a></p>
+						<h3>Петр Григорян</h3>
+					</li>
+					<li>
+						<div>
+							<img src="./pic/blog3.jpg" width="218" height="219" alt="">
+							<h5>15</h5>
+						</div>
+						<h6>05 декабря 2013</h6>
+						<p><a href="#">Мы обновили технопарк и теперь снимаем под водой. Чего только нет на дне реки Обь</a></p>
+						<h3>Игорь Носов</h3>
+					</li>
+					<li>
+						<div>
+							<img src="./pic/blog4.jpg" width="218" height="219" alt="">
+							<h5>94</h5>
+						</div>
+						<h6>01 декабря 2013</h6>
+						<p><a href="#">У нас сегодня день рождения: нашему проекту стукнуло 2 года. Поздравляйте нас</a></p>
+						<h3>Петр Григорян</h3>
+					</li>
+					<li>
+						<div>
+							<img src="./pic/blog5.jpg" width="218" height="219" alt="">
+							<h5>10</h5>
+						</div>
+						<h6>07 декабря 2013</h6>
+						<p><a href="#">Очередное расширение территории: полная капитуляция Иркутска</a></p>
+						<h3>Петр Григорян</h3>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="business">
+			<h3>Открой свой бизнес и начни зарабатывать вместе с «НА ВСЕ 360°»</h3>
+			<p>Вы можете начать делать 3D-туры своего города и зарабатывать хорошие деньги</p>
+		</div>
+		<div class="about">
+			<div>
+				<img src="./pic/facebook.jpg" width="220" height="250" alt="">
+			</div>
+			<h2>О проекте</h2>
+			<p>Модальные окна: <a href="#" data-target="ordercall">Заказать звонок</a>, <a href="#" data-target="ordercallvalidation">Заказать звонок валидация</a>, <a href="#" data-target="add">Добавить заведение</a>, <a href="#" data-target="addvalidation">Добавить заведение валидация</a>, <a href="#" data-target="addmessage">Добавить заведение сообщение</a>, <a href="#" data-target="registered">Благодарим за регистрацию</a>, <a href="#" data-target="recover">Восстановление пароля запрос</a>, <a href="#" data-target="recoverrepeat">Восставление пароля проверка</a>, <a href="#" data-target="recovervalidation">Восставление пароля валидация</a>, <a href="#" data-target="recovererror">Восстановление пароля ошибка</a>, <a href="#" data-target="recovermessage">Восстановление пароля сообщение</a>.</p>
+			<p>Проект «НА ВСЕ 360°» представляет собой 3D-путеводитель, благодаря которому можно прогуляться по улицам города, оценить достопримечательности, посетить любое заведение (ресторан, кафе, клуб, фитнес-центр, учебное учреждение, гостиницу, сауну и многие другие) и все это в формате увлекательного виртуального путешествия! «НА ВСЕ 360°» - дает, пожалуй, лучший ответ на часто встающий вопрос "Куда пойти?" (куда пойти учиться, лечиться, заняться спортом, просветиться, поужинать, развлечься, провести досуг, отдохнуть и т.д.).</p>
+			<p>Проект имеет всеохватывающую направленность и представляет собой наиболее полноценный и понятный путеводитель по городу! Здесь же играют роль преимущества виртуального тура над другими средствами визуализации, главными из которых являются наглядность, интерактивность, фотореалистичность, возможность осмотреть все на 360 градусов. Отсюда и название.</p>
+			<h6><a href="#">Подробнее о проекте</a></h6>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+		<div>
+			<h5>© 2010-2013. «НА ВСЕ 360°»  — 3D-путеводитель по Вашему городу.</h5>
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">О проекте</a></li>
+						<li><a href="#">Обзоры</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Партнеры</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+					</ul>
+				</li>
+			</ul>
+			<h6>Размещенный на сайте контент предназначен для просмотра лицами старше 18 лет.</h6>
+			<div>
+				<p>Следите за нами в соцсетях:</p>
+				<ul>
+					<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+					<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+					<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+					<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="fade"></div>
+	<div class="modal" data-modal="ordercall">
+		<h3>Заказать звонок</h3>
+		<div>
+			<h6>Меня зовут</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Мой телефон</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Я из города</h6>
+			<p><input type="text" placeholder="Петропавловск-Камчатский"></p>
+		</div>
+		<div>
+			<h6>Я по вопросу</h6>
+			<ul>
+				<li><input type="radio" name="r1" checked> создание 3D-тура</li>
+				<li><input type="radio" name="r1"> сотрудничества</li>
+				<li><input type="radio" name="r1"> покупки франшизы</li>
+				<li><input type="radio" name="r1"> хочу на <s>море</s> работу к Вам</li>
+			</ul>
+		</div>
+		<button><span>Жду звонка</span></button>
+	</div>
+	<div class="modal" data-modal="ordercallvalidation">
+		<h3>Заказать звонок</h3>
+		<div class="error">
+			<h6>Меня зовут</h6>
+			<p><input type="text" value="ус"> <em>Неверный формат данных</em></p>
+		</div>
+		<div class="success">
+			<h6>Мой телефон</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Я по вопросу</h6>
+			<ul>
+				<li><input type="radio" name="r1" checked> создание 3D-тура</li>
+				<li><input type="radio" name="r1"> сотрудничества</li>
+				<li><input type="radio" name="r1"> покупки франшизы</li>
+				<li><input type="radio" name="r1"> хочу на <s>море</s> работу к Вам</li>
+			</ul>
+		</div>
+		<button class="active"><span>Жду звонка</span></button>
+	</div>
+	<div class="modal add" data-modal="add">
+		<h3>Заказать звонок</h3>
+		<div>
+			<h6>Меня зовут</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><textarea placeholder="Петропавловск-Камчатский,"></textarea></p>
+		</div>
+		<div>
+			<h6>Телефон заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<button><span>Оставить заявку</span></button>
+	</div>
+	<div class="modal add" data-modal="addvalidation">
+		<h3>Заказать звонок</h3>
+		<div class="error">
+			<h6>Меня зовут</h6>
+			<p><input type="text" value="ус"> <em>Неверный формат данных</em></p>
+		</div>
+		<div class="success">
+			<h6>Название заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><textarea placeholder="Петропавловск-Камчатский,"></textarea></p>
+		</div>
+		<div>
+			<h6>Телефон заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<button class="active"><span>Оставить заявку</span></button>
+	</div>
+	<div class="modal add" data-modal="addmessage">
+		<h3>Заявка успешно отправлена</h3>
+		<h5>Благодарим за проявленный интерес к нашему сервису.<br>
+		В ближайшее время с Вами свяжется наш менеджер.</h5>
+	</div>
+	<div class="modal" data-modal="registered">
+		<h3>Благодарим за регистрацию</h3>
+		<h5>Теперь Вы стали полноправным пользователем сервиса «НА ВСЕ 360°» и можете воспользоваться всеми доступными сервисами.</h5>
+	</div>
+	<div class="modal recover" data-modal="recover">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div>
+			<h6>E-mail</h6>
+			<p><input type="text"></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recoverrepeat">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div class="repeat">
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"> <span></span></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovervalidation">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div>
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"></p>
+		</div>
+		<button class="active"><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovererror">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div class="error">
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"> <em>Пользователей с данным e-mail в базе не найдено.<br> Проверьте правильность ввода e-mail</em></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovermessage">
+		<h3>Восстановление пароля</h3>
+		<h5>На указанный e-mail отправлено письмо с дальнейшими инструкциями по восстановлению доступа.</h5>
+		<h5>Если письмо не будет получено в течении 10 минут, пожалуйста, проверьте папку СПАМ в указанном почтовом ящике или повторите процедуру восстановления доступа.</h5>
+	</div>
+</body>
+</html>
