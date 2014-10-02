@@ -79,7 +79,7 @@ $(window).resize(function() {
 	}
 });
 $(document).ready(function() {
-	$(['./img/a_bg_hover.png','./img/a_bg_type2_hover.png']).preload();
+	$(['./img/a_bg_hover.png','./img/a_bg_type2_hover.png','./img/map_a_hover.png']).preload();
 	if ( $('.slider').length > 0 ) {
 		$('.slider > div').slides({
 			generatePagination: true,
@@ -267,6 +267,7 @@ $(document).ready(function() {
 			$(this).parent().children('div').stop(true,true).animate({
 				'height': '120px'
 			}, 500);
+			$('.rb .map .ymaps-controls-pane').hide();
 		}
 		else {
 			$(this).addClass('active');
@@ -274,6 +275,7 @@ $(document).ready(function() {
 			$(this).parent().children('div').stop(true,true).animate({
 				'height': '400px'
 			}, 500);
+			$('.rb .map .ymaps-controls-pane').show();
 		}
 		return false;
 	});

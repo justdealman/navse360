@@ -25,7 +25,7 @@
         url('../fonts/ptsansb.woff') format('woff'),
         url('../fonts/ptsansb.ttf') format('truetype');
     font-weight:bold;
-    font-style:normal;
+    font-style:inormal;
 }
 @font-face {
     font-family:'PT Sans';
@@ -403,12 +403,15 @@ button::-moz-focus-inner {
 	position:relative;
 	z-index:1;
 }
-/*.panel .city > div button.active {
+.panel .city > div button:hover span {
+	color:#202020;
+}
+.panel .city > div button.active {
 	color:#6a5acd;
 	cursor:pointer;
 	padding:7px 18px 5px;
 	border:2px solid #6a5acd;
-}*/
+}
 .panel .city > div button:hover:before {
 	opacity:1;
 	display:block\0;
@@ -521,6 +524,8 @@ button::-moz-focus-inner {
 	-webkit-box-shadow:0 1px 6px rgba(0,0,0,0.6);
 	-moz-box-shadow:0 1px 6px rgba(0,0,0,0.6);
 	box-shadow:0 1px 6px rgba(0,0,0,0.6);
+	border:1px solid #cccccc\0;
+	border-top-width:0\0;
 }
 .panel .language > li > ul:before {
 	content:'';
@@ -981,7 +986,7 @@ button::-moz-focus-inner {
 	content:'';
 	position:absolute;
 	left:0;
-	bottom:1px;
+	bottom:3px;
 	width:100%;
 	border-bottom:1px dotted #c8c8c8;
 	transition:all 0.25s ease-in-out;
@@ -1059,8 +1064,6 @@ button::-moz-focus-inner {
 .catalog .introduction .breadcrumbs li.home a:hover:after {
 	border-bottom:1px dotted #e19ebc;
 }
-
-
 .catalog .lb {
 	float:left;
 	width:220px;
@@ -1332,6 +1335,9 @@ button::-moz-focus-inner {
 .rb .list > .nav ul li.newest a:hover span:after {
 	border-bottom:1px dotted #bcb6e4;
 }
+.rb .list > .nav ul li.newest a:hover span:before {
+	background-position:0 -26px;
+}
 .rb .list > .nav ul li.newest.active a span:before {
 	background-position:0 -13px;
 }
@@ -1508,9 +1514,17 @@ button::-moz-focus-inner {
 	font-size:15px;
 	line-height:18px;
 	font-weight:normal;
-	padding:9px 11px 7px 32px;
+	padding:0;
 	margin:0;
 	background:rgba(32,32,32,0.8) url('../img/blog_h5.png') no-repeat 9px 9px;
+}
+.rb .list .tab > ul li > div.information > div h5 a {
+	display:block;
+	color:#ffffff;
+	padding:9px 11px 7px 32px;
+}
+.rb .list .tab > ul li > div.information > div h5 a:hover {
+	text-decoration:none;
 }
 .rb .list .tab > ul li h2 {
 	overflow:hidden;
@@ -1755,6 +1769,13 @@ button::-moz-focus-inner {
 .rb .list .tab > div button span {
 	position:relative;
 	z-index:1;
+}
+.rb .list .tab > div button:hover {
+	color:#202020;
+}
+.rb .list .tab > div button:hover:before {
+	opacity:1;
+	display:block\0;
 }
 .rb .list .tab.tiles > ul {
 	width:720px;
@@ -2141,9 +2162,17 @@ button::-moz-focus-inner {
 	font-size:15px;
 	line-height:18px;
 	font-weight:normal;
-	padding:9px 11px 8px 32px;
+	padding:0;
 	margin:0;
 	background:rgba(0,0,0,0.8) url('../img/blog_h5.png') no-repeat 9px 9px;
+}
+.blog ul li > div h5 a {
+	display:block;
+	color:#ffffff;
+	padding:9px 11px 8px 32px;
+}
+.blog ul li > div h5 a:hover {
+	text-decoration:none;
 }
 .blog ul li h6 {
 	color:#888888;
@@ -2574,6 +2603,9 @@ button::-moz-focus-inner {
 	-moz-border-radius:4px;
 	border-radius:4px;
 }
+.rb .map > div  .ymaps-controls-pane {
+	display:none;
+}
 .rb .map h5 {
 	position:absolute;
 	left:50%;
@@ -2594,15 +2626,15 @@ button::-moz-focus-inner {
 }
 .rb .map h5 span {
 	position:relative;
-	border-bottom:1px dotted #cfcfcf;
-	transition:color, border-color 0.25s ease-in-out;
-	-webkit-transition:color, border-color 0.25s ease-in-out;
-	-moz-transition:color, border-color 0.25s ease-in-out;
-	-o-transition:color, border-color 0.25s ease-in-out;
+	background:url('../img/map_a.png') repeat-x bottom;
+	transition:color 0.25s ease-in-out;
+	-webkit-transition:color 0.25s ease-in-out;
+	-moz-transition:color 0.25s ease-in-out;
+	-o-transition:color 0.25s ease-in-out;
 }
 .rb .map h5:hover span {
 	color:#9b1c61;
-	border-color:#e19ebc;
+	background:url('../img/map_a_hover.png') repeat-x bottom;
 }
 .rb .map h5 span em {
 	position:absolute;
@@ -2900,6 +2932,13 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 }
+.filterup > div button:hover {
+	color:#202020;
+}
+.filterup > div button:hover:before {
+	opacity:1;
+	display:block\0;
+}
 .filterup > div button span {
 	position:relative;
 	z-index:1;
@@ -3096,6 +3135,8 @@ button::-moz-focus-inner {
 	-webkit-box-shadow:0 1px 6px rgba(0,0,0,0.6);
 	-moz-box-shadow:0 1px 6px rgba(0,0,0,0.6);
 	box-shadow:0 1px 6px rgba(0,0,0,0.6);
+	border:1px solid #cccccc\0;
+	border-top-width:0\0;
 }
 .panel .drop .close {
 	position:absolute;
@@ -3137,13 +3178,6 @@ button::-moz-focus-inner {
 }
 .panel .drop.enter:before {
 	margin-left:-3px;
-}
-.panel .drop.enter button:hover {
-	color:#202020;
-}
-.panel .drop.enter button:hover:before {
-	opacity:1;
-	display:block\0;
 }
 .panel .drop.registration:before {
 	margin-left:45px;
@@ -3247,6 +3281,13 @@ button::-moz-focus-inner {
 .panel .drop button span {
 	position:relative;
 	z-index:1;
+}
+.panel .drop button:hover {
+	color:#202020;
+}
+.panel .drop button:hover:before {
+	opacity:1;
+	display:block\0;
 }
 .panel .drop button.active {
 	color:#6a5acd;
