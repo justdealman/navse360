@@ -1,0 +1,831 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>На все 360°</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jquerymobile.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="panel">
+			<div>
+				<ul class="nav">
+					<li class="active"><a href="#">О проекте</a></li>
+					<li><a href="#">Обратная связь</a></li>
+					<li><a href="#">Помощь</a></li>
+				</ul>
+				<ul class="user">
+					<li><a href="enter">Войти</a></li>
+					<li><a href="registration">Регистрация</a></li>
+				</ul>
+				<p class="favorite">
+					<a href="#">Избранное</a>
+				</p>
+				<ul class="language">
+					<li>
+						<a href="#">RU</a>
+						<ul>
+							<li data-short="RU">Русский</li>
+							<li data-short="EN">English</li>
+							<li data-short="EE">Eesti</li>
+							<li data-short="DE">Deutch</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="city">
+					<p><a href="#">Петропавловск-Камчатский</a></p>
+					<h6><span>(4152) 55-66-77</span></h6>
+					<div>
+						<h3>Правильно?</h3>
+						<p>ли мы определили Ваш город?</p>
+						<button><span>Да, молодцы</span></button>
+						<h5><a href="#">Сменить город</a></h5>
+					</div>
+				</div>
+				<div class="drop enter">
+					<p class="email"><input type="text" placeholder="E-mail"></p>
+					<p class="password"><input type="password" placeholder="Пароль"></p>
+					<button><span>Войти</span></button>
+					<h5><a href="#">Забыли пароль?</a></h5>
+					<div>
+						<h6>Регистрация через социальные сети:</h6>
+						<ul>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="drop registration">
+					<p class="email"><input type="text" placeholder="Введите e-mail"></p>
+					<p class="password"><input type="password" placeholder="Укажите пароль"><span class="eye"></span></p>
+					<button class="active"><span>Регистрация</span></button>
+					<div>
+						<h6>Регистрация через социальные сети:</h6>
+						<ul>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<img src="./img/logo.png" width="220" height="66" class="logo" alt="">
+			<div class="search">
+				<div>
+					<p><input type="text" placeholder="Поиск по сайту"></p>
+					<button></button>
+				</div>
+				<h6>например, <span>где переночевать</span></h6>
+			</div>
+			<div class="add">
+				<button><span>Добавить заведение</span></button>
+				<p><a href="#">Владельцам заведений</a></p>
+			</div>
+		</div>
+		<div class="catalog">
+			<ul class="menu short">
+				<li class="active">
+					<a href="#">
+						<h5><span>Заведения</span></h5>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Афиша</span></h5>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Акции</span></h5>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>События</span></h5>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Недвижимость</span></h5>
+					</a>
+				</li>
+			</ul>
+			<div>
+				<div class="introduction">
+					<h1>Лалентин, гостиница <span data-rating="3"></span></h1>
+					<h5><em></em><span><a href="#">Вы здесь</a></span></h5>
+					<ul class="breadcrumbs">
+						<li class="home"><a href="#">Весь сайт</a></li>
+						<li><a href="#">Куда пойти?</a></li>
+						<li><a href="#">Гостиницы</a></li>
+						<li>Лалентин, гостиница</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><a href="1"><span>Описание</span></a></li>
+						<li><a href="2"><span>Номера</span></a></li>
+						<li><a href="3"><span>Афиша</span><sup>2</sup></a></li>
+						<li><a href="4"><span>Акции</span><sup>3</sup></a></li>
+						<li><a href="5"><span>Отзывы</span><sup>26</sup></a></li>
+					</ul>
+					<div data-tab="1">
+						<div>
+							<div class="contacts">
+								<div class="logo">
+									<img src="./pic/item_logo.png" width="198" height="85" alt="">
+								</div>
+								<div>
+									<h3>Адрес <span>~ 5.3 км от Вас</span></h3>
+									<p>ул. Красивых молдавских партизан, д. 5, строение 2, корпус 3 (с торца)</p>
+									<h5><a href="#">Смотреть на карте</a></h5>
+								</div>
+								<div>
+									<h3>Контакты:</h3>
+									<p>(3852) <strong>20-20-24</strong> (бронирование),<br>
+									(3852) <strong>20-20-40</strong> (администратор)</p>
+									<p><a href="#">www.hotel-laletin.ru</a></p>
+									<p><a href="#">info@hotel-laletin.ru</a></p>
+									<h5><a href="#">Заказать обратный звонок</a></h5>
+								</div>
+								<div>
+									<span class="status"></span>
+									<h3><a href="#">Режим работы:</a></h3>
+									<p>Сегодня 10:00 — 18:00<br>
+									закроется через 15 минут</p>
+								</div>
+								<div>
+									<h5 class="sms"><a href="#">Отправить контакты по СМС</a></h5>
+								</div>
+							</div>
+							<div class="media">
+								<ul>
+									<li class="active"><a href="#"><span>Виртуальный тур</span></a></li>
+									<li><a href="#"><span>Карта</span></a></li>
+									<li><a href="#"><span>Фотографии</span></a></li>
+									<li><a href="#"><span>Видео</span></a></li>
+								</ul>
+								<h5>
+									<span class="favorite"></span>
+									<span class="compare"></span>
+								</h5>
+								<div class="panorama">
+									kpano widget here
+								</div>
+								<div class="share">
+									<p>Добавь на стену, чтобы не потерять:</p>
+									<div>
+										<img src="./img/vkontakte_share.png" width="95" height="20" alt="">
+									</div>
+									<div>
+										<img src="./img/facebook_share.png" width="120" height="20" alt="">
+									</div>
+									<div>
+										<img src="./img/twitter_share.png" width="114" height="20" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="order">
+								<div>
+									<div>
+										<p>Возможности</p>
+										<h5>14 номеров</h5>
+										<h5>105 человек</h5>
+									</div>
+									<div>
+										<p>Стоимость проживания (сутки)</p>
+										<h5><span>от 1 500 рублей</span></h5>
+									</div>
+								</div>
+								<button><span>Заказать номер</span></button>
+							</div>
+							<div class="information">
+								<div>
+									<ul>
+										<li data-benefit="1">автопарковка</li>
+										<li data-benefit="2">кафе</li>
+										<li data-benefit="3">суверирный магазин</li>
+										<li data-benefit="4">еда в номер</li>
+										<li data-benefit="5">Wi-Fi</li>
+										<li data-benefit="6">конференц-зал</li>
+										<li data-benefit="7">кабельное ТВ</li>
+										<li data-benefit="8">прачечная</li>
+										<li data-benefit="9">бар</li>
+										<li data-benefit="10">салон красоты</li>
+									</ul>
+									<p><span>Способы оплаты:</span> наличные, безналичный расчет, пластиковые карты, оплата через Интернет</p>
+								</div>
+								<div>
+									<p>Гостиница Лалетин – это вековые традиции алтайского гостеприимства. Расположенная в одном из старейших архитектурных памятников города, гостиница встречает своих гостей уютом и отличным сервисом.</p>
+									<p>Гостям, которые проживают в гостинице "Лалетин" более 3-х суток, мы дарим Вам час сауны! У Вас свадебное торжество и Вы остановились в свадебном номере гостиницы «Лалетин»? Мы с радостью дарим Вам один час сауны!</p>
+									<p>Действует почасовая аренда номеров — 300 рублей в час.</p>
+								</div>
+								<div>
+									<h3>Филиалы</h3>
+									<div>
+										<div>
+											<p><a href="#">Березка, спортивно-развлекательный комплекс</a></p>
+											<p>Барнаул, пр. Красноармейский, 135 <em>~ 3.5 км от Вас</em></p>
+										</div>
+										<div>
+											<p><a href="#">Лалетин, гостиница</a></p>
+											<p>Барнаул, ул. Мало-Тобольская, 34 <em>~ 8.5 км от Вас</em></p>
+										</div>
+										<div>
+											<p><a href="#">Русь, гостиница</a></p>
+											<p>Барнаул, ул. Чкалова, 57а <em>~ 25.5 км от Вас</em></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-tab="2">
+						<div>
+							Номера
+						</div>
+					</div>
+					<div data-tab="3">
+						<div>
+							<div class="contacts">
+								<div class="logo">
+									<img src="./pic/item_logo.png" width="198" height="85" alt="">
+								</div>
+								<div>
+									<h3>Адрес <span>~ 5.3 км от Вас</span></h3>
+									<p>ул. Красивых молдавских партизан, д. 5, строение 2, корпус 3 (с торца)</p>
+									<h5><a href="#">Смотреть на карте</a></h5>
+								</div>
+								<div>
+									<h3>Контакты:</h3>
+									<p>(3852) <strong>20-20-24</strong> (бронирование),<br>
+									(3852) <strong>20-20-40</strong> (администратор)</p>
+									<p><a href="#">www.hotel-laletin.ru</a></p>
+									<p><a href="#">info@hotel-laletin.ru</a></p>
+									<h5><a href="#">Заказать обратный звонок</a></h5>
+								</div>
+								<div>
+									<span class="status"></span>
+									<h3><a href="#">Режим работы:</a></h3>
+									<p>Сегодня 10:00 — 18:00<br>
+									закроется через 15 минут</p>
+								</div>
+								<div>
+									<h5 class="sms"><a href="#">Отправить контакты по СМС</a></h5>
+								</div>
+							</div>
+							<div class="poster">
+								<h2>Афиша</h2>
+								<ul>
+									<li>
+										<img src="./pic/poster1.jpg" width="220" height="320" alt="">
+										<h2><a href="#">Люси</a></h2>
+										<p><span>Продолжительность:</span>90 мин.</p>
+										<p><span>Производство:</span>Франция</p>
+										<p><span>Жанр:</span>Фантастический боевик</p>
+										<p><span>Режиссер:</span>Люк Бессон</p>
+										<p><span>В ролях:</span>Скарлетт Йоханссон, Морган Фриман, Чхве Мин Сик, Амр Вакед и др.</p>
+										<p><span>На экранах:</span>до 27 октября 2014</p>
+										<div>
+											<p>«Люди используют лишь 10% своего мозга. Сегодня ей станут доступны все 100%».  Еще вчера она была просто сексапильной блондинкой, а сегодня — самое опасное и смертоносное создание на планете со верхъестественными способностями и интеллектом. То, что совсем недавно лучшие умы мира считали фантастической теорией, для нее стало реальностью. И теперь из добычи она превратится в охотницу.</p>
+										</div>
+									</li>
+									<li>
+										<img src="./pic/poster2.jpg" width="220" height="320" alt="">
+										<h2><a href="#">Великий уравнитель</a></h2>
+										<p><span>Продолжительность:</span>132 мин.</p>
+										<p><span>Производство:</span>США</p>
+										<p><span>Жанр:</span>Экшн</p>
+										<p><span>Режиссер:</span>Антуан Хукуа</p>
+										<p><span>В ролях:</span>Дензел Вашингтон, Мартон Чокаш, Хлоя Грейс Морец, Дэвид Харбор и др.</p>
+										<p><span>На экранах:</span>до 8 октября 2014</p>
+										<div>
+											<p>«Заступившись за едва знакомую проститутку, герой вынужден вступить в неравную схватку с ЦРУ-шными оборотнями в погонах и русскими бандитами. Финал у этой войны был бы плачевно предсказуем, не будь он отставной спецназовец, который только начал жизнь с чистого листа.</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div data-tab="4">
+						<div>
+							<div class="contacts">
+								<div class="logo">
+									<img src="./pic/item_logo.png" width="198" height="85" alt="">
+								</div>
+								<div>
+									<h3>Адрес <span>~ 5.3 км от Вас</span></h3>
+									<p>ул. Красивых молдавских партизан, д. 5, строение 2, корпус 3 (с торца)</p>
+									<h5><a href="#">Смотреть на карте</a></h5>
+								</div>
+								<div>
+									<h3>Контакты:</h3>
+									<p>(3852) <strong>20-20-24</strong> (бронирование),<br>
+									(3852) <strong>20-20-40</strong> (администратор)</p>
+									<p><a href="#">www.hotel-laletin.ru</a></p>
+									<p><a href="#">info@hotel-laletin.ru</a></p>
+									<h5><a href="#">Заказать обратный звонок</a></h5>
+								</div>
+								<div>
+									<span class="status"></span>
+									<h3><a href="#">Режим работы:</a></h3>
+									<p>Сегодня 10:00 — 18:00<br>
+									закроется через 15 минут</p>
+								</div>
+								<div>
+									<h5 class="sms"><a href="#">Отправить контакты по СМС</a></h5>
+								</div>
+							</div>
+							<div class="special">
+								<h2>Акции гостиницы</h2>
+								<p>Вся информация по акциям предоставляется непосредственно заведением.</p>
+								<p>Администрация сайта ответственности не несет</p>
+								<ul>
+									<li>
+										<img src="./pic/special1.jpg" width="219" height="163" alt="">
+										<h5>40<span>%</span></h5>
+										<h2><a href="#">Номера «Люкс» со скидкой 40%</a></h2>
+										<h6>Действует до: <strong>29 сентября 2014 </strong></h6>
+										<div>
+											<p>Полноценный отдых подразумевает не менее двух дней. Это могут быть семейные выходные или активный отдых с друзьями. А после насыщенного дня, посвященного... спорту и здоровью, будет особенно приятно расслабиться, отказавшись от вечерних путешествий. К тому же сон на свежем воздухе отлично восстанавливает силы!</p>
+										</div>
+									</li>
+									<li>
+										<img src="./pic/special2.jpg" width="219" height="163" alt="">
+										<h5>50<span>%</span></h5>
+										<h2><a href="#">Номера «Для молодоженов» со скидкой 50%</a></h2>
+										<h6>Действует до: <strong>29 сентября 2014 </strong></h6>
+										<div>
+											<p>Полноценный отдых подразумевает не менее двух дней. Это могут быть семейные выходные или активный отдых с друзьями. А после насыщенного дня, посвященного... спорту и здоровью, будет особенно приятно расслабиться, отказавшись от вечерних путешествий. К тому же сон на свежем воздухе отлично восстанавливает силы!</p>
+										</div>
+									</li>
+									<li>
+										<img src="./pic/special3.jpg" width="219" height="163" alt="">
+										<h2><a href="#">Бесплатные завтраки и обеды всю неделю</a></h2>
+										<h6>Действует до: <strong>29 сентября 2014 </strong></h6>
+										<div>
+											<p>Полноценный отдых подразумевает не менее двух дней. Это могут быть семейные выходные или активный отдых с друзьями. А после насыщенного дня, посвященного... спорту и здоровью, будет особенно приятно расслабиться, отказавшись от вечерних путешествий. К тому же сон на свежем воздухе отлично восстанавливает силы!</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div data-tab="5">
+						<div>
+							<div class="contacts">
+								<div class="logo">
+									<img src="./pic/item_logo.png" width="198" height="85" alt="">
+								</div>
+								<div>
+									<h3>Адрес <span>~ 5.3 км от Вас</span></h3>
+									<p>ул. Красивых молдавских партизан, д. 5, строение 2, корпус 3 (с торца)</p>
+									<h5><a href="#">Смотреть на карте</a></h5>
+								</div>
+								<div>
+									<h3>Контакты:</h3>
+									<p>(3852) <strong>20-20-24</strong> (бронирование),<br>
+									(3852) <strong>20-20-40</strong> (администратор)</p>
+									<p><a href="#">www.hotel-laletin.ru</a></p>
+									<p><a href="#">info@hotel-laletin.ru</a></p>
+									<h5><a href="#">Заказать обратный звонок</a></h5>
+								</div>
+								<div>
+									<span class="status"></span>
+									<h3><a href="#">Режим работы:</a></h3>
+									<p>Сегодня 10:00 — 18:00<br>
+									закроется через 15 минут</p>
+								</div>
+								<div>
+									<h5 class="sms"><a href="#">Отправить контакты по СМС</a></h5>
+								</div>
+							</div>
+							<div class="review">
+								<h2>Оставьте свой отзыв</h2>
+								<button class="add"><span>Оставить отзыв</span></button>
+								<p>Выскажите свое мнение о заведении, помогите сделать его лучше</p>
+								<p>Отзывы публикуются после предварительной модерации</p>
+								<ul class="data">
+									<li>
+										<div class="title">
+											<h3>Анна</h3>
+											<div class="rating" data-score="4"></div>
+											<h6>03.09.2014 в 15:40</h6>
+										</div>
+										<p>Очень приличный отель!</p>
+										<p>Приятно удивляет наличие гладильных принадлежностей в номере.</p>
+										<p>Отличный и бесплатный интернет. Прекрасные и разнообразные завтраки.</p>
+										<p>Приветливый персонал, нас проапгрейдили до вип-лаунж, бесплатно (но без вип-бара). Вид с 28 этажа - прекрасен!</p>
+									</li>
+									<li>
+										<div class="title">
+											<h3>Константин</h3>
+											<div class="rating" data-score="4"></div>
+											<h6>31.08.2014 в 10:03</h6>
+										</div>
+										<p>Очень хороший отель, располагается в историческом центре города, прекрасный вид из окон верхних этажей, красивые номера, большие кровати. Близость к историческим местам, удобно и быстро добраться до аэропорта. Советую.</p>
+									</li>
+									<li>
+										<div class="title">
+											<h3>Николай</h3>
+											<div class="rating" data-score="2"></div>
+											<h6>30.08.2014 в 13:22</h6>
+										</div>
+										<p>Не знаю, почему многие считают, что это приличный отель. Может быть они просто в приличных не бывали. Откуда у него вообще 3 звезды нарисовалось то? Кто их выдал? Жаль, что здесь нет возможности выложить фото. Простыни желтые, полотенца грязные. Больше ни за что там не остановлюсь.</p>
+										<div class="answer">
+											<p>Это какое-то невероятное недоразумение. Все номера перед тем, как сдать ключи на ресепшен, убираются и принимаются администратором, который проводит визуальный осмотр всего, включая постельное белье и полотенца. Почему не обратились к администратору?</p>
+											<h5>Управляющий гостиницы</h5>
+										</div>
+									</li>
+									<li>
+										<div class="title">
+											<h3>Максим</h3>
+											<div class="rating" data-score="4"></div>
+											<h6>25.08.2014 в 20:55</h6>
+										</div>
+										<p>Я вполне себе доволен тем, что я получил за отданные деньги. Все в рамках нормы, но четверка только потому, что меня подгоняли при выселении. Как будто на мое место уже очередь стояла.</p>
+									</li>
+								</ul>
+								<ul class="pagination">
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+								</ul>
+								<div class="message">
+									<p><textarea cols="80" rows="2" placeholder="Выскажите свое мнение о заведении, помогите сделать его лучше"></textarea></p>
+									<p><input type="text" placeholder="Ваше имя"></p>
+									<div class="rate">
+										<p>Ваша оценка:</p>
+										<div></div>
+									</div>
+									<button><span>Оставить отзыв</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="closest">
+					<div class="similar">
+						<h2><span>Смотрите также</span></h2>
+						<ul>
+							<li>
+								<span class="status open"></span>
+								<h5>
+									<span class="favorite"></span>
+									<span class="compare"></span>
+								</h5>
+								<div class="information">
+									<span class="sale"></span>
+									<div>
+										<img src="./pic/list7.jpg" width="160" height="120" alt="">
+										<h5><a href="#">13</a></h5>
+									</div>
+									<h2><a href="#">Апарт-отель «Федорова»</a></h2>
+									<h6><span>~ 2.5 км от Вас</span></h6>
+								</div>
+								<div class="description">
+									<h5><strong>от 1 000 рублей<em>/ночь</em></strong></h5>
+								</div>
+							</li>
+							<li>
+								<span class="status open"></span>
+								<h5>
+									<span class="favorite"></span>
+									<span class="compare"></span>
+								</h5>
+								<div class="information">
+									<div>
+										<img src="./pic/list4.jpg" width="160" height="120" alt="">
+										<h5><a href="#">13</a></h5>
+									</div>
+									<h2><a href="#">Арбуз, хостел</a></h2>
+									<h6><span>~ 2.1 км от Вас</span></h6>
+								</div>
+								<div class="description">
+									<h5><strong>от 1 500 рублей<em>/ночь</em></strong></h5>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="rb">
+						<div class="list">
+							<h2>Заведения поблизости</h2>
+							<div class="tab">
+								<ul>
+									<li>
+										<span class="status"></span>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/list1.jpg" width="160" height="120" alt="">
+												<h5><a href="#">3</a></h5>
+											</div>
+											<h2><a href="#">Алтай – Пригород, скорые поезда</a></h2>
+											<p>Услуги и сервис, Скорые поезда</p>
+											<ul>
+												<li data-benefit="1"></li>
+												<li data-benefit="2"></li>
+												<li data-benefit="3"></li>
+												<li data-benefit="4"></li>
+											</ul>
+											<h6><strong>пл. Победы, 10</strong> <span>~ 130 м</span></h6>
+										</div>
+									</li>
+									<li>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/list3.jpg" width="160" height="120" alt="">
+												<h5><a href="#">10</a></h5>
+											</div>
+											<h2><a href="#">Fit-it, фитнес-клуб</a></h2>
+											<p>Фитнес-центры, Тренажерные залы</p>
+											<ul>
+												<li data-benefit="1"></li>
+												<li data-benefit="2"></li>
+												<li data-benefit="3"></li>
+												<li data-benefit="4"></li>
+											</ul>
+											<h6><strong>ул. Островского 68е (с торца)</strong> <span>~ 0.5 км</span></h6>
+										</div>
+									</li>
+									<li>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/list4.jpg" width="160" height="120" alt="">
+												<h5><a href="#">13</a></h5>
+											</div>
+											<h2><a href="#">Мемориальный музей Калашникова М.Т.</a></h2>
+											<p>Культура и искусство, Музеи</p>
+											<ul>
+												<li data-benefit="1"></li>
+												<li data-benefit="2"></li>
+												<li data-benefit="3"></li>
+												<li data-benefit="4"></li>
+												<li data-benefit="5"></li>
+												<li data-benefit="6"></li>
+												<li data-benefit="7"></li>
+												<li data-benefit="8"></li>
+												<li data-benefit="9"></li>
+												<li data-benefit="10"></li>
+												<li data-benefit="11"></li>
+											</ul>
+											<h6><strong>с. Курья, Алтайский край</strong> <span>~ 1.2 км</span></h6>
+										</div>
+									</li>
+									<li>
+										<span class="status close" data-timer="откроется через 1 час"></span>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/list5.jpg" width="160" height="120" alt="">
+												<h5><a href="#">11</a></h5>
+											</div>
+											<h2><a href="#">Мемориальный музей Калашникова М.Т.</a></h2>
+											<p>Гостиницы, хостелы</p>
+											<ul>
+												<li data-benefit="1"></li>
+											</ul>
+											<h6><strong>ул. Северо-Западная, 48д</strong> <span>~ 0.6 км</span></h6>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+		<div>
+			<h5>© 2010-2013. «НА ВСЕ 360°»  — 3D-путеводитель по Вашему городу.</h5>
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">О проекте</a></li>
+						<li><a href="#">Обзоры</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Партнеры</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+					</ul>
+				</li>
+			</ul>
+			<h6>Размещенный на сайте контент предназначен для просмотра лицами старше 18 лет.</h6>
+			<div>
+				<p>Следите за нами в соцсетях:</p>
+				<ul>
+					<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+					<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+					<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+					<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="fade"></div>
+	<div class="modal" data-modal="ordercall">
+		<h3>Заказать звонок</h3>
+		<div>
+			<h6>Меня зовут</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Мой телефон</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Я из города</h6>
+			<p><input type="text" placeholder="Петропавловск-Камчатский"></p>
+		</div>
+		<div>
+			<h6>Я по вопросу</h6>
+			<ul>
+				<li><input type="radio" name="r1" checked> создание 3D-тура</li>
+				<li><input type="radio" name="r1"> сотрудничества</li>
+				<li><input type="radio" name="r1"> покупки франшизы</li>
+				<li><input type="radio" name="r1"> хочу на <s>море</s> работу к Вам</li>
+			</ul>
+		</div>
+		<button><span>Жду звонка</span></button>
+	</div>
+	<div class="modal" data-modal="ordercallvalidation">
+		<h3>Заказать звонок</h3>
+		<div class="error">
+			<h6>Меня зовут</h6>
+			<p><input type="text" value="ус"> <em>Неверный формат данных</em></p>
+		</div>
+		<div class="success">
+			<h6>Мой телефон</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Я по вопросу</h6>
+			<ul>
+				<li><input type="radio" name="r1" checked> создание 3D-тура</li>
+				<li><input type="radio" name="r1"> сотрудничества</li>
+				<li><input type="radio" name="r1"> покупки франшизы</li>
+				<li><input type="radio" name="r1"> хочу на <s>море</s> работу к Вам</li>
+			</ul>
+		</div>
+		<button class="active"><span>Жду звонка</span></button>
+	</div>
+	<div class="modal add" data-modal="add">
+		<h3>Заказать звонок</h3>
+		<div>
+			<h6>Меня зовут</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><textarea placeholder="Петропавловск-Камчатский,"></textarea></p>
+		</div>
+		<div>
+			<h6>Телефон заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<button><span>Оставить заявку</span></button>
+	</div>
+	<div class="modal add" data-modal="addvalidation">
+		<h3>Заказать звонок</h3>
+		<div class="error">
+			<h6>Меня зовут</h6>
+			<p><input type="text" value="ус"> <em>Неверный формат данных</em></p>
+		</div>
+		<div class="success">
+			<h6>Название заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><textarea placeholder="Петропавловск-Камчатский,"></textarea></p>
+		</div>
+		<div>
+			<h6>Телефон заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<button class="active"><span>Оставить заявку</span></button>
+	</div>
+	<div class="modal add" data-modal="addmessage">
+		<h3>Заявка успешно отправлена</h3>
+		<h5>Благодарим за проявленный интерес к нашему сервису.<br>
+		В ближайшее время с Вами свяжется наш менеджер.</h5>
+	</div>
+	<div class="modal" data-modal="registered">
+		<h3>Благодарим за регистрацию</h3>
+		<h5>Теперь Вы стали полноправным пользователем сервиса «НА ВСЕ 360°» и можете воспользоваться всеми доступными сервисами.</h5>
+	</div>
+	<div class="modal recover" data-modal="recover">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div>
+			<h6>E-mail</h6>
+			<p><input type="text"></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recoverrepeat">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div class="repeat">
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"> <span></span></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovervalidation">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div>
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"></p>
+		</div>
+		<button class="active"><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovererror">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div class="error">
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"> <em>Пользователей с данным e-mail в базе не найдено.<br> Проверьте правильность ввода e-mail</em></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovermessage">
+		<h3>Восстановление пароля</h3>
+		<h5>На указанный e-mail отправлено письмо с дальнейшими инструкциями по восстановлению доступа.</h5>
+		<h5>Если письмо не будет получено в течении 10 минут, пожалуйста, проверьте папку СПАМ в указанном почтовом ящике или повторите процедуру восстановления доступа.</h5>
+	</div>
+	<div class="found">
+		<p>Найдено заведений: <span>35</span></p>
+		<p><a href="#">Показать</a></p>
+	</div>
+	<div class="filterup">
+		<ul>
+			<li class="active"><a href="#"><span>Тип заведения</span></a></li>
+			<li><a href="#"><span>Особенности</span></a></li>
+			<li><a href="#"><span>Район</span></a></li>
+			<li><a href="#"><span>Расположение</span></a></li>
+		</ul>
+		<div>
+			<ul>
+				<li><input type="checkbox"> Мини-отели</li>
+				<li><input type="checkbox"> Мини-отели</li>
+				<li><input type="checkbox"> Бизнес-отели</li>
+				<li><input type="checkbox"> Бизнес-отели</li>
+				<li><input type="checkbox"> Загородные комплексы</li>
+				<li><input type="checkbox"> Загородные комплексы</li>
+				<li><input type="checkbox"> Хостелы</li>
+				<li><input type="checkbox"> Хостелы</li>
+			</ul>
+			<button><span>Искать</span></button>
+			<h5><a href="#">Сбросить все</a></h5>
+		</div>
+	</div>
+	<!--<span class="preload"></span>-->
+</body>
+</html>
