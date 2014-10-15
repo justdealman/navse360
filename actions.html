@@ -99,7 +99,7 @@
 		</div>
 		<div class="catalog">
 			<ul class="menu">
-				<li class="active">
+				<li>
 					<a href="#">
 						<h5><span>Заведения</span></h5>
 						<p>Загляни в заведения города прямо на сайте</p>
@@ -111,7 +111,7 @@
 						<p>Будь в курсе грядущих мероприятий города</p>
 					</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="#">
 						<h5><span>Акции</span></h5>
 						<p>Не пропусти выгодные предложения в городе</p>
@@ -131,6 +131,24 @@
 				</li>
 			</ul>
 			<div>
+				<div class="datefilter">
+					<div>
+						<ul>
+							<li class="active"><a href="#">Все</a></li>
+							<li><a href="#">Сегодня</a></li>
+							<li><a href="#">Завтра</a></li>
+							<li><a href="#">10 сентября</a></li>
+							<li><a href="#">11 сентября</a></li>
+							<li><a href="#">12 сентября</a></li>
+							<li><a href="#">Неделя</a></li>
+						</ul>
+						<div>
+							<p><input type="text"></p>
+							<p><input type="text"></p>
+							<button><span>Поиск</span></button>
+						</div>
+					</div>
+				</div>
 				<div>
 					<div class="lb">
 						<div class="nav">
@@ -149,188 +167,209 @@
 								<li><a href="#">Услуги и сервис</a></li>
 								<li><a href="#">Культура и искусство</a></li>
 							</ul>
-							<ul>
-								<li class="icon1"><a href="#">Маршруты и экскурсии</a></li>
-								<li class="icon2"><a href="#">Прогулка по городу</a></li>
-							</ul>
 						</div>
-						<div class="significant">
-							<h2><strong><em></em></strong> <span>мест города,</span> которые просто должен посетить каждый</h2>
-							<ul>
-								<li>посмотреть на город с <a href="#">колеса обозрения</a></li>
-								<li>купить пива после 22-00 в магазине <a href="#">«Наливай-ка»</a></li>
-								<li>прогуляться по <a href="#">Потоку</a> после 23-00 в нетрезвом виде</li>
-								<li>встретить рассвет с веселой компанией в <a href="#">вытрезвителе №15</a></li>
-								<li>посетить <a href="#">Травмпункт №3</a> после вытрезвителя №15</li>
-								<li>подправить свою улыбку в <a href="#">Стоматологической поликлинике №2</a></li>
-								<li>прикупить костыль в магазине <a href="#">Прикольных подарков</a></li>
-							</ul>
+						<div class="reasons">
+							<h2><strong><em>5</em></strong> <span>причин</span> оформить подписку<br> «НА ВСЕ 360°» <input type="text" placeholder="Укажите ваш e-mail"> <button class="active"><span>Подписаться</span></button></h2>
+							<p>Оформите подписку, и в первом же письме мы раскроем все секретные плюсы подписки<br> «НА ВСЕ 360°»</p>
 						</div>
 						<div class="banner">
 							<a href="#">
-								<h5>Французская кухня в «Ля бурже»</h5>
-								<img src="./pic/banner_l.jpg" width="220" height="120" alt="">
+								<h5>Скидка 40% на процедуры коррекции фигуры</h5>
+								<img src="./pic/banner_l2.jpg" width="220" height="300" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="rb">
-						<div class="slider">
+						<div class="reccslide">
 							<h2>Рекомендуем посетить <a href="#">Как сюда попасть?</a></h2>
 							<div>
 								<div class="container">
-									<div>
-										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+									<div class="element">
+										<h6>50<sup>%</sup></h6>
 										<div>
-											<h3>Золотая подкова, загородный клуб</h3>
-											<p>шоссе Ленточный бор, 31</p>
+											<div>
+												<img src="./pic/spec10.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Скидка 50% на все меню ресторана</a></h3>
+											<p><a href="#">Deutsche Pub, ресторан-бар</a></p>
 										</div>
-										<img src="./pic/slide1.jpg" width="1088" height="500" alt="">
 									</div>
-									<div>
-										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+									<div class="element">
+										<h6>40<sup>%</sup></h6>
 										<div>
-											<h3>Золотая подкова, загородный клуб</h3>
-											<p>шоссе Ленточный бор, 31</p>
+											<div>
+												<img src="./pic/spec11.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Скидка 40% на все виды пиццы</a></h3>
+											<p><a href="#">Macaroni, кафе</a></p>
 										</div>
-										<img src="./pic/slide2.jpg" width="1088" height="500" alt="">
 									</div>
-									<div>
-										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+									<div class="element">
+										<h6>20<sup>%</sup></h6>
 										<div>
-											<h3>Золотая подкова, загородный клуб</h3>
-											<p>шоссе Ленточный бор, 31</p>
+											<div>
+												<img src="./pic/spec12.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Скидка 20% на все коктейли</a></h3>
+											<p><a href="#">Зеркало, клуб-ресторан</a></p>
 										</div>
-										<img src="./pic/slide1.jpg" width="1088" height="500" alt="">
 									</div>
-									<div>
-										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+									<div class="element">
+										<h6>50<sup>%</sup></h6>
 										<div>
-											<h3>Золотая подкова, загородный клуб</h3>
-											<p>шоссе Ленточный бор, 31</p>
+											<div>
+												<img src="./pic/spec10.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Скидка 50% на все меню ресторана</a></h3>
+											<p><a href="#">Deutsche Pub, ресторан-бар</a></p>
 										</div>
-										<img src="./pic/slide2.jpg" width="1088" height="500" alt="">
 									</div>
-									<div>
-										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+									<div class="element">
+										<h6>40<sup>%</sup></h6>
 										<div>
-											<h3>Золотая подкова, загородный клуб</h3>
-											<p>шоссе Ленточный бор, 31</p>
+											<div>
+												<img src="./pic/spec11.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Скидка 40% на все виды пиццы</a></h3>
+											<p><a href="#">Macaroni, кафе</a></p>
 										</div>
-										<img src="./pic/slide1.jpg" width="1088" height="500" alt="">
+									</div>
+									<div class="element">
+										<h6>20<sup>%</sup></h6>
+										<div>
+											<div>
+												<img src="./pic/spec12.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Скидка 20% на все коктейли</a></h3>
+											<p><a href="#">Зеркало, клуб-ресторан</a></p>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="list">
+						<div class="spec">
 							<div class="nav">
-								<h3>3D-туры</h3>
+								<h3>Акции</h3>
 								<ul>
 									<li class="active"><a href="#"><span>Новые</span></a></li>
 									<li><a href="#"><span>Популярные</span></a></li>
-									<li class="newest"><a href="#"><span>Недавно открывшиеся</span></a></li>
 								</ul>
 							</div>
 							<div class="tab">
 								<ul>
 									<li>
-										<span class="status open"></span>
-										<div class="information">
+										<h6>50<sup>%</sup></h6>
+										<div>
 											<div>
-												<img src="./pic/list1.jpg" width="160" height="120" alt="">
-												<h5><a href="#">3</a></h5>
+												<img src="./pic/spec1.jpg" width="218" height="164" alt="">
 											</div>
-											<h2><a href="#">Алтай – Пригород, скорые поезда</a></h2>
-											<p>Услуги и сервис, Скорые поезда</p>
-											<ul>
-												<li data-benefit="1"></li>
-												<li data-benefit="2"></li>
-												<li data-benefit="3"></li>
-												<li data-benefit="4"></li>
-											</ul>
-											<h6><strong>пл. Победы, 10</strong></h6>
+											<h3><a href="#">Скидка 50% на 2 часа игры в боулинг</a></h3>
+											<p><a href="#">Зенит, боулинг-центр</a></p>
 										</div>
 									</li>
 									<li>
-										<span class="status open"></span>
-										<div class="information">
+										<div>
 											<div>
-												<img src="./pic/list2.jpg" width="160" height="120" alt="">
-												<h5><a href="#">10</a></h5>
+												<img src="./pic/spec2.jpg" width="218" height="164" alt="">
 											</div>
-											<h2><a href="#">Барнаул, гостиница</a></h2>
-											<p>Гостиницы, бизнес-отели</p>
-											<ul>
-												<li data-benefit="1"></li>
-												<li data-benefit="2"></li>
-												<li data-benefit="3"></li>
-												<li data-benefit="4"></li>
-												<li data-benefit="5"></li>
-												<li data-benefit="6"></li>
-												<li data-benefit="7"></li>
-												<li data-benefit="8"></li>
-												<li data-benefit="9"></li>
-												<li data-benefit="10"></li>
-												<li data-benefit="11"></li>
-											</ul>
-											<h6><strong>пр. Красноармейский, 135</strong></h6>
+											<h3><a href="#">Бесплатная игра в пейтбол</a></h3>
+											<p><a href="#">Абордаж, пейнтбольный клуб</a></p>
 										</div>
 									</li>
 									<li>
-										<span class="status close" data-timer="откроется через 1 час"></span>
-										<div class="information">
+										<h6>70<sup>%</sup></h6>
+										<div>
 											<div>
-												<img src="./pic/list3.jpg" width="160" height="120" alt="">
-												<h5><a href="#">10</a></h5>
+												<img src="./pic/spec3.jpg" width="218" height="164" alt="">
 											</div>
-											<h2><a href="#">Fit-it, фитнес-клуб</a></h2>
-											<p>Фитнес-центры, Тренажерные залы</p>
-											<ul>
-												<li data-benefit="1"></li>
-												<li data-benefit="2"></li>
-												<li data-benefit="3"></li>
-												<li data-benefit="4"></li>
-											</ul>
-											<h6><strong>ул. Островского 68е (с торца)</strong></h6>
+											<h3><a href="#">VIP-фотосессия в изысканных образах со скидкой 70%</a></h3>
+											<p><a href="#">Абрикос, фотостудия</a></p>
 										</div>
 									</li>
 									<li>
-										<span class="status open"></span>
-										<div class="information">
+										<div>
 											<div>
-												<img src="./pic/list4.jpg" width="160" height="120" alt="">
-												<h5><a href="#">13</a></h5>
+												<img src="./pic/spec4.jpg" width="218" height="164" alt="">
 											</div>
-											<h2><a href="#">Арбуз, хостел</a></h2>
-											<p>Гостиницы, хостелы</p>
-											<ul>
-												<li data-benefit="1"></li>
-												<li data-benefit="2"></li>
-												<li data-benefit="3"></li>
-												<li data-benefit="4"></li>
-												<li data-benefit="5"></li>
-												<li data-benefit="6"></li>
-												<li data-benefit="7"></li>
-												<li data-benefit="8"></li>
-												<li data-benefit="9"></li>
-												<li data-benefit="10"></li>
-												<li data-benefit="11"></li>
-											</ul>
-											<h6><strong>ул. Северо-Западная, 48д</strong></h6>
+											<h3><a href="#">Бесплатная игра в русский бильярд</a></h3>
+											<p><a href="#">Deutsche Pub, ресторан-бар</a></p>
 										</div>
 									</li>
 									<li>
-										<span class="status close" data-timer="откроется через 1 час"></span>
-										<div class="information">
+										<h6>30<sup>%</sup></h6>
+										<div>
 											<div>
-												<img src="./pic/list5.jpg" width="160" height="120" alt="">
-												<h5><a href="#">11</a></h5>
+												<img src="./pic/spec5.jpg" width="218" height="164" alt="">
 											</div>
-											<h2><a href="#">Мемориальный музей Калашникова М.Т.</a></h2>
-											<p>Культура и искусство, Музеи</p>
-											<ul>
-												<li data-benefit="1"></li>
-											</ul>
-											<h6><strong>с. Курья, Алтайский край</strong></h6>
+											<h3><a href="#">Необычное свидание и фотосессия для двоих со скидкой 30%</a></h3>
+											<p><a href="#">Язь, арт-студия</a></p>
+										</div>
+									</li>
+									<li>
+										<h6>20<sup>%</sup></h6>
+										<div>
+											<div>
+												<img src="./pic/spec6.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Скидка 20% на все коктейли</a></h3>
+											<p><a href="#">Зеркало, клуб-ресторан</a></p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div>
+												<img src="./pic/spec7.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Прессотерапия и кавитация со скидкой</a></h3>
+											<p><a href="#">Ромашка, салон красоты</a></p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div>
+												<img src="./pic/spec8.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Креативная стрижка и укладка почти даром</a></h3>
+											<p><a href="#">Велонда, салон красоты</a></p>
+										</div>
+									</li>
+									<li>
+										<h6>80<sup>%</sup></h6>
+										<div>
+											<div>
+												<img src="./pic/spec9.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Целый день в аквапарке со скидкой 80%</a></h3>
+											<p><a href="#">Европа, аквапарк</a></p>
+										</div>
+									</li>
+									<li>
+										<h6>50<sup>%</sup></h6>
+										<div>
+											<div>
+												<img src="./pic/spec1.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Скидка 50% на 2 часа игры в боулинг</a></h3>
+											<p><a href="#">Зенит, боулинг-центр</a></p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div>
+												<img src="./pic/spec2.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">Бесплатная игра в пейтбол</a></h3>
+											<p><a href="#">Абордаж, пейнтбольный клуб</a></p>
+										</div>
+									</li>
+									<li>
+										<h6>70<sup>%</sup></h6>
+										<div>
+											<div>
+												<img src="./pic/spec3.jpg" width="218" height="164" alt="">
+											</div>
+											<h3><a href="#">VIP-фотосессия в изысканных образах со скидкой 70%</a></h3>
+											<p><a href="#">Абрикос, фотостудия</a></p>
 										</div>
 									</li>
 								</ul>
@@ -339,74 +378,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="blog">
-			<div>
-				<h2>Как провести свой день</h2>
-				<ul>
-					<li>
-						<div>
-							<img src="./pic/blog1.jpg" width="218" height="219" alt="">
-							<h5><a href="#">51</a></h5>
-						</div>
-						<h6>09 декабря 2013</h6>
-						<p><a href="#">Банда «НА ВСЕ 360» отдохнула и «пробила почву» для развития в Горном Алтае</a></p>
-						<h3>Игорь Носов</h3>
-					</li>
-					<li>
-						<div>
-							<img src="./pic/blog2.jpg" width="218" height="219" alt="">
-							<h5><a href="#">10</a></h5>
-						</div>
-						<h6>07 декабря 2013</h6>
-						<p><a href="#">Очередное расширение территории: полная капитуляция Иркутска</a></p>
-						<h3>Петр Григорян</h3>
-					</li>
-					<li>
-						<div>
-							<img src="./pic/blog3.jpg" width="218" height="219" alt="">
-							<h5><a href="#">15</a></h5>
-						</div>
-						<h6>05 декабря 2013</h6>
-						<p><a href="#">Мы обновили технопарк и теперь снимаем под водой. Чего только нет на дне реки Обь</a></p>
-						<h3>Игорь Носов</h3>
-					</li>
-					<li>
-						<div>
-							<img src="./pic/blog4.jpg" width="218" height="219" alt="">
-							<h5><a href="#">94</a></h5>
-						</div>
-						<h6>01 декабря 2013</h6>
-						<p><a href="#">У нас сегодня день рождения: нашему проекту стукнуло 2 года. Поздравляйте нас</a></p>
-						<h3>Петр Григорян</h3>
-					</li>
-					<li>
-						<div>
-							<img src="./pic/blog5.jpg" width="218" height="219" alt="">
-							<h5><a href="#">10</a></h5>
-						</div>
-						<h6>07 декабря 2013</h6>
-						<p><a href="#">Очередное расширение территории: полная капитуляция Иркутска</a></p>
-						<h3>Петр Григорян</h3>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="business">
-			<a href="#">
-				<h3>Открой свой бизнес и начни зарабатывать вместе с «НА ВСЕ 360°»</h3>
-				<p>Вы можете начать делать 3D-туры своего города и зарабатывать хорошие деньги</p>
-			</a>
-		</div>
-		<div class="about">
-			<div>
-				<img src="./pic/facebook.jpg" width="220" height="250" alt="">
-			</div>
-			<h2>О проекте</h2>
-			<p>Модальные окна: <a href="#" data-target="ordercall">Заказать звонок</a>, <a href="#" data-target="ordercallvalidation">Заказать звонок валидация</a>, <a href="#" data-target="add">Добавить заведение</a>, <a href="#" data-target="addvalidation">Добавить заведение валидация</a>, <a href="#" data-target="addmessage">Добавить заведение сообщение</a>, <a href="#" data-target="registered">Благодарим за регистрацию</a>, <a href="#" data-target="recover">Восстановление пароля запрос</a>, <a href="#" data-target="recoverrepeat">Восставление пароля проверка</a>, <a href="#" data-target="recovervalidation">Восставление пароля валидация</a>, <a href="#" data-target="recovererror">Восстановление пароля ошибка</a>, <a href="#" data-target="recovermessage">Восстановление пароля сообщение</a>.</p>
-			<p>Проект «НА ВСЕ 360°» представляет собой 3D-путеводитель, благодаря которому можно прогуляться по улицам города, оценить достопримечательности, посетить любое заведение (ресторан, кафе, клуб, фитнес-центр, учебное учреждение, гостиницу, сауну и многие другие) и все это в формате увлекательного виртуального путешествия! «НА ВСЕ 360°» - дает, пожалуй, лучший ответ на часто встающий вопрос "Куда пойти?" (куда пойти учиться, лечиться, заняться спортом, просветиться, поужинать, развлечься, провести досуг, отдохнуть и т.д.).</p>
-			<p>Проект имеет всеохватывающую направленность и представляет собой наиболее полноценный и понятный путеводитель по городу! Здесь же играют роль преимущества виртуального тура над другими средствами визуализации, главными из которых являются наглядность, интерактивность, фотореалистичность, возможность осмотреть все на 360 градусов. Отсюда и название.</p>
-			<h6><a href="#">Подробнее о проекте</a></h6>
 		</div>
 		<div class="clear"></div>
 	</div>

@@ -1,0 +1,469 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>На все 360°</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jquerymobile.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="panel">
+			<div>
+				<ul class="nav">
+					<li class="active"><a href="#">О проекте</a></li>
+					<li><a href="#">Обратная связь</a></li>
+					<li><a href="#">Помощь</a></li>
+				</ul>
+				<ul class="user">
+					<li><a href="enter">Войти</a></li>
+					<li><a href="registration">Регистрация</a></li>
+				</ul>
+				<p class="favorite">
+					<a href="#">Избранное</a>
+				</p>
+				<ul class="language">
+					<li>
+						<a href="#">RU</a>
+						<ul>
+							<li data-short="RU">Русский</li>
+							<li data-short="EN">English</li>
+							<li data-short="EE">Eesti</li>
+							<li data-short="DE">Deutch</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="city">
+					<p><a href="#">Петропавловск-Камчатский</a></p>
+					<h6><span><a href="tel:+74152556677">(4152) 55-66-77</a></span></h6>
+					<div>
+						<h3>Правильно?</h3>
+						<p>ли мы определили Ваш город?</p>
+						<button><span>Да, молодцы</span></button>
+						<h5><a href="#">Сменить город</a></h5>
+					</div>
+				</div>
+				<div class="drop enter">
+					<p class="email"><input type="text" placeholder="E-mail"></p>
+					<p class="password"><input type="password" placeholder="Пароль"></p>
+					<button><span>Войти</span></button>
+					<h5><a href="#">Забыли пароль?</a></h5>
+					<div>
+						<h6>Регистрация через социальные сети:</h6>
+						<ul>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="drop registration">
+					<p class="email"><input type="text" placeholder="Введите e-mail"></p>
+					<p class="password"><input type="password" placeholder="Укажите пароль"><span class="eye"></span></p>
+					<button class="active"><span>Регистрация</span></button>
+					<div>
+						<h6>Регистрация через социальные сети:</h6>
+						<ul>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<img src="./img/logo.png" width="220" height="66" class="logo" alt="">
+			<div class="search">
+				<div>
+					<p><input type="text" placeholder="Поиск по сайту"></p>
+					<button></button>
+				</div>
+				<h6>например, <span>где переночевать</span></h6>
+			</div>
+			<div class="add">
+				<button><span>Добавить заведение</span></button>
+				<p><a href="#">Владельцам заведений</a></p>
+			</div>
+		</div>
+		<div class="catalog">
+			<ul class="menu short">
+				<li>
+					<a href="#">
+						<h5><span>Заведения</span></h5>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Афиша</span></h5>
+					</a>
+				</li>
+				<li class="active">
+					<a href="#">
+						<h5><span>Акции</span></h5>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>События</span></h5>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Недвижимость</span></h5>
+					</a>
+				</li>
+			</ul>
+			<div>
+				<div class="introduction">
+					<h1>Часовая прогулка на квадроциклах для одного или двоих со скидкой 50%</h1>
+					<h5><em></em><span><a href="#">Вы здесь</a></span></h5>
+					<ul class="breadcrumbs">
+						<li class="home"><a href="#">Весь сайт</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Развлечения</a></li>
+						<li>Часовая прогулка...</li>
+					</ul>
+				</div>
+				<div class="item single">
+					<div>
+						<h2><a href="#">Форсаж, загородный комплекс</a> <span></span></h2>
+						<div>
+							<div class="action">
+								<h5><span>Акция действует до:</span> 20 сентября 2014</h5>
+								<div>
+									<h3>
+										<strong>50<sup>%</sup></strong>
+										<span>скидка</span>
+									</h3>
+									<!--<h3><em></em></h3>-->
+									<div>
+										<p><span>Стандартная стоимость:</span> 30 000 рублей/час</p>
+									</div>
+									<div>
+										<p><span>Распространяется на:</span> исключительно на услугу аренды квадроциклов</p>
+									</div>
+								</div>
+							</div>
+							<div class="media">
+								<div class="picture">
+									<img src="./pic/action.jpg" width="640" height="360" alt="">
+								</div>
+								<div class="share">
+									<p>Добавь на стену, чтобы не потерять:</p>
+									<div>
+										<img src="./img/vkontakte_share.png" width="95" height="20" alt="">
+									</div>
+									<div>
+										<img src="./img/facebook_share.png" width="120" height="20" alt="">
+									</div>
+									<div>
+										<img src="./img/twitter_share.png" width="114" height="20" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="contacts">
+								<div>
+									<h3>Адрес <span>~ 5.3 км от Вас</span></h3>
+									<p>ул. Красивых молдавских партизан, д. 5, строение 2, корпус 3 (с торца)</p>
+									<h5><a href="#">Смотреть на карте</a></h5>
+								</div>
+								<div>
+									<h3>Контакты:</h3>
+									<p>(3852) <strong>20-20-24</strong> (бронирование),<br>
+									(3852) <strong>20-20-40</strong> (администратор)</p>
+									<p><a href="#">www.hotel-laletin.ru</a></p>
+									<p><a href="#">info@hotel-laletin.ru</a></p>
+									<h5><a href="#">Заказать обратный звонок</a></h5>
+								</div>
+								<div>
+									<span class="status"></span>
+									<h3><a href="#">Режим работы:</a></h3>
+									<p>Сегодня 10:00 — 18:00<br>
+									закроется через 15 минут</p>
+								</div>
+							</div>
+							<div class="information">
+								<div>
+									<p>Не знаете чем заняться в свободное время? Загородный комплекс «Форсаж» приглашает вас в увлекательное часовое путешествие на квадроцикле. Вас ждет много впечатлений и эмоций. Катание на квадроцикле — это активный и необычный отдых, который не забывается!</p>
+									<p>Квадроциклы — это просто уникальное транспортное средство для позитивных людей с активной жизненной позицией. Они позволят в полной мере вам ощутить на себе свободу передвижения. Эти машины легкие и маневренные, они способны доставить взрослым и детям самые незабываемые радостные минуты передвижения. У квадроциклов исключительно высокая проходимость, недоступная ни одному автомобилю или мотоциклу. Особых проблем не составит научиться управлять этой техникой, каждому под силу это сделать. Вы сможете покататься по полю, где нет преград, или совершить прогулку по лесу. Все зависит от ваших пожеланий и предпочтений.</p>
+									<p>Если вам надоели серые будние или вы не знаете, как провести время — приезжайте в «Форсаж» и прокатитесь на квадроцикле. Всплеск адреналина и положительных эмоций вам гарантирован! С нами никому не будет скучно!</p>
+								</div>
+								<div>
+									<h3>Условия и детали</h3>
+									<p>Перед тем, как поучаствовать в акции обязательно ознакомьтесь с ее условиями, чтобы потом не было каких-либо недоразумений или недовольств.</p>
+									<ul class="details">
+										<li>Одновременно могут кататься максимум 2 человека;</li>
+										<li>К катанию допускаются дети от 10 до 14 лет в качестве пассажиров (за инструктором) с доплатой 500 рублей (доплата осуществляется на месте);</li>
+										<li>Для катания необходимо наличие шлема, можно принести свой, а можно арендовать — 250 рублей;</li>
+										<li>Возможна аренда непромокаемого камуфляжа — 200 рублей;</li>
+										<li>Маршрут прогулки (поле, лес) производится на усмотрение инструктора;</li>
+										<li>При себе необходимо иметь паспорт и залог - 5000 рублей.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="other">
+						<h3>Другие акции</h3>
+						<ul>
+							<li>
+								<h6>80<sup>%</sup></h6>
+								<div>
+									<div>
+										<img src="./pic/spec9.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Целый день в аквапарке со скидкой 80%</a></h3>
+									<p><a href="#">Европа, аквапарк</a></p>
+								</div>
+							</li>
+							<li>
+								<h6>50<sup>%</sup></h6>
+								<div>
+									<div>
+										<img src="./pic/spec1.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Скидка 50% на 2 часа игры в боулинг</a></h3>
+									<p><a href="#">Зенит, боулинг-центр</a></p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<div>
+										<img src="./pic/spec4.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Бесплатная игра в русский бильярд</a></h3>
+									<p><a href="#">Deutsche Pub, ресторан-бар</a></p>
+								</div>
+							</li>
+							<li>
+								<h6>30<sup>%</sup></h6>
+								<div>
+									<div>
+										<img src="./pic/spec5.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Необычное свидание и фотосессия для двоих со скидкой 30%</a></h3>
+									<p><a href="#">Язь, арт-студия</a></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+		<div>
+			<h5>© 2010-2013. «НА ВСЕ 360°»  — 3D-путеводитель по Вашему городу.</h5>
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">О проекте</a></li>
+						<li><a href="#">Обзоры</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Партнеры</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+					</ul>
+				</li>
+			</ul>
+			<h6>Размещенный на сайте контент предназначен для просмотра лицами старше 18 лет.</h6>
+			<div>
+				<p>Следите за нами в соцсетях:</p>
+				<ul>
+					<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+					<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+					<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+					<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="fade"></div>
+	<div class="modal" data-modal="ordercall">
+		<h3>Заказать звонок</h3>
+		<div>
+			<h6>Меня зовут</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Мой телефон</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Я из города</h6>
+			<p><input type="text" placeholder="Петропавловск-Камчатский"></p>
+		</div>
+		<div>
+			<h6>Я по вопросу</h6>
+			<ul>
+				<li><input type="radio" name="r1" checked> создание 3D-тура</li>
+				<li><input type="radio" name="r1"> сотрудничества</li>
+				<li><input type="radio" name="r1"> покупки франшизы</li>
+				<li><input type="radio" name="r1"> хочу на <s>море</s> работу к Вам</li>
+			</ul>
+		</div>
+		<button><span>Жду звонка</span></button>
+	</div>
+	<div class="modal" data-modal="ordercallvalidation">
+		<h3>Заказать звонок</h3>
+		<div class="error">
+			<h6>Меня зовут</h6>
+			<p><input type="text" value="ус"> <em>Неверный формат данных</em></p>
+		</div>
+		<div class="success">
+			<h6>Мой телефон</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Я по вопросу</h6>
+			<ul>
+				<li><input type="radio" name="r1" checked> создание 3D-тура</li>
+				<li><input type="radio" name="r1"> сотрудничества</li>
+				<li><input type="radio" name="r1"> покупки франшизы</li>
+				<li><input type="radio" name="r1"> хочу на <s>море</s> работу к Вам</li>
+			</ul>
+		</div>
+		<button class="active"><span>Жду звонка</span></button>
+	</div>
+	<div class="modal add" data-modal="add">
+		<h3>Заказать звонок</h3>
+		<div>
+			<h6>Меня зовут</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><textarea placeholder="Петропавловск-Камчатский,"></textarea></p>
+		</div>
+		<div>
+			<h6>Телефон заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<button><span>Оставить заявку</span></button>
+	</div>
+	<div class="modal add" data-modal="addvalidation">
+		<h3>Заказать звонок</h3>
+		<div class="error">
+			<h6>Меня зовут</h6>
+			<p><input type="text" value="ус"> <em>Неверный формат данных</em></p>
+		</div>
+		<div class="success">
+			<h6>Название заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><textarea placeholder="Петропавловск-Камчатский,"></textarea></p>
+		</div>
+		<div>
+			<h6>Телефон заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<button class="active"><span>Оставить заявку</span></button>
+	</div>
+	<div class="modal add" data-modal="addmessage">
+		<h3>Заявка успешно отправлена</h3>
+		<h5>Благодарим за проявленный интерес к нашему сервису.<br>
+		В ближайшее время с Вами свяжется наш менеджер.</h5>
+	</div>
+	<div class="modal" data-modal="registered">
+		<h3>Благодарим за регистрацию</h3>
+		<h5>Теперь Вы стали полноправным пользователем сервиса «НА ВСЕ 360°» и можете воспользоваться всеми доступными сервисами.</h5>
+	</div>
+	<div class="modal recover" data-modal="recover">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div>
+			<h6>E-mail</h6>
+			<p><input type="text"></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recoverrepeat">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div class="repeat">
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"> <span></span></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovervalidation">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div>
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"></p>
+		</div>
+		<button class="active"><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovererror">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div class="error">
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"> <em>Пользователей с данным e-mail в базе не найдено.<br> Проверьте правильность ввода e-mail</em></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovermessage">
+		<h3>Восстановление пароля</h3>
+		<h5>На указанный e-mail отправлено письмо с дальнейшими инструкциями по восстановлению доступа.</h5>
+		<h5>Если письмо не будет получено в течении 10 минут, пожалуйста, проверьте папку СПАМ в указанном почтовом ящике или повторите процедуру восстановления доступа.</h5>
+	</div>
+	<div class="found">
+		<p>Найдено заведений: <span>35</span></p>
+		<p><a href="#">Показать</a></p>
+	</div>
+	<div class="filterup">
+		<ul>
+			<li class="active"><a href="#"><span>Тип заведения</span></a></li>
+			<li><a href="#"><span>Особенности</span></a></li>
+			<li><a href="#"><span>Район</span></a></li>
+			<li><a href="#"><span>Расположение</span></a></li>
+		</ul>
+		<div>
+			<ul>
+				<li><input type="checkbox"> Мини-отели</li>
+				<li><input type="checkbox"> Мини-отели</li>
+				<li><input type="checkbox"> Бизнес-отели</li>
+				<li><input type="checkbox"> Бизнес-отели</li>
+				<li><input type="checkbox"> Загородные комплексы</li>
+				<li><input type="checkbox"> Загородные комплексы</li>
+				<li><input type="checkbox"> Хостелы</li>
+				<li><input type="checkbox"> Хостелы</li>
+			</ul>
+			<button><span>Искать</span></button>
+			<h5><a href="#">Сбросить все</a></h5>
+		</div>
+	</div>
+	<!--<span class="preload"></span>-->
+</body>
+</html>

@@ -476,6 +476,13 @@ button::-moz-focus-inner {
 	height:20px;
 	background:url('../img/phone_icon.png') no-repeat left top;
 }
+.panel .city h6 span a {
+	color:#b6abfd;
+	text-decoration:none;
+}
+.panel .city h6 span a:after {
+	display:none;
+}
 .panel .language {
 	position:absolute;
 	left:314px;
@@ -962,7 +969,7 @@ button::-moz-focus-inner {
 	display:inline-block;
 	vertical-align:top;
 	white-space:nowrap;
-	margin:9px 0 0 11px;
+	margin:9px 0 -10px 11px;
 }
 .catalog .introduction h1 span em {
 	display:inline-block;
@@ -1237,7 +1244,7 @@ button::-moz-focus-inner {
 .lb .banner h5 {
 	position:absolute;
 	left:-10px;
-	top:20px;
+	bottom:50px;
 	width:120px;
 	color:#ffffff;
 	font-size:14px;
@@ -1270,11 +1277,11 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 0 15px;
 }
-.rb .list > .nav {
+.rb .list > .nav, .rb .spec > .nav {
 	height:39px;
 	margin:0 0 14px;
 }
-.rb .list > .nav h3 {
+.rb .list > .nav h3, .rb .spec > .nav h3 {
 	float:left;
 	font-size:24px;
 	line-height:30px;
@@ -1282,16 +1289,16 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 20px 0 0;
 }
-.rb .list > .nav ul {
+.rb .list > .nav ul, .rb .spec > .nav ul {
 	float:left;
 	margin:0;
 }
-.rb .list > .nav ul li {
+.rb .list > .nav ul li, .rb .spec > .nav ul li {
 	float:left;
 	font-size:15px;
 	line-height:20px;
 }
-.rb .list > .nav ul li a {
+.rb .list > .nav ul li a, .rb .spec > .nav ul li a {
 	position:relative;
 	display:block;
 	color:#888888;
@@ -1304,10 +1311,10 @@ button::-moz-focus-inner {
 	-moz-transition:background, color, padding-left 0.25s ease-in-out;
 	-o-transition:background, color, padding-left 0.25s ease-in-out;
 }
-.rb .list > .nav ul li a span {
+.rb .list > .nav ul li a span, .rb .spec > .nav ul li a span {
 	position:relative;
 }
-.rb .list > .nav ul li a span:after {
+.rb .list > .nav ul li a span:after, .rb .spec > .nav ul li a span:after {
 	content:'';
 	position:absolute;
 	left:0;
@@ -1320,7 +1327,7 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 }
-.rb .list > .nav ul li a:after {
+.rb .list > .nav ul li a:after, .rb .spec > .nav ul li a:after {
 	content:'';
 	position:absolute;
 	left:50%;
@@ -1333,14 +1340,14 @@ button::-moz-focus-inner {
 	opacity:0;
 	display:none\0;
 }
-.rb .list > .nav ul li a:hover {
+.rb .list > .nav ul li a:hover, .rb .spec > .nav ul li a:hover {
 	color:#6a5acd;
 	text-decoration:none;
 }
-.rb .list > .nav ul li a:hover span:after {
+.rb .list > .nav ul li a:hover span:after, .rb .spec > .nav ul li a:hover span:after {
 	border-bottom:1px dotted #bcb6e4;
 }
-.rb .list > .nav ul li.active a {
+.rb .list > .nav ul li.active a, .rb .spec > .nav ul li.active a {
 	color:#ffffff;
 	text-decoration:none;
 	background:#a0a0a0;
@@ -1348,22 +1355,22 @@ button::-moz-focus-inner {
 	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.75);
 	box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.75);
 }
-.rb .list > .nav ul li.active a:after {
+.rb .list > .nav ul li.active a:after, .rb .spec > .nav ul li.active a:after {
 	opacity:1;
 	display:block\0;
 }
-.rb .list > .nav ul li.active a span:after {
+.rb .list > .nav ul li.active a span:after, .rb .spec > .nav ul li.active a span:after {
 	opacity:0;
 	display:none\0;
 }
-.rb .list > .nav ul li.newest a {
+.rb .list > .nav ul li.newest a, .rb .spec > .nav ul li.newest a {
 	color:#9b1c61;
 	padding-left:20px;
 }
-.rb .list > .nav ul li.newest a span:after {
+.rb .list > .nav ul li.newest a span:after, .rb .spec > .nav ul li.newest a span:after {
 	border-bottom:1px dotted #d09dbb;
 }
-.rb .list > .nav ul li.newest a span:before {
+.rb .list > .nav ul li.newest a span:before, .rb .spec > .nav ul li.newest a span:before {
 	content:'';
 	position:absolute;
 	left:-19px;
@@ -1372,24 +1379,24 @@ button::-moz-focus-inner {
 	height:13px;
 	background:url('../img/list_newest_check.png') no-repeat left top;
 }
-.rb .list > .nav ul li.newest a:hover {
+.rb .list > .nav ul li.newest a:hover, .rb .spec > .nav ul li.newest a:hipver {
 	color:#6a5acd;
 	text-decoration:none;
 }
-.rb .list > .nav ul li.newest a:hover span:after {
+.rb .list > .nav ul li.newest a:hover span:after, .rb .spec > .nav ul li.newest a:hover span:after {
 	border-bottom:1px dotted #bcb6e4;
 }
-.rb .list > .nav ul li.newest a:hover span:before {
+.rb .list > .nav ul li.newest a:hover span:before, .rb .spec > .nav ul li.newest a:hover span:before {
 	background-position:0 -26px;
 }
-.rb .list > .nav ul li.newest.active a span:before {
+.rb .list > .nav ul li.newest.active a span:before, .rb .spec > .nav ul li.newest.active a span:before {
 	background-position:0 -13px;
 }
-.rb .list > .nav ul li.newest.active a {
+.rb .list > .nav ul li.newest.active a, .rb .spec > .nav ul li.newest.active a {
 	color:#ffffff;
 	padding-left:34px !important;
 }
-.rb .list > .sort {
+.rb .list > .sort, .rb .spec > .sort {
 	position:relative;
 	z-index:10;
 	height:36px;
@@ -1398,17 +1405,23 @@ button::-moz-focus-inner {
 	border-top:1px solid #dbdbdb;
 	border-bottom:1px solid #dbdbdb;
 }
-.rb .list > .sort .view {
+.rb .list > .sort ul, .rb .list > .sort p, .rb .spec > .sort ul, .rb .spec > .sort p {
+	float:right;
+}
+.rb .list > .sort :first-child, .rb .spec > .sort :first-child {
+	float:left;
+}
+.rb .list > .sort .view, .rb .spec > .sort .view {
 	margin:0;
 }
-.rb .list > .sort .view li {
+.rb .list > .sort .view li, .rb .spec > .sort .view li {
 	float:left;
 	margin:0 0 0 6px;
 }
-.rb .list > .sort .view li:first-child {
+.rb .list > .sort .view li:first-child, .rb .spec > .sort .view li:first-child {
 	margin-left:0;
 }
-.rb .list > .sort .view li a {
+.rb .list > .sort .view li a, .rb .spec > .sort .view li a {
 	overflow:hidden;
 	display:block;
 	background:url('../img/list_sort_li.png') repeat-x top;
@@ -1422,22 +1435,22 @@ button::-moz-focus-inner {
 	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.1);
 	box-shadow:0 1px 2px rgba(0,0,0,0.1);
 }
-.rb .list > .sort .view li a:hover {
+.rb .list > .sort .view li a:hover, .rb .spec > .sort li a:hover {
 	background-position:0 -34px;
 }
-.rb .list > .sort .view li a span {
+.rb .list > .sort .view li a span, .rb .spec > .sort li a span {
 	display:inline-block;
 	width:34px;
 	height:34px;
 	vertical-align:top;
 }
-.rb .list > .sort .view li.lines a span {
+.rb .list > .sort .view li.lines a span, .rb .spec > .sort .view li.lines a span {
 	background:url('../img/list_lines_icon.png') no-repeat left top;
 }
-.rb .list > .sort .view li.tiles a span {
+.rb .list > .sort .view li.tiles a span, .rb .spec > .sort .view li.tiles a span {
 	background:url('../img/list_tiles_icon.png') no-repeat left top;
 }
-.rb .list > .sort .view li a em {
+.rb .list > .sort .view li a em, .rb .spec > .sort .view li a em {
 	display:none;
 	color:#ffffff;
 	font-size:15px;
@@ -1446,10 +1459,10 @@ button::-moz-focus-inner {
 	vertical-align:top;
 	padding:8px 9px 4px 0;
 }
-.rb .list > .sort .view li.active a em {
+.rb .list > .sort .view li.active a em, .rb .spec > .sort li.active a em {
 	display:inline-block;
 }
-.rb .list > .sort .view li.active a {
+.rb .list > .sort .view li.active a, .rb .spec > .sort li.active a {
 	background:#a0a0a0;
 	border:1px solid #8b8b8b;
 	border-top:1px solid #757575;
@@ -1458,14 +1471,13 @@ button::-moz-focus-inner {
 	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 #ffffff;
 	box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 #ffffff;
 }
-.rb .list > .sort .view li.active a span {
+.rb .list > .sort .view li.active a span, .rb .spec > .sort li.active a span {
 	background-position:0 -34px;
 }
-.rb .list > .sort p {
-	float:right;
+.rb .list > .sort p, .rb .spec > .sort p {
 	margin:0;
 }
-.rb .list > .sort p strong {
+.rb .list > .sort p strong, .rb .spec > .sort p strong {
 	float:left;
 	font-size:15px;
 	line-height:22px;
@@ -1800,6 +1812,9 @@ button::-moz-focus-inner {
 	width:100%;
 	height:100%;
 	background:url('../img/button_bg.png') repeat-x -34px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
 	opacity:0;
 	display:none\0;
 	transition:all 0.25s ease-in-out;
@@ -2249,8 +2264,15 @@ button::-moz-focus-inner {
 	position:relative;
 	color:#ffffff;
 	text-align:center;
-	padding:16px 0 8px;
 	background:#505050;
+}
+.business a {
+	position:relative;
+	z-index:5;
+	display:block;
+	color:#ffffff;
+	text-decoration:none;
+	padding:16px 0 8px;
 }
 .business:before, .business:after {
 	content:'';
@@ -2364,6 +2386,7 @@ button::-moz-focus-inner {
 	margin:0 0 59px;
 }
 .lb .filter > p {
+	min-height:132px;
 	font-size:15px;
 	line-height:22px;
 	margin:-3px 0 35px;
@@ -2605,6 +2628,70 @@ button::-moz-focus-inner {
 	padding:0 18px;
 	background:#f3f3f3;
 }
+.lb .filter > div > div.popular {
+	padding:7px 18px 14px;
+}
+.lb .filter > div > div.popular ul {
+	display:block !important;
+}
+.lb .filter > div > div.interval > div {
+	display:block !important;
+	height:36px;
+	margin:12px 0 6px;
+}
+.lb .filter > div > div.interval > div p {
+	position:relative;
+	float:left;
+	margin:0 0 0 20px;
+}
+.lb .filter > div > div.interval > div p:first-child {
+	margin-left:0;
+}
+.lb .filter > div > div.interval > div p:before {
+	content:'';
+	position:absolute;
+	left:-15px;
+	top:17px;
+	width:10px;
+	height:1px;
+	background:#bbbbbb;
+}
+.lb .filter > div > div.interval > div p:first-child:before {
+	display:none;
+}
+.lb .filter > div > div.interval > div p:after {
+	content:'';
+	position:absolute;
+	right:10px;
+	top:10px;
+	width:16px;
+	height:16px;
+	background:url('../img/calendar_icon.png') no-repeat left top;
+}
+.lb .filter > div > div.interval > div p input[type="text"] {
+	position:relative;
+	width:43px;
+	font-size:15px;
+	padding:8px 26px 7px 9px;
+	background:#ffffff;
+	border:1px solid #bbbbbb;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	transition:border-color 0.25s ease-in-out;
+	-webkit-transition:border-color 0.25s ease-in-out;
+	-moz-transition:border-color 0.25s ease-in-out;
+	-o-transition:border-color 0.25s ease-in-out;
+}
+.lb .filter > div > div.calendar > div {
+	display:block;
+}
+
+
+
 .lb .share {
 	text-align:center;
 	margin:0 0 24px;
@@ -3782,9 +3869,9 @@ button::-moz-focus-inner {
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
 	border-radius:4px;
-	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 #ffffff;
-	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 #ffffff;
-	box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 #ffffff;
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
 }
 .sort .selectbox .dropdown {
 	top:37px !important;
@@ -3865,6 +3952,128 @@ button::-moz-focus-inner {
 	display:block;
 	border:0;
 	background:url('../img/slider_range.png') repeat-x top;
+}
+.ui-datepicker {
+	z-index:50 !important;
+	width:180px;
+	padding:16px 14px 10px;
+	margin-top:1px;
+	background:#ffffff;
+	border:1px solid #bbbbbb;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+}
+.filter .calendar .ui-datepicker {
+	padding:2px 0 0;
+	background:none;
+	border:0;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+.ui-datepicker .ui-datepicker-header {
+	position:relative;
+	text-align:center;
+	padding:0 0 9px;
+	border-bottom:1px solid #bbbbbb;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev, .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+	position:absolute;
+	top:0;
+	z-index:10;
+	display:block;
+	width:8px;
+	height:15px;
+	cursor:pointer;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+	left:0;
+	background:url('../img/calendar_prev.png') no-repeat left top;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+	right:0;
+	background:url('../img/calendar_next.png') no-repeat left top;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover {
+	background-position:0 -15px;
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+	position:relative;
+	color:#6a5acd;
+	font-size:15px;
+	line-height:18px;
+	font-weight:bold;
+	text-align:center;
+	text-transform:uppercase;
+}
+.ui-datepicker .ui-datepicker-calendar {
+	margin:0 0 6px 3px;
+}
+.ui-datepicker .ui-datepicker-calendar th {
+	width:24px;
+	height:24px;
+	color:#202020;
+	font-size:12px;
+	line-height:16px;
+	text-transform:uppercase;
+	padding:8px 0 1px;
+}
+.ui-datepicker .ui-datepicker-calendar td {
+	width:24px;
+	height:24px;
+	font-size:13px;
+	line-height:14px;
+	padding:3px 1px 3px 0;
+}
+.ui-datepicker .ui-datepicker-calendar td a, .ui-datepicker .ui-datepicker-calendar td span {
+	position:relative;
+	display:block;
+	color:#888888;
+	text-align:center;
+	text-decoration:none;
+	padding:7px 3px 3px 3px;
+}
+.ui-datepicker .ui-datepicker-calendar td.ui-state-disabled span {
+	color:#bbbbbb;
+}
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today a {
+	color:#6a5acd;
+	font-weight:bold;
+	text-shadow:0 1px 0 rgba(255,255,255,0.5);
+	padding:6px 2px 2px 2px !important;
+	background:#bbb5e1 !important;
+	border:1px solid #6a5acd !important;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.4);
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.4);
+}
+.ui-datepicker .ui-datepicker-calendar td a:hover {
+	color:#6a5acd;
+	font-weight:bold;
+	padding:5px 1px 1px 1px;
+	border:2px solid #6a5acd;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+.ui-datepicker .ui-datepicker-calendar td .ui-state-custom:after {
+	content:'';
+	position:absolute;
+	right:0;
+	top:3px;
+	width:5px;
+	height:6px;
+	background:url('../img/calendar_custom.png') no-repeat left top;
+}
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today a:after, .ui-datepicker .ui-datepicker-calendar td a:hover:after {
+	display:none;
 }
 
 /* Preloader */
@@ -3990,6 +4199,73 @@ button::-moz-focus-inner {
 	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.08);
 	box-shadow:0 1px 2px rgba(0,0,0,0.08);
 }
+.item.single  > div {
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+.item > div h2 {
+	position:relative;
+	font-size:24px;
+	line-height:30px;
+	font-weight:normal;
+	padding:0 40px 0 0;
+	margin:-9px 19px 21px;
+}
+.item > div h2 a {
+	position:relative;
+	color:#6a5acd;
+	text-decoration:none;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.item > div h2 a:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:4px;
+	width:100%;
+	border-bottom:1px solid #c3bdeb;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.item > div h2 a:hover {
+	color:#9b1c61;
+}
+.item > div h2 a:hover:after {
+	border-bottom:1px solid #e19ebc;
+}
+.item > div h2 span {
+	position:absolute;
+	right:0;
+	top:-1px;
+	width:30px;
+	height:32px;
+	cursor:pointer;
+	margin:0 0 0 2px;
+	background-color:#a0a0a0;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-image:url('../img/list_favorite_icon.png');
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.item > div h2 span:hover {
+	background-color:#c3bdeb;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
 .item > div > div {
 	position:relative;
 	clear:both;
@@ -4006,12 +4282,12 @@ button::-moz-focus-inner {
 	height:1px;
 	background:#dbdbdb;
 }
-.item > div > div:first-child {
+.item > div > div:first-of-type {
 	padding-top:0;
 	margin-top:0;
 	border-top-width:0;
 }
-.item > div > div:first-child:before {
+.item > div > div:first-of-type:before {
 	display:none;
 }
 .item .contacts {
@@ -4307,6 +4583,12 @@ button::-moz-focus-inner {
 .item .media .share > div img {
 	margin:0 0 -3px;
 }
+.item .media .picture {
+	margin:0 0 -6px;
+}
+.item .media .picture img {
+	max-width:640px;
+}
 .item .order {
 	float:left;
 	width:240px;
@@ -4352,7 +4634,9 @@ button::-moz-focus-inner {
 	margin:0 0 6px;
 }
 .item .order > div > div h5 span {
+	display:block;
 	color:#9b1c61;
+	padding:1px 0 0;
 }
 .item .order button {
 	position:relative;
@@ -4401,13 +4685,13 @@ button::-moz-focus-inner {
 .item .information > div > ul li {
 	position:relative;
 	display:inline-block;
-	width:137px;
+	width:147px;
 	color:#202020;
 	font-size:15px;
 	line-height:22px;
 	vertical-align:top;
 	padding:0 0 0 33px;
-	margin:0 -3px 12px 20px;
+	margin:0 -3px 12px 20px !important;
 }
 .item .information > div > ul li span {
 	position:absolute;
@@ -4465,6 +4749,146 @@ button::-moz-focus-inner {
 	font-weight:normal;
 	padding:0;
 	margin:-1px 0 17px;
+}
+.item .action {
+	float:left;
+	width:240px;
+}
+.item .action > h5 {
+	font-size:15px;
+	line-height:25px;
+	font-weight:normal;
+	text-align:center;
+	padding:15px 14px 14px;
+	margin:0 0 53px;
+	background:#f3f3f3;
+}
+.item .action > h5 span {
+	display:block;
+	color:#888888;
+}
+.item .action > div {
+	position:relative;
+	text-align:center;
+	padding:69px 18px 20px;
+	margin:0 0 27px;
+	border:2px solid #cd8eb2;
+	border-bottom-width:0;
+}
+.item .action > div:after {
+	content:'';
+	position:absolute;
+	left:-2px;
+	bottom:-22px;
+	width:240px;
+	height:22px;
+	background:url('../img/item_action_after.png') no-repeat left top;
+}
+.item .action > div h3 {
+	position:absolute;
+	left:-2px;
+	top:-38px;
+	width:240px;
+	font-size:28px;
+	line-height:34px;
+	font-weight:normal;
+	text-align:center;
+	padding:0;
+	margin:0;
+}
+.item .action > div h3 strong {
+	position:relative;
+	display:inline-block;
+	color:#9b1c61;
+	font-size:72px;
+	line-height:72px;
+	letter-spacing:-3px;
+	padding:0 9px 0 8px;
+	margin:0;
+	background:#ffffff;
+}
+.item .action > div h3 strong sup {
+	position:absolute;
+	right:-18px;
+	top:-1px;
+	font-size:28px;
+	line-height:34px;
+}
+.item .action > div h3 span {
+	position:relative;
+	z-index:5;
+	display:block;
+	margin:-12px 20px 0;
+}
+.item .action > div h3 em {
+	display:inline-block;
+	width:92px;
+	height:72px;
+	vertical-align:top;
+	background:#ffffff url('../img/gift_icon.png') no-repeat center 5px;
+}
+.item .action > div > div {
+	text-align:center;
+	padding:9px 0 9px;
+	border-top:1px solid #dbdbdb;
+}
+.item .action > div > div p {
+	font-size:15px;
+	line-height:25px;
+	margin:0;
+}
+.item .action > div > div p span {
+	display:block;
+	color:#888888;
+}
+.item .information .details {
+	margin:-11px 0 -8px 20px !important;
+}
+.item .information .details li {
+	position:relative;
+	display:block;
+	width:auto;
+	padding:0 0 0 20px;
+	margin:0 0 9px !important;
+}
+.item .information .details li:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:4px;
+	width:10px;
+	height:12px;
+	background:url('../img/item_details_li.png') no-repeat left top;
+}
+.item .information .details li span {
+	display:none;
+}
+.item .other {
+	padding:0;
+	margin:36px 0 32px;
+	background:none;
+	border:0;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+.item .other > h3 {
+	font-size:24px;
+	line-height:30px;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 16px;
+}
+.item .other ul {
+	white-space:nowrap;
+	margin:0;
+}
+.item .other ul li {
+	display:inline-block;
+	margin:0 17px 0 0;
+}
+.item .other ul li h3 {
+	white-space:normal;
 }
 .catalog .similar {
 	position:relative;
@@ -5009,7 +5433,7 @@ button::-moz-focus-inner {
 	box-shadow:inset 0 1px 3px rgba(0,0,0,0.4);
 }
 .item .review .message {
-	margin:30px 0 0;
+	margin:30px 0 -14px;
 }
 .item .review .message p {
 	margin:0 0 10px;
@@ -5203,10 +5627,646 @@ button::-moz-focus-inner {
 .item .poster ul li > div {
 	margin:21px 0 0;
 }
+.catalog > div .datefilter {
+	width:100%;
+	padding:6px 0;
+	border-bottom:1px solid #bbbbbb;
+}
+.catalog > div .datefilter > div {
+	width:940px;
+	height:36px;
+	margin:0 auto;
+}
+.catalog > div .datefilter > div > ul {
+	float:left;
+	margin:8px 0 6px 19px;
+}
+.catalog > div .datefilter > div > ul li {
+	float:left;
+	font-size:15px;
+	line-height:22px;
+}
+.catalog > div .datefilter > div > ul li:before {
+	content:'';
+	float:left;
+	width:1px;
+	height:20px;
+	margin:0 9px;
+	background:url('../img/datefilter_li.png') no-repeat left top;
+}
+.catalog > div .datefilter > div > ul li:first-child:before {
+	display:none;
+}
+.catalog > div .datefilter > div > ul li a {
+	position:relative;
+	color:#888888;
+	text-decoration:none;
+	transition:color 0.25s ease-in-out;
+	-webkit-transition:color 0.25s ease-in-out;
+	-moz-transition:color 0.25s ease-in-out;
+	-o-transition:color 0.25s ease-in-out;
+}
+.catalog > div .datefilter > div > ul li a:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:3px;
+	width:100%;
+	border-bottom:1px solid #c8c8c8;
+	transition:color 0.25s ease-in-out;
+	-webkit-transition:color 0.25s ease-in-out;
+	-moz-transition:color 0.25s ease-in-out;
+	-o-transition:color 0.25s ease-in-out;
+}
+.catalog > div .datefilter > div > ul li a:hover {
+	color:#9b1c61;
+}
+.catalog > div .datefilter > div > ul li a:hover:after {
+	border-bottom:1px solid #e19ebc;
+}
+.catalog > div .datefilter > div > ul li.active a {
+	color:#202020;
+}
+.catalog > div .datefilter > div > ul li.active a:after {
+	display:none;
+}
+.catalog > div .datefilter > div > div {
+	float:right;
+}
+.catalog > div .datefilter > div > div p {
+	position:relative;
+	float:left;
+	margin:0 0 0 20px;
+}
+.catalog > div .datefilter > div > div p:before {
+	content:'';
+	position:absolute;
+	left:-15px;
+	top:17px;
+	width:10px;
+	height:1px;
+	background:#bbbbbb;
+}
+.catalog > div .datefilter > div > div p:first-child:before {
+	display:none;
+}
+.catalog > div .datefilter > div > div p:after {
+	content:'';
+	position:absolute;
+	right:10px;
+	top:10px;
+	width:16px;
+	height:16px;
+	background:url('../img/calendar_icon.png') no-repeat left top;
+}
+.catalog > div .datefilter > div > div p input[type="text"] {
+	position:relative;
+	width:43px;
+	font-size:15px;
+	padding:8px 26px 7px 9px;
+	background:#ffffff;
+	border:1px solid #bbbbbb;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	transition:border-color 0.25s ease-in-out;
+	-webkit-transition:border-color 0.25s ease-in-out;
+	-moz-transition:border-color 0.25s ease-in-out;
+	-o-transition:border-color 0.25s ease-in-out;
+}
+.catalog > div .datefilter > div > div button {
+	overflow:hidden;
+	position:relative;
+	float:left;
+	color:#888888;
+	font-size:15px;
+	line-height:20px;
+	text-shadow:0 1px 0 #ffffff;
+	vertical-align:top;
+	cursor:pointer;
+	padding:8px 19px 6px;
+	margin:0 0 0 10px;
+	background:url('../img/button_bg.png') repeat-x top;
+	border:1px solid #c0c0c0;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.1);
+	box-shadow:0 1px 2px rgba(0,0,0,0.1);
+	transition:color, border-color 0.25s ease-in-out;
+	-webkit-transition:color, border-color 0.25s ease-in-out;
+	-moz-transition:color, border-color 0.25s ease-in-out;
+	-o-transition:color, border-color 0.25s ease-in-out;
+}
+.catalog > div .datefilter > div > div button:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:url('../img/button_bg.png') repeat-x -34px;
+	opacity:0;
+	display:none\0;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.catalog > div .datefilter > div > div button span {
+	position:relative;
+	z-index:1;
+}
+.catalog > div .datefilter > div > div button:hover {
+	color:#202020;
+}
+.catalog > div .datefilter > div > div button:hover:before {
+	opacity:1;
+	display:block\0;
+}
+.catalog > div .datefilter > div > div button.active {
+	color:#6a5acd;
+	padding:7px 18px 5px;
+	border:2px solid #6a5acd;
+}
+.catalog > div .datefilter > div > div button.active:hover:before {
+	opacity:1;
+	display:block\0;
+}
+.rb .spec {
+	margin:0 0 31px;
+}
+.rb .spec > .nav {
+	margin:0 0 26px;
+}
+.rb .spec .tab > ul {
+	margin:0;
+}
+.rb .spec .tab > ul li, .rb .reccslide > div .container > div .element, .item .other ul li {
+	position:relative;
+	display:inline-block;
+	width:220px;
+	vertical-align:top;
+	margin:0 17px 20px 0;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-webkit-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-moz-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-o-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+}
+.rb .reccslide > div .container > div .element {
+	float:left;
+	margin:10px;
+}
+.rb .spec .tab > ul li:nth-of-type(4n) {
+	margin-right:17px;
+}
+.rb .spec .tab > ul li:nth-of-type(3n) {
+	margin-right:-3px;
+}
+.rb .spec .tab > ul li h6, .rb .reccslide > div .container > div .element h6, .item .other ul li h6 {
+	position:absolute;
+	left:-9px;
+	top:20px;
+	z-index:5;
+	color:#ffffff;
+	font-size:28px;
+	line-height:34px;
+	padding:6px 10px 0;
+	margin:0;
+	background:#9b1c61;
+}
+.rb .spec .tab > ul li h6 sup, .rb .reccslide > div .container > div .element h6 sup, .item .other ul li h6 sup {
+	display:inline-block;
+	font-size:15px;
+	line-height:15px;
+	vertical-align:top;
+	margin:4px 0 0 1px;
+}
+.rb .spec .tab > ul li h6:before, .rb .reccslide > div .container > div .element h6:before, .item .other ul li h6:before {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:-10px;
+	border-left:10px solid transparent;
+	border-top:10px solid #691345;
+}
+.rb .spec .tab > ul li > div, .rb .reccslide > div .container > div .element > div, .item .other ul li > div {
+	overflow:hidden;
+	padding:0 0 11px;
+	background:#ffffff;
+	border:1px solid #dbdbdb;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-webkit-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-moz-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-o-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+}
+.rb .spec .tab > ul li:hover > div, .rb .reccslide > div .container > div .element:hover > div, .item .other ul li:hover > div {
+	border:1px solid #a89df4;
+	-webkit-box-shadow:0 1px 10px rgba(0,0,0,0.5);
+	-moz-box-shadow:0 1px 10px rgba(0,0,0,0.5);
+	box-shadow:0 1px 10px rgba(0,0,0,0.5);
+}
+.rb .spec .tab > ul li div > div, .rb .reccslide > div .container > div .element > div > div, .item .other ul li div > div {
+	overflow:hidden;
+	position:relative;
+	width:218px;
+	height:164px;
+	margin:0 0 12px;
+}
+.rb .spec .tab > ul li div > div img, .rb .reccslide > div .container > div .element > div > div img, .item .other ul li div > div img {
+	position:absolute;
+	left:0;
+	top:0;
+	min-width:218px;
+	min-height:164px;
+}
+.rb .spec .tab > ul li div h3, .rb .reccslide > div .container > div .element > div h3, .item .other ul li > div h3, .item .other ul li div h3 {
+	max-height:72px;
+	font-size:18px;
+	line-height:24px;
+	text-align:center;
+	padding:0;
+	margin:0 19px 3px;
+}
+.rb .spec .tab > ul > h5 {
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	color:#888888;
+	font-size:14px;
+	line-height:18px;
+	font-weight:normal;
+	text-align:center;
+	padding:0;
+	margin:8px 0 27px;
+}
+.rb .spec .tab > ul > h5:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:8px;
+	width:100%;
+	border-bottom:1px solid #dbdbdb;
+}
+.rb .spec .tab > ul > h5 span {
+	position:relative;
+	z-index:1;
+	padding:0 11px;
+	background:#f3f3f3;
+}
+.rb .reccslide > div .container > div .element > div h3 {
+	overflow:hidden;
+	min-height:48px;
+}
+.rb .spec .tab > ul li div h3 a, .rb .reccslide > div .container > div .element > div h3 a {
+	color:#6a5acd;
+	text-decoration:none;
+	background:url('../img/a_bg.png') repeat-x bottom;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .spec .tab > ul li div h3 a:hover, .rb .reccslide > div .container > div .element > div h3 a:hover {
+	color:#9b1c61;
+	background:url('../img/a_bg_hover.png') repeat-x bottom;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .spec .tab > ul li div p, .rb .reccslide > div .container > div .element > div p, .item .other ul li div p {
+	position:relative;
+	overflow:hidden;
+	font-size:15px;
+	line-height:22px;
+	text-align:center;
+	white-space:nowrap;
+	margin:0 19px 3px;
+}
+.rb .spec .tab > ul li div p:after, .rb .reccslide > div .container > div .element > div p:after, .item .other ul li div p:after {
+	content:'';
+	position:absolute;
+	right:0;
+	top:0;
+	z-index:1;
+	width:10px;
+	height:100%;
+	background:url('../img/list_h2_after.png') repeat-y left;
+}
+.rb .spec .tab > ul li div p a, .rb .reccslide > div .container > div .element > div p a, .item .other ul li div p a {
+	position:relative;
+	color:#888888;
+	text-decoration:none;
+}
+.rb .spec .tab > ul li div p a:after, .rb .reccslide > div .container > div .element > div p a:after, .item .other ul li div p a:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:3px;
+	width:100%;
+	border-bottom:1px solid #cfcfcf;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .spec .tab > ul li div p a:hover, .rb .reccslide > div .container > div .element > div p a:hover, .item .other ul li div p a:hover {
+	color:#9b1c61;
+}
+.rb .spec .tab > ul li div p a:hover:after, .rb .reccslide > div .container > div .element > div p a:hover:after, .item .other ul li div p a:hover:after {
+	border-bottom:1px solid #e19ebc;
+}
+.rb .spec .tab > div {
+	text-align:center;
+	margin:-8px 0 -10px;
+}
+.rb .spec .tab > div button {
+	overflow:hidden;
+	position:relative;
+	display:inline-block;
+	color:#888888;
+	font-size:15px;
+	line-height:20px;
+	text-shadow:0 1px 0 #ffffff;
+	vertical-align:top;
+	cursor:pointer;
+	padding:8px 19px 6px;
+	margin:8px 0 0;
+	background:url('../img/button_bg.png') repeat-x top;
+	border:1px solid #c0c0c0;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.1);
+	box-shadow:0 1px 2px rgba(0,0,0,0.1);
+	transition:color, border-color 0.25s ease-in-out;
+	-webkit-transition:color, border-color 0.25s ease-in-out;
+	-moz-transition:color, border-color 0.25s ease-in-out;
+	-o-transition:color, border-color 0.25s ease-in-out;
+}
+.rb .spec .tab > div button:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:url('../img/button_bg.png') repeat-x -34px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	opacity:0;
+	display:none\0;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .spec .tab > div button span {
+	position:relative;
+	z-index:1;
+}
+.rb .spec .tab > div button:hover {
+	color:#202020;
+}
+.rb .spec .tab > div button:hover:before {
+	opacity:1;
+	display:block\0;
+}
+.lb .reasons {
+	margin:52px 0 23px;
+}
+.lb .reasons h2 {
+	position:relative;
+	font-size:15px;
+	line-height:22px;
+	font-weight:normal;
+	text-align:center;
+	padding:23px 20px 15px;
+	margin:0 0 39px;
+	border:2px solid #c788ac;
+	border-bottom-width:0;
+}
+.lb .reasons h2:after {
+	content:'';
+	position:absolute;
+	left:-2px;
+	bottom:-22px;
+	width:220px;
+	height:22px;
+	background:url('../img/significant_h2_after.png') no-repeat left top;
+}
+.lb .reasons h2 strong {
+	position:absolute;
+	left:-1px;
+	top:-38px;
+	display:block;
+	width:100%;
+	font-size:72px;
+	line-height:72px;
+}
+.lb .reasons h2 strong em {
+	display:inline-block;
+	font-style:normal;
+	padding:0 6px;
+	background:#f3f3f3;
+}
+.lb .reasons h2 > span {
+	position:relative;
+	display:block;
+	font-size:28px;
+	line-height:32px;
+	margin:0 0 4px;
+}
+.lb .reasons h2 input {
+	position:relative;
+	width:158px;
+	font-size:15px;
+	text-align:center;
+	padding:8px 10px 7px 10px;
+	margin:5px 0 10px -2px;
+	background:#ffffff;
+	border:1px solid #bbbbbb;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.2), 0 1px 0 rgba(255,255,255,0.75);
+}
+/*.lb .reasons h2 input:focus {
+	padding:7px 9px 6px 42px;
+	border:2px solid #6a5acd;
+}*/
+.lb .reasons h2 input.error {
+	border:1px solid #9b1c61;
+}
+.lb .reasons h2 button {
+	overflow:hidden;
+	position:relative;
+	display:inline-block;
+	color:#888888;
+	font-size:15px;
+	line-height:20px;
+	text-shadow:0 1px 0 #ffffff;
+	vertical-align:top;
+	cursor:pointer;
+	padding:8px 28px 6px;
+	margin:0 0 3px;
+	background:url('../img/button_bg.png') repeat-x top;
+	border:1px solid #c0c0c0;
+	-webkit-border-radius:18px;
+	-moz-border-radius:18px;
+	border-radius:18px;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.4);
+	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.4);
+	box-shadow:0 1px 2px rgba(0,0,0,0.4);
+	transition:color, border-color 0.25s ease-in-out;
+	-webkit-transition:color, border-color 0.25s ease-in-out;
+	-moz-transition:color, border-color 0.25s ease-in-out;
+	-o-transition:color, border-color 0.25s ease-in-out;
+}
+.lb .reasons h2 button:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:url('../img/button_bg.png') repeat-x -34px;
+	opacity:0;
+	display:none\0;
+	-webkit-border-radius:18px;
+	-moz-border-radius:18px;
+	border-radius:18px;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.lb .reasons h2 button span {
+	position:relative;
+	z-index:1;
+}
+.lb .reasons h2 button.active {
+	color:#9b1c61;
+	padding:7px 18px 5px;
+	border:2px solid #9b1c61;
+}
+.lb .reasons h2 button.active:hover:before {
+	opacity:1;
+	display:block\0;
+}
+.lb .reasons p {
+	font-size:15px;
+	line-height:22px;
+	text-align:center;
+	margin:0;
+}
+.rb .reccslide {
+	margin:0 0 39px;
+}
+.rb .reccslide h2 {
+	position:relative;
+	color:#9b1c61;
+	font-size:24px;
+	line-height:27px;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 6px;
+}
+.rb .reccslide h2 a {
+	position:absolute;
+	right:0;
+	top:7px;
+	color:#888888;
+	font-size:14px;
+	line-height:18px;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .reccslide h2 a:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:3px;
+	width:100%;
+	border-bottom:1px dotted #c8c8c8;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .reccslide h2 a:hover {
+	color:#9b1c61;
+	text-decoration:none;
+}
+.rb .reccslide h2 a:hover:after {
+	border-bottom:1px dotted #d09db9;
+}
+.rb .reccslide > div {
+	width:720px;
+	margin:0 -10px 0 -10px;
+}
+.rb .reccslide > div > .container {
+	clear:both;
+	overflow:hidden;
+	width:720px;
+	height:285px;
+}
+.rb .reccslide > div .pagination {
+	width:720px;
+	text-align:center;
+	margin:10px 0 0;
+}
+.rb .reccslide > div .pagination li {
+	display:inline-block;
+	vertical-align:top;
+	margin:0 0 0 3px;
+}
+.rb .reccslide > div .pagination li:first-child {
+	margin-left:0;
+}
+.rb .reccslide > div .pagination li a {
+	display:block;
+	width:24px;
+	height:25px;
+	background:url('../img/reccsolide_pagination.png') no-repeat left top;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .reccslide > div .pagination li.current a {
+	background-position:0 -25px;
+}
+.temp {
+	display:none;
+}
 
 /* Wide */
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1260px) {
 	.panel > div, .header, .catalog .menu, .catalog > div > div, .catalog > div > div > div, .blog > div, .blog ul, .footer > div {
 		width:1180px;
 	}
@@ -5264,5 +6324,46 @@ button::-moz-focus-inner {
 	}
 	.item .review .message p textarea {
 		width:842px;
+	}
+	.catalog > div .datefilter > div {
+		width:1180px;
+	}
+	.rb .spec .tab > ul li:nth-of-type(3n) {
+		margin-right:17px;
+	}
+	.rb .spec .tab > ul li:nth-of-type(4n) {
+		margin-right:-3px;
+	}
+	.rb .reccslide > div {
+		width:960px;
+	}
+	.rb .reccslide > div .pagination {
+		width:960px;
+	}
+	.rb .reccslide > div > .container {
+		width:960px;
+	}
+	.item.single > div {
+		display:inline-block;
+		width:938px !important;
+		vertical-align:top;
+		margin-bottom:51px;
+	}
+	.item.single .information, .item.single .media {
+		width:640px;
+	}
+	.item > div > div:before {
+		width:900px;
+	}
+	.item.single .other {
+		display:inline-block;
+		width:240px !important;
+		margin:0 -50px 0 17px;
+	}
+	.item.single .other ul {
+		white-space:normal;
+	}
+	.item.single .other > h3 {
+		margin:22px 0 21px;
 	}
 }

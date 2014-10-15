@@ -73,9 +73,104 @@ function slider() {
 		'margin-right': $('.rb .slider > div .pagination').width()+40+'px'
 	});
 }
+function spec() {
+	if ( $('.wrapper').width() >= 1240 ) {
+		var cols = 4;
+	}
+	else {
+		var cols = 3;
+	}
+	for ( var i = 0; i < Math.ceil($('.rb .spec .tab ul li').length/cols); i++ ) {
+		var max = 0;
+		for ( var j = 1; j <= cols; j++ ) {
+			$('.rb .spec .tab ul li:nth-child('+eval(i*cols+j)+')').each(function() {
+				var h = $(this).outerHeight(); 
+				max = h > max ? h : max;
+			});
+		}
+		for ( var j = 1; j <= cols; j++ ) {
+			$('.rb .spec .tab ul li:nth-child('+eval(i*cols+j)+') > div').outerHeight(max);
+		}
+	}
+}
+function reccslide() {
+	$('.wrapper').append('<div class="temp"></div>');
+	$('.reccslide > div .element:not(.cloned)').detach().appendTo($('.temp'));
+	$('.reccslide > div .slides_control, .reccslide > div .pagination').remove();
+	$('.reccslide > div .container > div').remove();
+	var rl = $('.temp .element').size();
+	if ( $('.wrapper').width() >= 1260 ) {
+		var cols = 4;
+	}
+	else {
+		var cols = 3;
+	}
+	for ( var i = 0; i < rl/cols; i++ ) {
+		$('.reccslide > div .container').append('<div></div>');
+		for ( var j = 1; j <= cols; j++ ) {
+			$('.temp .element:first-child').detach().appendTo($('.reccslide > div .container > div:nth-child('+eval(i+1)+')'));
+		}
+	}
+	var lastsize = $('.reccslide > div .container > div:last-child .element').size();
+	$('.reccslide > div .container > div:last-child').each(function() {
+		if ( lastsize < cols ) {
+			for ( i = 1; i <= cols-lastsize; i++ ) {
+				$('.reccslide > div .container > div:first-child .element:nth-child('+i+')').clone().appendTo('.reccslide > div .container > div:last-child').addClass('cloned');
+			}
+		}
+	});
+	$('.reccslide > div').slides({
+		generatePagination: true,
+		generateNextPrev: false,
+		container: 'container',
+		effect: 'slide',
+		slideSpeed: 500,
+		slideEasing: 'easeInOutCubic',
+		play: 10000,
+		pause: 2500
+	});
+	$('.wrapper .temp').remove();
+}
+function rebuild() {
+	if ( $('.wrapper').width() >= 1260 ) {
+		re = 0;
+	}
+	else {
+		re = 1;
+	}
+	$('input.re').val(re);
+}
+function otheritem() {
+	if ( $(window).width() < 1260 ) {
+		var max = 0;
+		$('.item .other ul li > div').each(function() {
+			var h = $(this).outerHeight(); 
+			max = h > max ? h : max;
+		});
+		$('.item .other ul li > div').outerHeight(max);
+	}
+	else {
+		$('.item .other ul li > div').css({
+			'height': 'auto'
+		});
+	}
+}
 $(window).resize(function() {
 	if ( $('.slider').length > 0 ) {
 		slider();
+	}
+	if ( $('.rb .spec .tab').length > 0 ) {
+		spec();
+	}
+	if ( $('.reccslide').length > 0 ) {
+		rebuild();
+		$('input.re').change(function() {
+			reccslide();
+			$('.reccslide > div .pagination li:first-child a').trigger('click');
+		});
+	}
+	if ( $('.item .other').length > 0 ) {
+		otheritem();
 	}
 });
 $(document).ready(function() {
@@ -83,7 +178,7 @@ $(document).ready(function() {
 	if ( $('.slider').length > 0 ) {
 		$('.slider > div').slides({
 			generatePagination: true,
-			generateNextPrev: true,
+			generateNextPrev: false,
 			container: 'container',
 			effect: 'slide',
 			slideSpeed: 500,
@@ -98,6 +193,15 @@ $(document).ready(function() {
 		$('.slider').bind('swipeleft', function() {
 			$('.slider .next').trigger('click');
 		});
+	}
+	if ( $('.reccslide').length > 0 ) {
+		var re;
+		$('.wrapper').append('<input type="hidden" class="re" value="'+re+'">')
+		rebuild();
+		reccslide();
+	}
+	if ( $('.item .other').length > 0 ) {
+		otheritem();
 	}
 	$('.header .search h6 span').bind('click', function() {
 		$(this).parent().siblings().find('input').val($(this).text());
@@ -391,6 +495,26 @@ $(document).ready(function() {
 			return false;
 		});
 	});
+	$('.rb .spec > .nav ul li a').bind('click', function() {
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		return false;
+	});
+	if ( $('.rb .spec .tab').length > 0 ) {
+		spec();
+	}
+	$('.filter .calendar > div, .lb .filter > div > div.interval > div p input[type="text"], .catalog > div .datefilter > div > div p input[type="text"]').datepicker({
+		prevText: '',
+		nextText: '',
+		firstDay: 1,
+		dateFormat: 'dd.mm',
+		showOtherMonths: true,
+		dayNamesMin: [ 'Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб' ],
+		monthNames: [ 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь' ],
+		hightlight: {
+			format: 'dd.mm.yy',
+			values: [ '17.10.2014' ]
+		}
+	});
 	$('input[type="checkbox"], input[type="radio"]').uniform();
 	$('select').selectbox();
 	$('input, textarea').each(function () {
@@ -411,5 +535,5 @@ $(window).load(function() {
 		$(this).css({
 			'margin-left': -$(this).outerWidth()+'px'
 		});
-	})
+	});
 });
