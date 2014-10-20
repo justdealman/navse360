@@ -155,6 +155,29 @@ function otheritem() {
 		});
 	}
 }
+function mediagallery() {
+	if ( $(window).width() < 1260 ) {
+		$('.item .media .gallery .preview, .item .media .gallery .carousel').remove();
+		$('.item .media .gallery').append('<ul class="carousel"></ul>');
+		$('.item .media .gallery .temp li').clone().appendTo('.item .media .gallery .carousel');
+		$('.item .media .gallery .carousel').jcarousel({
+			vertical: true,
+			scroll: 1,
+			animation: 250,
+			easing: 'easeInOutCubic'
+		});
+	}	
+	else {
+		$('.item .media .gallery .preview, .item .media .gallery .carousel').remove();
+		$('.item .media .gallery').append('<ul class="preview"></ul>');
+		$('.item .media .gallery .temp li').clone().appendTo('.item .media .gallery .preview');
+	}
+	$('.item .media .gallery .preview li a, .item .media .gallery .carousel .jcarousel-item a').bind('click', function() {
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		$(this).parents('.gallery').find('.big').children('img[data-img="'+$(this).attr('href')+'"]').show().siblings().hide();
+		return false;
+	}).parent().filter(':nth-child(1)').children('a').click();
+}
 $(window).resize(function() {
 	if ( $('.slider').length > 0 ) {
 		slider();
@@ -168,6 +191,9 @@ $(window).resize(function() {
 			reccslide();
 			$('.reccslide > div .pagination li:first-child a').trigger('click');
 		});
+	}
+	if ( $('.item .media .gallery').length > 0 ) {
+		mediagallery();
 	}
 	if ( $('.item .other').length > 0 ) {
 		otheritem();
@@ -199,6 +225,14 @@ $(document).ready(function() {
 		$('.wrapper').append('<input type="hidden" class="re" value="'+re+'">')
 		rebuild();
 		reccslide();
+	}
+	if ( $('.item .media .gallery').length > 0 ) {
+		mediagallery();
+		$('.item .media .gallery .big img').each(function() {
+			$(this).css({
+				'margin-left': -$(this).attr('width')/2+'px'
+			});
+		});
 	}
 	if ( $('.item .other').length > 0 ) {
 		otheritem();
@@ -515,6 +549,11 @@ $(document).ready(function() {
 			values: [ '17.10.2014' ]
 		}
 	});
+	$('.item .media > ul li a').bind('click', function() {
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		$(this).parents('.media').find('.incut').children('div[data-tab="'+$(this).attr('href')+'"]').show().siblings().hide();
+		return false;
+	}).parent().filter(':nth-child(1)').children('a').click();
 	$('input[type="checkbox"], input[type="radio"]').uniform();
 	$('select').selectbox();
 	$('input, textarea').each(function () {
