@@ -121,13 +121,19 @@ function reccslide() {
 	});
 	$('.reccslide > div').slides({
 		generatePagination: true,
-		generateNextPrev: false,
+		generateNextPrev: true,
 		container: 'container',
 		effect: 'slide',
 		slideSpeed: 500,
 		slideEasing: 'easeInOutCubic',
 		play: 10000,
 		pause: 2500
+	});
+	$('.reccslide > div').bind('swiperight', function() {
+		$('.reccslide > div .prev').trigger('click');
+	});
+	$('.reccslide > div').bind('swipeleft', function() {
+		$('.reccslide > div .next').trigger('click');
 	});
 	$('.wrapper .temp').remove();
 }
@@ -141,7 +147,7 @@ function rebuild() {
 	$('input.re').val(re);
 }
 function otheritem() {
-	if ( $(window).width() < 1260 ) {
+	if ( $(window).width() < 1260 || $.browser.msie && parseInt($.browser.version, 10) === 8 ) {
 		var max = 0;
 		$('.item .other ul li > div').each(function() {
 			var h = $(this).outerHeight(); 
@@ -156,25 +162,45 @@ function otheritem() {
 	}
 }
 function mediagallery() {
-	if ( $(window).width() < 1260 ) {
+	if ( $(window).width() < 1260 || $.browser.msie && parseInt($.browser.version, 10) === 8 ) {
 		$('.item .media .gallery .preview, .item .media .gallery .carousel').remove();
 		$('.item .media .gallery').append('<ul class="carousel"></ul>');
-		$('.item .media .gallery .temp li').clone().appendTo('.item .media .gallery .carousel');
-		$('.item .media .gallery .carousel').jcarousel({
-			vertical: true,
-			scroll: 1,
-			animation: 250,
-			easing: 'easeInOutCubic'
-		});
+		$('.item .media .gallery .temp').clone().appendTo('.item .media .gallery .carousel');
+		if ( $('.item .media .gallery .carousel li').size() > 6 ) {
+			$('.item .media .gallery .carousel').jcarousel({
+				vertical: true,
+				scroll: 1,
+				animation: 250,
+				easing: 'easeInOutCubic'
+			});
+		}
 	}	
 	else {
 		$('.item .media .gallery .preview, .item .media .gallery .carousel').remove();
 		$('.item .media .gallery').append('<ul class="preview"></ul>');
 		$('.item .media .gallery .temp li').clone().appendTo('.item .media .gallery .preview');
 	}
-	$('.item .media .gallery .preview li a, .item .media .gallery .carousel .jcarousel-item a').bind('click', function() {
+	$('.item .media .gallery .preview li a, .item .media .gallery .carousel .jcarousel-item a, .item .media .gallery .carousel > li > a').bind('click', function() {
 		$(this).parent().addClass('active').siblings().removeClass('active');
 		$(this).parents('.gallery').find('.big').children('img[data-img="'+$(this).attr('href')+'"]').show().siblings().hide();
+		return false;
+	}).parent().filter(':nth-child(1)').children('a').click();
+}
+function mediavideo() {
+	$('.item .media .video .carousel').remove();
+	$('.item .media .video').append('<ul class="carousel"></ul>');
+	$('.item .media .video .temp li').clone().appendTo('.item .media .video .carousel');
+	if ( $('.item .media .video .carousel li').size() > 6 ) {
+		$('.item .media .video .carousel').jcarousel({
+			vertical: true,
+			scroll: 1,
+			animation: 250,
+			easing: 'easeInOutCubic'
+		});
+	}
+	$('.item .media .video .carousel .jcarousel-item a, .item .media .video .carousel > li > a').bind('click', function() {
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		$(this).parents('.video').find('.big').children('div[data-video="'+$(this).attr('href')+'"]').show().siblings().hide();
 		return false;
 	}).parent().filter(':nth-child(1)').children('a').click();
 }
@@ -194,6 +220,9 @@ $(window).resize(function() {
 	}
 	if ( $('.item .media .gallery').length > 0 ) {
 		mediagallery();
+	}
+	if ( $('.item .media .video').length > 0 ) {
+		mediavideo();
 	}
 	if ( $('.item .other').length > 0 ) {
 		otheritem();
@@ -229,6 +258,14 @@ $(document).ready(function() {
 	if ( $('.item .media .gallery').length > 0 ) {
 		mediagallery();
 		$('.item .media .gallery .big img').each(function() {
+			$(this).css({
+				'margin-left': -$(this).attr('width')/2+'px'
+			});
+		});
+	}
+	if ( $('.item .media .video').length > 0 ) {
+		mediavideo();
+		$('.item .media .video .big img').each(function() {
 			$(this).css({
 				'margin-left': -$(this).attr('width')/2+'px'
 			});
