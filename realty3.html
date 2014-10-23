@@ -7,6 +7,7 @@
 	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
 	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
 	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jcarousel.js"></script>
 	<script type="text/javascript" src="./js/jqueryui.js"></script>
 	<script type="text/javascript" src="./js/jquerymobile.js"></script>
 	<script type="text/javascript" src="./js/easing.js"></script>
@@ -109,7 +110,7 @@
 						<h5><span>Афиша</span></h5>
 					</a>
 				</li>
-				<li class="active">
+				<li>
 					<a href="#">
 						<h5><span>Акции</span></h5>
 					</a>
@@ -119,7 +120,7 @@
 						<h5><span>События</span></h5>
 					</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="#">
 						<h5><span>Недвижимость</span></h5>
 					</a>
@@ -127,319 +128,212 @@
 			</ul>
 			<div>
 				<div class="introduction">
-					<h1>Акции в гостиницах Петропавловска-Камчатского</h1>
-					<h5><span>Вы здесь: <a href="#">Барнаул, проспект Красноармейский, 108</a></span></h5>
+					<h1>Георгия Исакова 145</h1>
+					<h5><em></em><span><a href="#">Вы здесь</a></span></h5>
 					<ul class="breadcrumbs">
 						<li class="home"><a href="#">Весь сайт</a></li>
-						<li><a href="#">Акции</a></li>
-						<li>Рестораны и кафе</li>
+						<li><a href="#">Недвижимость</a></li>
+						<li><a href="#">Квартиры</a></li>
+						<li>Геогия Исакова 145</li>
 					</ul>
 				</div>
-				<div>
-					<div class="lb">
-						<div class="filter">
-							<p>Выбирайте заведение и приятно экономьте свои деньги. Будьте в курсе всех акций, проводимых ресторанами и кафе города.</p>
-							<div>
+				<div class="item">
+					<ul>
+						<li><a href="1"><span>Описание</span></a></li>
+						<li><a href="3"><span>Документы</span><sup>2</sup></a></li>
+						<li><a href="4"><span>Отзывы</span><sup>26</sup></a></li>
+					</ul>
+					<div data-tab="1">
+						<div>
+							<div class="realty">
+								<h5>2-комнатная квартира</h5>
 								<div>
-									<h2><span>Подбор</span></h2>
 									<div>
-										<p>акций по параметрам</p>
-										<select>
-											<option>Рестораны и кафе</option>
-											<option>Рестораны и кафе</option>
-										</select>
+										<h6>Этаж / этажность</h6>
+										<h5>3 / 10</h5>
+										<p>кирпичный дом</p>
+									</div>
+									<div>
+										<h6>Площадь квартиры, м<sup>2</sup></h6>
+										<h5>46 / 31 / 6</h5>
+										<p>общая / жилая / кухня</p>
+									</div>
+									<div>
+										<h6>Стоимость квартиры, руб.</h6>
+										<h5><span>2 700 000</span></h5>
+										<p>35 500 за м<sup>2</sup></p>
 									</div>
 								</div>
-								<div class="calendar">
-									<div></div>
-								</div>
-								<div class="interval">
-									<h3>Интервал поиска</h3>
-									<div>
-										<p><input type="text" placeholder=""></p>
-										<p><input type="text"></p>
+								<p>Размещено: 10 октября 2014</p>
+							</div>
+							<div class="media">
+								<ul>
+									<li><a href="1"><span>Виртуальный тур</span></a></li>
+									<li><a href="2"><span>Карта</span></a></li>
+									<li><a href="3"><span>Фотографии</span></a></li>
+									<li><a href="4"><span>Видео</span></a></li>
+								</ul>
+								<h5>
+									<span class="favorite"></span>
+									<span class="compare"></span>
+								</h5>
+								<div class="incut">
+									<div data-tab="1">
+										kpano widget here
+									</div>
+									<div data-tab="2">
+										map here
+									</div>
+									<div data-tab="3">
+										<div class="gallery">
+											<div class="big">
+												<img src="./pic/media_photo1.jpg" width="600" height="400" data-img="1" alt="">
+												<img src="./pic/media_photo2.jpg" width="265" height="400" data-img="2" alt="">
+											</div>
+											<ul class="temp">
+												<li><a href="1"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="2"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="1"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="2"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="1"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="2"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="1"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="2"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="1"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="2"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="1"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="2"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="1"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="2"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="1"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="2"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="1"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+											</ul>
+										</div>
+									</div>
+									<div data-tab="4">
+										<div class="video">
+											<div class="big">
+												<div data-video="1">
+													<iframe width="100%" height="400" src="http://www.youtube.com/embed/Kqr0yUuSiTs" frameborder="0" allowfullscreen></iframe>
+												</div>
+												<div data-video="2">
+													<iframe width="100%" height="400" src="http://www.youtube.com/embed/XE3M4CLhZAM" frameborder="0" allowfullscreen></iframe>
+												</div>
+											</div>
+											<ul class="temp">
+												<li><a href="1"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+												<li><a href="2"><img src="./pic/media_preview1.jpg" width="80" height="53" alt=""></a></li>
+											</ul>
+										</div>
 									</div>
 								</div>
-								<div class="popular">
-									<ul style="display:block !important">
-										<li><input type="checkbox"> Только популярные</li>
+								<div class="share">
+									<p>Добавь на стену, чтобы не потерять:</p>
+									<div>
+										<img src="./img/vkontakte_share.png" width="95" height="20" alt="">
+									</div>
+									<div>
+										<img src="./img/facebook_share.png" width="120" height="20" alt="">
+									</div>
+									<div>
+										<img src="./img/twitter_share.png" width="114" height="20" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="contacts">
+								<div>
+									<h3>Адрес <span>~ 5.3 км от Вас</span></h3>
+									<p>ул. Красивых молдавских партизан, д. 5, строение 2, корпус 3 (с торца)</p>
+									<h5><a href="#">Смотреть на карте</a></h5>
+								</div>
+								<div>
+									<h3>Контакты:</h3>
+									<p>(3852) <strong>20-20-24</strong>, <strong>20-20-40</strong><br>
+									(923) <strong>657-15-42</strong> (администратор)</p>
+									<p><a href="#">info@hotel-laletin.ru</a></p>
+								</div>
+								<div>
+									<h5 class="sms"><a href="#">Отправить контакты по СМС</a></h5>
+								</div>
+							</div>
+							<div class="information">
+								<div>
+									<ul>
+										<li data-benefit="1">автопарковка</li>
+										<li data-benefit="12">интернет</li>
+										<li data-benefit="13">консьерж</li>
+										<li data-benefit="14">мебель</li>
+										<li data-benefit="15">охрана</li>
+										<li data-benefit="16">домашний телефон</li>
+										<li data-benefit="17">детская площадка</li>
+										<li data-benefit="18">лифт</li>
 									</ul>
+									<p>2-х комнатная квартира, Центральный р-н, ул. Красивых молдавских партизан 5, этаж 3/10, элитный жилой комплекс, 46 кв.м., встроенная мебель, встроенная кухня, 2 с/у, душевая, джакузи, лоджия застеклена теплым пластиком с тройным остеклением, достойная квартира с хорошим качественным ремонтом, с видом на фонтан, тихое, спокойное место, светлая, охрана, чистая продажа, имеется парковочное место, в цокольном этаже имеется техническое помещение оборудованное под сауну.</p>
 								</div>
-								<div>
-									<h6><span>Сбросить все фильтры</span></h6>
-								</div>
-								<div>
-									<p>соответствуют условиям</p>
-								</div>
-								<h5><span>33</span></h5>
 							</div>
 						</div>
 					</div>
-					<div class="rb">
-						<div class="map">
-							<div>
-								<script type="text/javascript" charset="utf-8" src="http://api-maps.yandex.ru/services/constructor/1.0/js/?sid=hi3li2j2gZ7fTEOP4HYTz1iDUHnYGCVx&width=100%&height=698"></script>
-							</div>
-							<h5><span>развернуть карту<em></em><strong></strong></span></h5>
+					<div data-tab="2">
+						<div>
+							Документы
 						</div>
-						<div class="spec">
-							<div class="sort">
-								<p>
-									<strong>Сортировать по:</strong>
-									<select>
-										<option>расстоянию (возрастание)</option>
-										<option>расстоянию (убывание)</option>
-									</select>
-								</p>
-							</div>
-							<div class="tab">
-								<ul>
-									<li>
-										<h6>50<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec1.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Скидка 50% на 2 часа игры в боулинг</a></h3>
-											<p><a href="#">Зенит, боулинг-центр</a></p>
-										</div>
-									</li>
-									<li>
-										<div>
-											<div>
-												<img src="./pic/spec2.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Бесплатная игра в пейтбол</a></h3>
-											<p><a href="#">Абордаж, пейнтбольный клуб</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>70<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec3.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">VIP-фотосессия в изысканных образах со скидкой 70%</a></h3>
-											<p><a href="#">Абрикос, фотостудия</a></p>
-										</div>
-									</li>
-									<li>
-										<div>
-											<div>
-												<img src="./pic/spec4.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Бесплатная игра в русский бильярд</a></h3>
-											<p><a href="#">Deutsche Pub, ресторан-бар</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>30<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec5.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Необычное свидание и фотосессия для двоих со скидкой 30%</a></h3>
-											<p><a href="#">Язь, арт-студия</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>20<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec6.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Скидка 20% на все коктейли</a></h3>
-											<p><a href="#">Зеркало, клуб-ресторан</a></p>
-										</div>
-									</li>
-									<li>
-										<div>
-											<div>
-												<img src="./pic/spec7.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Прессотерапия и кавитация со скидкой</a></h3>
-											<p><a href="#">Ромашка, салон красоты</a></p>
-										</div>
-									</li>
-									<li>
-										<div>
-											<div>
-												<img src="./pic/spec8.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Креативная стрижка и укладка почти даром</a></h3>
-											<p><a href="#">Велонда, салон красоты</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>80<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec9.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Целый день в аквапарке со скидкой 80%</a></h3>
-											<p><a href="#">Европа, аквапарк</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>50<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec1.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Скидка 50% на 2 часа игры в боулинг</a></h3>
-											<p><a href="#">Зенит, боулинг-центр</a></p>
-										</div>
-									</li>
-									<li>
-										<div>
-											<div>
-												<img src="./pic/spec2.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Бесплатная игра в пейтбол</a></h3>
-											<p><a href="#">Абордаж, пейнтбольный клуб</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>70<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec3.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">VIP-фотосессия в изысканных образах со скидкой 70%</a></h3>
-											<p><a href="#">Абрикос, фотостудия</a></p>
-										</div>
-									</li>
-									<h5><span>стр. 2 из 4</span></h5>
-									<li>
-										<h6>50<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec1.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Скидка 50% на 2 часа игры в боулинг</a></h3>
-											<p><a href="#">Зенит, боулинг-центр</a></p>
-										</div>
-									</li>
-									<li>
-										<div>
-											<div>
-												<img src="./pic/spec2.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Бесплатная игра в пейтбол</a></h3>
-											<p><a href="#">Абордаж, пейнтбольный клуб</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>70<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec3.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">VIP-фотосессия в изысканных образах со скидкой 70%</a></h3>
-											<p><a href="#">Абрикос, фотостудия</a></p>
-										</div>
-									</li>
-									<li>
-										<div>
-											<div>
-												<img src="./pic/spec4.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Бесплатная игра в русский бильярд</a></h3>
-											<p><a href="#">Deutsche Pub, ресторан-бар</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>30<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec5.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Необычное свидание и фотосессия для двоих со скидкой 30%</a></h3>
-											<p><a href="#">Язь, арт-студия</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>20<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec6.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Скидка 20% на все коктейли</a></h3>
-											<p><a href="#">Зеркало, клуб-ресторан</a></p>
-										</div>
-									</li>
-									<li>
-										<div>
-											<div>
-												<img src="./pic/spec7.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Прессотерапия и кавитация со скидкой</a></h3>
-											<p><a href="#">Ромашка, салон красоты</a></p>
-										</div>
-									</li>
-									<li>
-										<div>
-											<div>
-												<img src="./pic/spec8.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Креативная стрижка и укладка почти даром</a></h3>
-											<p><a href="#">Велонда, салон красоты</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>80<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec9.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Целый день в аквапарке со скидкой 80%</a></h3>
-											<p><a href="#">Европа, аквапарк</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>50<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec1.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Скидка 50% на 2 часа игры в боулинг</a></h3>
-											<p><a href="#">Зенит, боулинг-центр</a></p>
-										</div>
-									</li>
-									<li>
-										<div>
-											<div>
-												<img src="./pic/spec2.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">Бесплатная игра в пейтбол</a></h3>
-											<p><a href="#">Абордаж, пейнтбольный клуб</a></p>
-										</div>
-									</li>
-									<li>
-										<h6>70<sup>%</sup></h6>
-										<div>
-											<div>
-												<img src="./pic/spec3.jpg" width="218" height="164" alt="">
-											</div>
-											<h3><a href="#">VIP-фотосессия в изысканных образах со скидкой 70%</a></h3>
-											<p><a href="#">Абрикос, фотостудия</a></p>
-										</div>
-									</li>
-								</ul>
-								<div>
-									<button><span>Показать еще</span></button>
-								</div>
-							</div>
+					</div>
+					<div data-tab="3">
+						<div>
+							Отзывы
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="article">
-			<div>
-				<h2>Какие акции не стоит пропускать в Петропавловске-Камчатском</h2>
-				<img src="./pic/article.jpg" width="220" height="162" class="left" alt="">
-				<p>Проект «НА ВСЕ 360°» представляет собой 3D-путеводитель, благодаря которому можно прогуляться по улицам города, оценить достопримечательности, посетить любое заведение (ресторан, кафе, клуб, фитнес-центр, учебное учреждение, гостиницу, сауну и многие другие) и все это в формате увлекательного виртуального путешествия! «НА ВСЕ 360°» - дает, пожалуй, лучший ответ на часто встающий вопрос "Куда пойти?" (куда пойти учиться, лечиться, заняться спортом, просветиться, поужинать, развлечься, провести досуг, отдохнуть и т.д.).  Проект имеет всеохватывающую направленность и представляет собой наиболее полноценный и понятный путеводитель по городу!</p>
+				<div class="also">
+					<h3>Смотри также</h3>
+					<ul>
+						<li>
+							<div>
+								<img src="./pic/realty1.jpg" width="160" height="120" alt="">
+								<h5><a href="#">3</a></h5>
+							</div>
+							<h3><a href="#">Шевченко, 82</a></h3>
+							<p>3 комнаты, 2/10 этаж, 50  м<sup>2</sup>, панельный</p>
+							<h5>3 500 000 рублей</h5>
+						</li>
+						<li>
+							<div>
+								<img src="./pic/realty2.jpg" width="160" height="120" alt="">
+							</div>
+							<h3><a href="#">Комсомольский пр-кт, 40</a></h3>
+							<p>3 комнаты, 2/10 этаж, 50  м<sup>2</sup>, панельный</p>
+							<h5>договорная цена</h5>
+						</li>
+						<li>
+							<div>
+								<img src="./pic/realty4.jpg" width="160" height="120" alt="">
+							</div>
+							<h3><a href="#">Абаканская, 14</a></h3>
+							<p>5 комнат, деревянный</p>
+							<h5>6 500 000 рублей</h5>
+						</li>
+						<li>
+							<div>
+								<img src="./pic/realty1.jpg" width="160" height="120" alt="">
+							</div>
+							<h3><a href="#">Змеиногорский тракт, 69Л</a></h3>
+							<p>4 комнаты, 1/6 этаж, 154/82 м<sup>2</sup>, кирпичный</p>
+							<h5>договорная цена</h5>
+						</li>
+						<li>
+							<div>
+								<img src="./pic/realty1.jpg" width="160" height="120" alt="">
+								<h5><a href="#">3</a></h5>
+							</div>
+							<h3><a href="#">Шевченко, 82</a></h3>
+							<p>3 комнаты, 2/10 этаж, 50  м<sup>2</sup>, панельный</p>
+							<h5>3 500 000 рублей</h5>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="clear"></div>

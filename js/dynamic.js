@@ -22,7 +22,8 @@ function slider() {
 			'-webkit-transform': 'translateX('+(-dx)+'px)',
 			'-moz-transform': 'translateX('+(-dx)+'px)',
 			'-ms-transform': 'translateX('+(-dx)+'px)',
-			'-o-transform': 'translateX('+(-dx)+'px)'
+			'-o-transform': 'translateX('+(-dx)+'px)',
+			'margin-top': -($(this).attr('height')-$('.rb .slider > div').height())/2+'px'
 		});
 		/*$(this).css({
 			'transform': 'translate('+(-dx)+'px,'+(-dy)+'px)',
@@ -165,7 +166,7 @@ function mediagallery() {
 	if ( $(window).width() < 1260 || $.browser.msie && parseInt($.browser.version, 10) === 8 ) {
 		$('.item .media .gallery .preview, .item .media .gallery .carousel').remove();
 		$('.item .media .gallery').append('<ul class="carousel"></ul>');
-		$('.item .media .gallery .temp').clone().appendTo('.item .media .gallery .carousel');
+		$('.item .media .gallery .temp li').clone().appendTo('.item .media .gallery .carousel');
 		if ( $('.item .media .gallery .carousel li').size() > 6 ) {
 			$('.item .media .gallery .carousel').jcarousel({
 				vertical: true,
@@ -323,7 +324,14 @@ $(document).ready(function() {
 		'Конференц зал',
 		'ХЗ 1',
 		'Бар',
-		'ХЗ 2'
+		'ХЗ 2',
+		'Интернет',
+		'ХЗ 3',
+		'Мебель',
+		'Видеонаблюдение',
+		'Телефон',
+		'Консоль',
+		'Лифт'
 	];
 	$('.catalog .list .tab > ul > li').each(function() {
 		$(this).find('.status.close').hover(
@@ -454,7 +462,7 @@ $(document).ready(function() {
 			$(this).addClass('active');
 			$(this).children('span').html('свернуть карту<em></em><strong></strong>');
 			$(this).parent().children('div').stop(true,true).animate({
-				'height': '400px'
+				'height': '698px'
 			}, 500);
 			$('.rb .map .ymaps-controls-pane').show();
 		}
@@ -591,6 +599,71 @@ $(document).ready(function() {
 		$(this).parents('.media').find('.incut').children('div[data-tab="'+$(this).attr('href')+'"]').show().siblings().hide();
 		return false;
 	}).parent().filter(':nth-child(1)').children('a').click();
+	$('.lb .filter').prev('.nav').css({
+		'margin-bottom': '20px'
+	});
+	$('.lb .banner').prev('.filter').css({
+		'margin-bottom': '61px'
+	});
+	$('.lb .filter > div > div ul.direction li span').bind('click', function() {
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		return false;
+	}).filter(':first').click();
+	if ( $('.filter .range.price').length > 0 ) {
+		var pricemin = 10000;
+		var pricemax = 40000;
+		$('.filter .range.price > .slide').slider({
+			range: true,
+			min: 0,
+			max: 50000,
+			step: 500,
+			values: [pricemin, pricemax],
+			slide: function(event,ui) {
+				$('.filter .range.price').find('input.min').val('от '+ui.values[0]);
+				$('.filter .range.price').find('input.max').val('до '+ui.values[1]);
+				rangepricehandle.eq(0).find('span').empty().text(ui.values[0]);
+				rangepricehandle.eq(1).find('span').empty().text(ui.values[1]);
+			}
+		});
+		var rangepricehandle = $(this).find('.filter .range.price > .slide .ui-slider-handle');
+		$('.filter .range.price').find('input.min').val('от '+pricemin);
+		$('.filter .range.price').find('input.max').val('до '+pricemax);
+		rangepricehandle.eq(0).append('<span>'+pricemin+'</span>')
+		rangepricehandle.eq(1).append('<span>'+pricemax+'</span>')
+	}
+	if ( $('.filter .range.square').length > 0 ) {
+		var squaremin = 50;
+		var squaremax = 250;
+		$('.filter .range.square > .slide').slider({
+			range: true,
+			min: 0,
+			max: 500,
+			step: 1,
+			values: [squaremin, squaremax],
+			slide: function(event,ui) {
+				$('.filter .range.square').find('input.min').val('от '+ui.values[0]);
+				$('.filter .range.square').find('input.max').val('до '+ui.values[1]);
+				rangesquarehandle.eq(0).find('span').empty().text(ui.values[0]);
+				rangesquarehandle.eq(1).find('span').empty().text(ui.values[1]);
+			}
+		});
+		var rangesquarehandle = $(this).find('.filter .range.square > .slide .ui-slider-handle');
+		$('.filter .range.square').find('input.min').val('от '+squaremin);
+		$('.filter .range.square').find('input.max').val('до '+squaremax);
+		rangesquarehandle.eq(0).append('<span>'+squaremin+'</span>')
+		rangesquarehandle.eq(1).append('<span>'+squaremax+'</span>')
+	}
+	$('.lb .filter > div > .streets > div > ul li span').each(function() {
+		$(this).append('<em></em>');
+	});
+	if ( $('.also').length > 0 ) {
+		var max = 0;
+		$('.also ul li').each(function() {
+			var h = $(this).height(); 
+			max = h > max ? h : max;
+		});
+		$('.also ul li').height(max-21);
+	}
 	$('input[type="checkbox"], input[type="radio"]').uniform();
 	$('select').selectbox();
 	$('input, textarea').each(function () {

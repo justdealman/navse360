@@ -1,0 +1,706 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>На все 360°</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jquerymobile.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="panel">
+			<div>
+				<ul class="nav">
+					<li class="active"><a href="#">О проекте</a></li>
+					<li><a href="#">Обратная связь</a></li>
+					<li><a href="#">Помощь</a></li>
+				</ul>
+				<ul class="user">
+					<li><a href="enter">Войти</a></li>
+					<li><a href="registration">Регистрация</a></li>
+				</ul>
+				<p class="favorite">
+					<a href="#">Избранное</a>
+				</p>
+				<ul class="language">
+					<li>
+						<a href="#">RU</a>
+						<ul>
+							<li data-short="RU">Русский</li>
+							<li data-short="EN">English</li>
+							<li data-short="EE">Eesti</li>
+							<li data-short="DE">Deutch</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="city">
+					<p><a href="#">Петропавловск-Камчатский</a></p>
+					<h6><span><a href="tel:+74152556677">(4152) 55-66-77</a></span></h6>
+					<div>
+						<h3>Правильно?</h3>
+						<p>ли мы определили Ваш город?</p>
+						<button><span>Да, молодцы</span></button>
+						<h5><a href="#">Сменить город</a></h5>
+					</div>
+				</div>
+				<div class="drop enter">
+					<p class="email"><input type="text" placeholder="E-mail"></p>
+					<p class="password"><input type="password" placeholder="Пароль"></p>
+					<button><span>Войти</span></button>
+					<h5><a href="#">Забыли пароль?</a></h5>
+					<div>
+						<h6>Регистрация через социальные сети:</h6>
+						<ul>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="drop registration">
+					<p class="email"><input type="text" placeholder="Введите e-mail"></p>
+					<p class="password"><input type="password" placeholder="Укажите пароль"><span class="eye"></span></p>
+					<button class="active"><span>Регистрация</span></button>
+					<div>
+						<h6>Регистрация через социальные сети:</h6>
+						<ul>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<img src="./img/logo.png" width="220" height="66" class="logo" alt="">
+			<div class="search">
+				<div>
+					<p><input type="text" placeholder="Поиск по сайту"></p>
+					<button></button>
+				</div>
+				<h6>например, <span>где переночевать</span></h6>
+			</div>
+			<div class="add">
+				<button><span>Добавить заведение</span></button>
+				<p><a href="#">Владельцам заведений</a></p>
+			</div>
+		</div>
+		<div class="catalog">
+			<ul class="menu">
+				<li>
+					<a href="#">
+						<h5><span>Заведения</span></h5>
+						<p>Загляни в заведения города прямо на сайте</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Афиша</span></h5>
+						<p>Будь в курсе грядущих мероприятий города</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Акции</span></h5>
+						<p>Не пропусти выгодные предложения в городе</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>События</span></h5>
+						<p>Посети события, которые были в городе</p>
+					</a>
+				</li>
+				<li class="active">
+					<a href="#">
+						<h5><span>Недвижимость</span></h5>
+						<p>Раздел не в тему, но пока пусть будет</p>
+					</a>
+				</li>
+			</ul>
+			<div>
+				<div>
+					<div class="lb">
+						<div class="nav">
+							<ul>
+								<li><a href="#">Квартиры</a></li>
+								<li><a href="#">Дома/коттеджи</a></li>
+								<li><a href="#">Загородная недвижимость</a></li>
+								<li><a href="#">Коммерческая недвижимость</a></li>
+								<li><a href="#">Земельные участки</a></li>
+						</div>
+						<div class="filter">
+							<div>
+								<div>
+									<h2><span>Подбор</span></h2>
+									<div>
+										<p>объектов по параметрам</p>
+										<ul class="direction">
+											<li><span>Куплю</span></li>
+											<li><span>Сниму</span></li>
+										</ul>
+										<select>
+											<option>Квартиру</option>
+											<option>Квартиру</option>
+										</select>
+									</div>
+								</div>
+								<div class="active range price">
+									<h3><span>Цена <em>(тыс. руб.)</em></span></h3>
+									<div class="slide"></div>
+									<div>
+										<p><input type="text" class="min" disabled></p>
+										<p><input type="text" class="max" disabled></p>
+									</div>
+								</div>
+								<div class="range square">
+									<h3><span>Площадь <em>(м<sup>2</sup>)</em></span></h3>
+									<div class="slide"></div>
+									<div>
+										<p><input type="text" class="min" disabled></p>
+										<p><input type="text" class="max" disabled></p>
+									</div>
+								</div>
+								<div class="active rooms">
+									<h3><span>Количество комнат</span></h3>
+									<ul>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="active"><a href="#">4</a></li>
+										<li><a href="#">4+</a></li>
+									</ul>
+								</div>
+								<div class="active">
+									<h3><span>Тип дома</span></h3>
+									<ul>
+										<li><input type="checkbox"> Кирпичный</li>
+										<li><input type="checkbox"> Панельный</li>
+										<li><input type="checkbox"> Монолит</li>
+										<li><input type="checkbox"> Деревянный</li>
+									</ul>
+								</div>
+								<div class="active floor">
+									<h3><span>Этаж</span></h3>
+									<div>
+										<p><input type="text" placeholder="" id="dp1414089032089" class="hasDatepicker"></p>
+										<p><input type="text" id="dp1414089032090" class="hasDatepicker" placeholder=""></p>
+									</div>
+									<ul>
+										<li><input type="checkbox"> Кроме первого</li>
+										<li><input type="checkbox"> Кроме последнего</li>
+									</ul>
+								</div>
+								<div>
+									<h3><span>Состояние</span></h3>
+									<ul>
+										<li><input type="checkbox"> Евроремонт</li>
+										<li><input type="checkbox"> Хорошее</li>
+										<li><input type="checkbox"> Удовлетвориельное</li>
+										<li><input type="checkbox"> Требует ремонта</li>
+									</ul>
+								</div>
+								<div>
+									<h3><span>Дополнительно</span></h3>
+									<ul>
+										<li><input type="checkbox"> Интернет подведен</li>
+										<li><input type="checkbox"> Охрана</li>
+										<li><input type="checkbox"> Мебель</li>
+										<li><input type="checkbox"> Городской телефон</li>
+									</ul>
+									<h5><span>Все особенности</span><sup>9</sup></h5>
+								</div>
+								<div>
+									<h3><span>Район города</span></h3>
+									<ul>
+										<li><input type="checkbox"> Центральный</li>
+										<li><input type="checkbox"> Ленинский</li>
+										<li><input type="checkbox"> Железнодорожный</li>
+										<li><input type="checkbox"> Октябрьский</li>
+									</ul>
+									<h5><span>Все районы города</span><sup>9</sup></h5>
+								</div>
+								<div>
+									<h3><span>Расположение</span></h3>
+									<div>
+										<select>
+											<option>Выберите улицу</option>
+											<option>Улица</option>
+											<option>Улица</option>
+											<option>Улица</option>
+										</select>
+										<ul>
+											<li><span>Малахова</span></li>
+											<li><span>Попова</span></li>
+											<li><span>Павловский тракт</span></li>
+										</ul>
+									</div>
+								</div>
+								<div>
+									<h6><span>Сбросить все фильтры</span></h6>
+								</div>
+								<div>
+									<p>соответствуют условиям</p>
+								</div>
+								<h5><span>33</span></h5>
+							</div>
+						</div>
+						<div class="banner">
+							<a href="#">
+								<h5>Французская кухня в «Ля бурже»</h5>
+								<img src="./pic/banner_l.jpg" width="220" height="120" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="rb">
+						<div class="slider">
+							<h2>Рекомендуем <a href="#">Как сюда попасть?</a></h2>
+							<div>
+								<div class="container">
+									<div>
+										<h5>Все из кедра. Мебель и техника, 3 ванные комнаты, 3 санузла, тренажерный зал, баня, сауна, бассейн, фитобочка, массажный кабинет, прачечная, встроенный гараж на 2 авто, барбекю, беседка с камином... <strong>50 000 тыс. рублей</strong></h5>
+										<div>
+											<h3>ул. Тенистая</h3>
+											<p>Коттедж: 3 уровня, 10 комнат, 750 м2, дерево</p>
+										</div>
+										<img src="./pic/slide3.jpg" width="1088" height="440" alt="">
+									</div>
+									<div>
+										<h5>Отдых на природе на любой вкус и кошелек независимо от времени года.  Всего в 15 мин. езды от города</h5>
+										<div>
+											<h3>Золотая подкова, загородный клуб</h3>
+											<p>шоссе Ленточный бор, 31</p>
+										</div>
+										<img src="./pic/slide3.jpg" width="1088" height="440" alt="">
+									</div>
+									<div>
+										<h5>Все из кедра. Мебель и техника, 3 ванные комнаты, 3 санузла, тренажерный зал, баня, сауна, бассейн, фитобочка, массажный кабинет, прачечная, встроенный гараж на 2 авто, барбекю, беседка с камином... <strong>50 000 тыс. рублей</strong></h5>
+										<div>
+											<h3>Золотая подкова, загородный клуб</h3>
+											<p>шоссе Ленточный бор, 31</p>
+										</div>
+										<img src="./pic/slide3.jpg" width="1088" height="440" alt="">
+									</div>
+									<div>
+										<h5>Все из кедра. Мебель и техника, 3 ванные комнаты, 3 санузла, тренажерный зал, баня, сауна, бассейн, фитобочка, массажный кабинет, прачечная, встроенный гараж на 2 авто, барбекю, беседка с камином... <strong>50 000 тыс. рублей</strong></h5>
+										<div>
+											<h3>Золотая подкова, загородный клуб</h3>
+											<p>шоссе Ленточный бор, 31</p>
+										</div>
+										<img src="./pic/slide3.jpg" width="1088" height="440" alt="">
+									</div>
+									<div>
+										<h5>Все из кедра. Мебель и техника, 3 ванные комнаты, 3 санузла, тренажерный зал, баня, сауна, бассейн, фитобочка, массажный кабинет, прачечная, встроенный гараж на 2 авто, барбекю, беседка с камином... <strong>50 000 тыс. рублей</strong></h5>
+										<div>
+											<h3>Золотая подкова, загородный клуб</h3>
+											<p>шоссе Ленточный бор, 31</p>
+										</div>
+										<img src="./pic/slide3.jpg" width="1088" height="440" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="list realty">
+							<div class="nav">
+								<h3>Объекты</h3>
+								<ul>
+									<li class="active"><a href="#"><span>Новые</span></a></li>
+									<li><a href="#"><span>Популярные</span></a></li>
+								</ul>
+							</div>
+							<div class="tab">
+								<ul>
+									<li>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/realty1.jpg" width="160" height="120" alt="">
+												<h5><a href="#">3</a></h5>
+											</div>
+											<h2><a href="#">Шевченко, 82</a></h2>
+											<p>Железнодорожный район</p>
+											<h6><strong>Квартира:</strong> 3 комнаты, 2/10 этаж, 50 м<sup>2</sup>, панельный</h6>
+											<ul>
+												<li data-benefit="12"></li>
+												<li data-benefit="13"></li>
+												<li data-benefit="14"></li>
+												<li data-benefit="15"></li>
+												<li data-benefit="16"></li>
+												<li data-benefit="17"></li>
+												<li data-benefit="18"></li>
+											</ul>
+										</div>
+										<div class="description">
+											<h5><strong>3 500 000 рублей</strong> <span>– 70 000 рублей/м<sup>2</sup></span> <em>10 октября 2014</em></h5>
+										</div>
+									</li>
+									<li>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/realty2.jpg" width="160" height="120" alt="">
+											</div>
+											<h2><a href="#">Комсомольский проспект, 40</a></h2>
+											<p>Железнодорожный район</p>
+											<h6><strong>Квартира:</strong> 5 комнат, 241.5 м<sup>2</sup>, кирпичный</h6>
+											<ul>
+												<li data-benefit="12"></li>
+												<li data-benefit="13"></li>
+												<li data-benefit="14"></li>
+												<li data-benefit="15"></li>
+												<li data-benefit="16"></li>
+												<li data-benefit="17"></li>
+												<li data-benefit="18"></li>
+											</ul>
+										</div>
+										<div class="description">
+											<h5><strong>договорная цена</strong> <span>– цена за м<sup>2</sup> еще не определена</sup></span> <em>10 октября 2014</em></h5>
+										</div>
+									</li>
+									<li>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/realty3.jpg" width="160" height="120" alt="">
+											</div>
+											<h2><a href="#">Коттедж в Берёзовой Роще</a></h2>
+											<p>Березовая роща (пригородный поселок)</p>
+											<h6><strong>Квартира:</strong> 5 комнат, 450 м<sup>2</sup>, кирпичный</h6>
+											<ul>
+												<li data-benefit="12"></li>
+												<li data-benefit="13"></li>
+												<li data-benefit="14"></li>
+												<li data-benefit="15"></li>
+											</ul>
+										</div>
+										<div class="description">
+											<h5><strong>договорная цена</strong> <span>– цена за м<sup>2</sup> еще не определена</sup></span> <em>10 октября 2014</em></h5>
+										</div>
+									</li>
+									<li>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/realty4.jpg" width="160" height="120" alt="">
+											</div>
+											<h2><a href="#">Абаканская, 14</a></h2>
+											<p>Ленинский район</p>
+											<h6><strong>Квартира:</strong> 5 комнат, деревянный</h6>
+											<ul>
+												<li data-benefit="12"></li>
+												<li data-benefit="13"></li>
+											</ul>
+										</div>
+										<div class="description">
+											<h5><strong>6 500 000 рублей</strong> <span>– цена за м<sup>2</sup> еще не определена</sup></span> <em>09 октября 2014</em></h5>
+										</div>
+									</li>
+									<li>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/realty5.jpg" width="160" height="120" alt="">
+											</div>
+											<h2><a href="#">Змеиногорский тракт, 69Л</a></h2>
+											<p>Ленинский район</p>
+											<h6><strong>Квартира:</strong> 4 комнаты, 1/6 этаж, 154/82 м<sup>2</sup>, кирпичный</h6>
+											<ul>
+												<li data-benefit="12"></li>
+												<li data-benefit="13"></li>
+												<li data-benefit="14"></li>
+												<li data-benefit="15"></li>
+												<li data-benefit="16"></li>
+												<li data-benefit="17"></li>
+												<li data-benefit="18"></li>
+											</ul>
+										</div>
+										<div class="description">
+											<h5><strong>договорная цена</strong> <span>– цена за м<sup>2</sup> еще не определена</sup></span> <em>09 октября 2014</em></h5>
+										</div>
+									</li>
+									<li>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/realty6.jpg" width="160" height="120" alt="">
+											</div>
+											<h2><a href="#">Ленина проспект, 43а</a></h2>
+											<p>Центральный район</p>
+											<h6><strong>Квартира:</strong> 4 комнаты, 3/5 этаж, 120 м<sup>2</sup>, кирпичный</h6>
+											<ul>
+												<li data-benefit="12"></li>
+												<li data-benefit="13"></li>
+												<li data-benefit="14"></li>
+												<li data-benefit="15"></li>
+												<li data-benefit="16"></li>
+												<li data-benefit="17"></li>
+												<li data-benefit="18"></li>
+											</ul>
+										</div>
+										<div class="description">
+											<h5><strong>5 300 000 рублей</strong> <span>– 44 200 рублей / м<sup>2</sup> <em>09 октября 2014</em></h5>
+										</div>
+									</li>
+									<li>
+										<h5>
+											<span class="favorite"></span>
+											<span class="compare"></span>
+										</h5>
+										<div class="information">
+											<div>
+												<img src="./pic/realty7.jpg" width="160" height="120" alt="">
+											</div>
+											<h2><a href="#">Офисное здание в центре</a></h2>
+											<p>Октябрьский район</p>
+											<h6><strong>Квартира:</strong> 3 этажа, 486,5 м<sup>2</sup>, кирпичный</h6>
+											<ul>
+												<li data-benefit="12"></li>
+												<li data-benefit="13"></li>
+												<li data-benefit="14"></li>
+												<li data-benefit="15"></li>
+											</ul>
+										</div>
+										<div class="description">
+											<h5><strong>договорная цена</strong> <span>– цена за м<sup>2</sup> еще не определена</sup></span> <em>09 октября 2014</em></h5>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+		<div>
+			<h5>© 2010-2013. «НА ВСЕ 360°»  — 3D-путеводитель по Вашему городу.</h5>
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">О проекте</a></li>
+						<li><a href="#">Обзоры</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Партнеры</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+					</ul>
+				</li>
+			</ul>
+			<h6>Размещенный на сайте контент предназначен для просмотра лицами старше 18 лет.</h6>
+			<div>
+				<p>Следите за нами в соцсетях:</p>
+				<ul>
+					<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+					<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+					<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+					<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="fade"></div>
+	<div class="modal" data-modal="ordercall">
+		<h3>Заказать звонок</h3>
+		<div>
+			<h6>Меня зовут</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Мой телефон</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Я из города</h6>
+			<p><input type="text" placeholder="Петропавловск-Камчатский"></p>
+		</div>
+		<div>
+			<h6>Я по вопросу</h6>
+			<ul>
+				<li><input type="radio" name="r1" checked> создание 3D-тура</li>
+				<li><input type="radio" name="r1"> сотрудничества</li>
+				<li><input type="radio" name="r1"> покупки франшизы</li>
+				<li><input type="radio" name="r1"> хочу на <s>море</s> работу к Вам</li>
+			</ul>
+		</div>
+		<button><span>Жду звонка</span></button>
+	</div>
+	<div class="modal" data-modal="ordercallvalidation">
+		<h3>Заказать звонок</h3>
+		<div class="error">
+			<h6>Меня зовут</h6>
+			<p><input type="text" value="ус"> <em>Неверный формат данных</em></p>
+		</div>
+		<div class="success">
+			<h6>Мой телефон</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Я по вопросу</h6>
+			<ul>
+				<li><input type="radio" name="r1" checked> создание 3D-тура</li>
+				<li><input type="radio" name="r1"> сотрудничества</li>
+				<li><input type="radio" name="r1"> покупки франшизы</li>
+				<li><input type="radio" name="r1"> хочу на <s>море</s> работу к Вам</li>
+			</ul>
+		</div>
+		<button class="active"><span>Жду звонка</span></button>
+	</div>
+	<div class="modal add" data-modal="add">
+		<h3>Заказать звонок</h3>
+		<div>
+			<h6>Меня зовут</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><textarea placeholder="Петропавловск-Камчатский,"></textarea></p>
+		</div>
+		<div>
+			<h6>Телефон заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<button><span>Оставить заявку</span></button>
+	</div>
+	<div class="modal add" data-modal="addvalidation">
+		<h3>Заказать звонок</h3>
+		<div class="error">
+			<h6>Меня зовут</h6>
+			<p><input type="text" value="ус"> <em>Неверный формат данных</em></p>
+		</div>
+		<div class="success">
+			<h6>Название заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><textarea placeholder="Петропавловск-Камчатский,"></textarea></p>
+		</div>
+		<div>
+			<h6>Телефон заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<button class="active"><span>Оставить заявку</span></button>
+	</div>
+	<div class="modal add" data-modal="addmessage">
+		<h3>Заявка успешно отправлена</h3>
+		<h5>Благодарим за проявленный интерес к нашему сервису.<br>
+		В ближайшее время с Вами свяжется наш менеджер.</h5>
+	</div>
+	<div class="modal" data-modal="registered">
+		<h3>Благодарим за регистрацию</h3>
+		<h5>Теперь Вы стали полноправным пользователем сервиса «НА ВСЕ 360°» и можете воспользоваться всеми доступными сервисами.</h5>
+	</div>
+	<div class="modal recover" data-modal="recover">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div>
+			<h6>E-mail</h6>
+			<p><input type="text"></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recoverrepeat">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div class="repeat">
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"> <span></span></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovervalidation">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div>
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"></p>
+		</div>
+		<button class="active"><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovererror">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div class="error">
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"> <em>Пользователей с данным e-mail в базе не найдено.<br> Проверьте правильность ввода e-mail</em></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovermessage">
+		<h3>Восстановление пароля</h3>
+		<h5>На указанный e-mail отправлено письмо с дальнейшими инструкциями по восстановлению доступа.</h5>
+		<h5>Если письмо не будет получено в течении 10 минут, пожалуйста, проверьте папку СПАМ в указанном почтовом ящике или повторите процедуру восстановления доступа.</h5>
+	</div>
+	<div class="found">
+		<p>Найдено заведений: <span>35</span></p>
+		<p><a href="#">Показать</a></p>
+	</div>
+	<div class="filterup">
+		<ul>
+			<li class="active"><a href="#"><span>Тип заведения</span></a></li>
+			<li><a href="#"><span>Особенности</span></a></li>
+			<li><a href="#"><span>Район</span></a></li>
+			<li><a href="#"><span>Расположение</span></a></li>
+		</ul>
+		<div>
+			<ul>
+				<li><input type="checkbox"> Мини-отели</li>
+				<li><input type="checkbox"> Мини-отели</li>
+				<li><input type="checkbox"> Бизнес-отели</li>
+				<li><input type="checkbox"> Бизнес-отели</li>
+				<li><input type="checkbox"> Загородные комплексы</li>
+				<li><input type="checkbox"> Загородные комплексы</li>
+				<li><input type="checkbox"> Хостелы</li>
+				<li><input type="checkbox"> Хостелы</li>
+			</ul>
+			<button><span>Искать</span></button>
+			<h5><a href="#">Сбросить все</a></h5>
+		</div>
+	</div>
+	<!--<span class="preload"></span>-->
+</body>
+</html>
