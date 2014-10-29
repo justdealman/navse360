@@ -1114,6 +1114,9 @@ button::-moz-focus-inner {
 .lb .nav {
 	margin:0 0 14px;
 }
+.lb .nav.afisha {
+	min-height:449px;
+}
 .lb .nav ul {
 	padding:17px 0 15px;
 	margin:0;
@@ -1283,11 +1286,11 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 0 15px;
 }
-.rb .list > .nav, .rb .spec > .nav {
+.rb .list > .nav, .rb .spec > .nav, .rb .afisha > .nav {
 	height:39px;
 	margin:0 0 14px;
 }
-.rb .list > .nav h3, .rb .spec > .nav h3 {
+.rb .list > .nav h3, .rb .spec > .nav h3, .rb .afisha > .nav h3 {
 	float:left;
 	font-size:24px;
 	line-height:30px;
@@ -1295,16 +1298,16 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 20px 0 0;
 }
-.rb .list > .nav ul, .rb .spec > .nav ul {
+.rb .list > .nav ul, .rb .spec > .nav ul, .rb .afisha > .nav ul {
 	float:left;
 	margin:0;
 }
-.rb .list > .nav ul li, .rb .spec > .nav ul li {
+.rb .list > .nav ul li, .rb .spec > .nav ul li, .rb .afisha > .nav ul li {
 	float:left;
 	font-size:15px;
 	line-height:20px;
 }
-.rb .list > .nav ul li a, .rb .spec > .nav ul li a {
+.rb .list > .nav ul li a, .rb .spec > .nav ul li a, .rb .afisha > .nav ul li a {
 	position:relative;
 	display:block;
 	color:#888888;
@@ -1317,10 +1320,10 @@ button::-moz-focus-inner {
 	-moz-transition:background, color, padding-left 0.25s ease-in-out;
 	-o-transition:background, color, padding-left 0.25s ease-in-out;
 }
-.rb .list > .nav ul li a span, .rb .spec > .nav ul li a span {
+.rb .list > .nav ul li a span, .rb .spec > .nav ul li a span, .rb .afisha > .nav ul li a span {
 	position:relative;
 }
-.rb .list > .nav ul li a span:after, .rb .spec > .nav ul li a span:after {
+.rb .list > .nav ul li a span:after, .rb .spec > .nav ul li a span:after, .rb .afisha > .nav ul li a span:after {
 	content:'';
 	position:absolute;
 	left:0;
@@ -1333,7 +1336,7 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 }
-.rb .list > .nav ul li a:after, .rb .spec > .nav ul li a:after {
+.rb .list > .nav ul li a:after, .rb .spec > .nav ul li a:after, .rb .afisha > .nav ul li a:after {
 	content:'';
 	position:absolute;
 	left:50%;
@@ -1346,14 +1349,14 @@ button::-moz-focus-inner {
 	opacity:0;
 	display:none\0;
 }
-.rb .list > .nav ul li a:hover, .rb .spec > .nav ul li a:hover {
+.rb .list > .nav ul li a:hover, .rb .spec > .nav ul li a:hover, .rb .afisha > .nav ul li a:hover {
 	color:#6a5acd;
 	text-decoration:none;
 }
-.rb .list > .nav ul li a:hover span:after, .rb .spec > .nav ul li a:hover span:after {
+.rb .list > .nav ul li a:hover span:after, .rb .spec > .nav ul li a:hover span:after, .rb .afisha > .nav ul li a:hover span:after {
 	border-bottom:1px dotted #bcb6e4;
 }
-.rb .list > .nav ul li.active a, .rb .spec > .nav ul li.active a {
+.rb .list > .nav ul li.active a, .rb .spec > .nav ul li.active a, .rb .afisha > .nav ul li.active a {
 	color:#ffffff;
 	text-decoration:none;
 	background:#a0a0a0;
@@ -1361,11 +1364,11 @@ button::-moz-focus-inner {
 	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.75);
 	box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.75);
 }
-.rb .list > .nav ul li.active a:after, .rb .spec > .nav ul li.active a:after {
+.rb .list > .nav ul li.active a:after, .rb .spec > .nav ul li.active a:after, .rb .afisha > .nav ul li.active a:after {
 	opacity:1;
 	display:block\0;
 }
-.rb .list > .nav ul li.active a span:after, .rb .spec > .nav ul li.active a span:after {
+.rb .list > .nav ul li.active a span:after, .rb .spec > .nav ul li.active a span:after, .rb .afisha > .nav ul li.active a span:after {
 	opacity:0;
 	display:none\0;
 }
@@ -1402,7 +1405,7 @@ button::-moz-focus-inner {
 	color:#ffffff;
 	padding-left:34px !important;
 }
-.rb .list > .sort, .rb .spec > .sort {
+.rb .list > .sort, .rb .spec > .sort, .rb .afisha > .sort {
 	position:relative;
 	z-index:10;
 	height:36px;
@@ -1411,23 +1414,23 @@ button::-moz-focus-inner {
 	border-top:1px solid #dbdbdb;
 	border-bottom:1px solid #dbdbdb;
 }
-.rb .list > .sort ul, .rb .list > .sort p, .rb .spec > .sort ul, .rb .spec > .sort p {
+.rb .list > .sort ul, .rb .list > .sort p, .rb .spec > .sort ul, .rb .spec > .sort p, .rb .afisha > .sort p {
 	float:right;
 }
-.rb .list > .sort :first-child, .rb .spec > .sort :first-child {
+.rb .list > .sort :first-child, .rb .spec > .sort :first-child, .rb .afisha > .sort :first-child {
 	float:left;
 }
-.rb .list > .sort .view, .rb .spec > .sort .view {
+.rb .list > .sort .view, .rb .spec > .sort .view, .rb .afisha > .sort .view {
 	margin:0;
 }
-.rb .list > .sort .view li, .rb .spec > .sort .view li {
+.rb .list > .sort .view li, .rb .spec > .sort .view li, .rb .afisha > .sort li {
 	float:left;
 	margin:0 0 0 6px;
 }
-.rb .list > .sort .view li:first-child, .rb .spec > .sort .view li:first-child {
+.rb .list > .sort .view li:first-child, .rb .spec > .sort .view li:first-child, .rb .afisha > .sort li:first-child {
 	margin-left:0;
 }
-.rb .list > .sort .view li a, .rb .spec > .sort .view li a {
+.rb .list > .sort .view li a, .rb .spec > .sort .view li a, .rb .afisha > .sort li a {
 	overflow:hidden;
 	display:block;
 	background:url('../img/list_sort_li.png') repeat-x top;
@@ -1441,22 +1444,22 @@ button::-moz-focus-inner {
 	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.1);
 	box-shadow:0 1px 2px rgba(0,0,0,0.1);
 }
-.rb .list > .sort .view li a:hover, .rb .spec > .sort li a:hover {
+.rb .list > .sort .view li a:hover, .rb .spec > .sort li a:hover, .rb .afisha > .sort li a:hover {
 	background-position:0 -34px;
 }
-.rb .list > .sort .view li a span, .rb .spec > .sort li a span {
+.rb .list > .sort .view li a span, .rb .spec > .sort li a span, .rb .afisha > .sort li a span {
 	display:inline-block;
 	width:34px;
 	height:34px;
 	vertical-align:top;
 }
-.rb .list > .sort .view li.lines a span, .rb .spec > .sort .view li.lines a span {
+.rb .list > .sort .view li.lines a span, .rb .spec > .sort .view li.lines a span, .rb .afisha > .sort li.lines a span {
 	background:url('../img/list_lines_icon.png') no-repeat left top;
 }
-.rb .list > .sort .view li.tiles a span, .rb .spec > .sort .view li.tiles a span {
+.rb .list > .sort .view li.tiles a span, .rb .spec > .sort .view li.tiles a span, .rb .afisha > .sort li.tiles a span {
 	background:url('../img/list_tiles_icon.png') no-repeat left top;
 }
-.rb .list > .sort .view li a em, .rb .spec > .sort .view li a em {
+.rb .list > .sort .view li a em, .rb .spec > .sort .view li a em, .rb .afisha > .sort li a em {
 	display:none;
 	color:#ffffff;
 	font-size:15px;
@@ -1465,10 +1468,10 @@ button::-moz-focus-inner {
 	vertical-align:top;
 	padding:8px 9px 4px 0;
 }
-.rb .list > .sort .view li.active a em, .rb .spec > .sort li.active a em {
+.rb .list > .sort .view li.active a em, .rb .spec > .sort li.active a em, .rb .afisha > .sort li.active a span {
 	display:inline-block;
 }
-.rb .list > .sort .view li.active a, .rb .spec > .sort li.active a {
+.rb .list > .sort .view li.active a, .rb .spec > .sort li.active a, .rb .afisha > .sort li.active a {
 	background:#a0a0a0;
 	border:1px solid #8b8b8b;
 	border-top:1px solid #757575;
@@ -1477,13 +1480,13 @@ button::-moz-focus-inner {
 	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 #ffffff;
 	box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 #ffffff;
 }
-.rb .list > .sort .view li.active a span, .rb .spec > .sort li.active a span {
+.rb .list > .sort .view li.active a span, .rb .spec > .sort li.active a span, .rb .afisha > .sort li.active a span {
 	background-position:0 -34px;
 }
-.rb .list > .sort p, .rb .spec > .sort p {
+.rb .list > .sort p, .rb .spec > .sort p, .rb .afisha > .sort p {
 	margin:0;
 }
-.rb .list > .sort p strong, .rb .spec > .sort p strong {
+.rb .list > .sort p strong, .rb .spec > .sort p strong, .rb .afisha > .sort p strong {
 	float:left;
 	font-size:15px;
 	line-height:22px;
@@ -4437,7 +4440,7 @@ button::-moz-focus-inner {
 }
 .item > div {
 	width:auto !important;
-	padding:30px 0 24px;
+	padding:20px 0 24px;
 	background:#ffffff;
 	border:1px solid #dbdbdb;
 	-webkit-border-radius:0 3px 3px 3px;
@@ -4458,7 +4461,7 @@ button::-moz-focus-inner {
 	line-height:30px;
 	font-weight:normal;
 	padding:0 40px 0 0;
-	margin:-9px 19px 21px;
+	margin:1px 19px 21px;
 }
 .item > div h2 a {
 	position:relative;
@@ -4531,7 +4534,7 @@ button::-moz-focus-inner {
 	background:#dbdbdb;
 }
 .item > div > div:first-of-type {
-	padding-top:0;
+	padding-top:10px;
 	margin-top:0;
 	border-top-width:0;
 }
@@ -5044,25 +5047,22 @@ button::-moz-focus-inner {
 	width:550px;
 	height:400px;
 }
-
-
-.item .media .share {
+.item .media .share, .item .description .share {
 	margin:20px 0 0;
 }
-.item .media .share p {
+.item .media .share p, .item .description .share p {
 	display:inline-block;
 	color:#202020;
 	font-size:15px;
 	line-height:22px;
 	vertical-align:top;
-	margin:0;
+	margin:0 7px 0 0;
 }
-.item .media .share > div {
+.item .media .share > div, .item .description .share > div {
 	display:inline-block;
 	vertical-align:top;
-	margin:0 0 0 7px;
 }
-.item .media .share > div img {
+.item .media .share > div img, .item .description .share > div img {
 	margin:0 0 -3px;
 }
 .item .media .picture {
@@ -5309,11 +5309,36 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:-1px 0 17px;
 }
-.item .action {
+.item .action, .item .afisha {
 	float:left;
 	width:240px;
 }
-.item .action > h5 {
+.item .afisha ul {
+	margin:-13px 0 16px;
+}
+.item .afisha ul li {
+	font-size:18px;
+	line-height:24px;
+	font-weight:bold;
+	text-align:center;
+	margin:4px 0 0;
+}
+.item .afisha ul li:first-child {
+	margin-top:0;
+}
+.item .afisha ul li a {
+	background:url('../img/a_bg.png') repeat-x bottom;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.item .afisha ul li a:hover {
+	color:#9b1c61;
+	text-decoration:none;
+	background:url('../img/a_bg_hover.png') repeat-x bottom;
+}
+.item .action > h5, .item .afisha > h5 {
 	font-size:15px;
 	line-height:25px;
 	font-weight:normal;
@@ -5322,7 +5347,7 @@ button::-moz-focus-inner {
 	margin:0 0 53px;
 	background:#f3f3f3;
 }
-.item .action > h5 span {
+.item .action > h5 span, .item .afisha > h5 span {
 	display:block;
 	color:#888888;
 }
@@ -5411,6 +5436,79 @@ button::-moz-focus-inner {
 	display:block;
 	color:#888888;
 }
+.item .afisha > div {
+	position:relative;
+	text-align:center;
+	padding:0 18px 3px;
+	margin:0 0 37px;
+	border:2px solid #cd8eb2;
+	border-bottom-width:0;
+}
+.item .afisha > div:after {
+	content:'';
+	position:absolute;
+	left:-2px;
+	bottom:-22px;
+	width:240px;
+	height:22px;
+	background:url('../img/item_action_after.png') no-repeat left top;
+}
+.item .afisha > div > div {
+	padding:17px 0 10px;
+	border-top:1px solid #dbdbdb;
+}
+.item .afisha > div h3 {
+	position:absolute;
+	left:-2px;
+	top:-38px;
+	width:240px;
+	color:#9b1c61;
+	font-size:72px;
+	line-height:72px;
+	text-align:center;
+	padding:0;
+	margin:0;
+}
+.item .afisha > div h3 span {
+	position:relative;
+	display:inline-block;
+	padding:0 6px;
+	background:#ffffff;
+}
+.item .afisha > div h3 span sup {
+	position:absolute;
+	right:-14px;
+	top:-1px;
+	display:block;
+	font-size:28px;
+	line-height:34px;
+}
+.item .afisha > div h5 {
+	position:relative;
+	font-size:15px;
+	line-height:22px;
+	font-weight:normal;
+	padding:22px 0 15px;
+	margin:0;
+}
+.item .afisha > div h5 span {
+	display:block;
+	font-size:28px;
+	line-height:34px;
+	margin:0 0 3px;
+}
+.item .afisha > div p {
+	font-size:15px;
+	line-height:22px;
+	margin:0;
+}
+.item .afisha > div p span {
+	display:block;
+	color:#9b1c61;
+	font-size:28px;
+	line-height:34px;
+	margin:0 0 -3px;
+}
 .item .information .details {
 	margin:-11px 0 -8px 20px !important;
 }
@@ -5433,31 +5531,42 @@ button::-moz-focus-inner {
 .item .information .details li span {
 	display:none;
 }
-.item .other {
+.item .other, .item .otherafisha {
 	padding:0;
-	margin:36px 0 32px;
 	background:none;
 	border:0;
 	-webkit-box-shadow:none;
 	-moz-box-shadow:none;
 	box-shadow:none;
 }
-.item .other > h3 {
+.item .other {
+	margin:36px 0 32px;
+}
+.item .otherafisha {
+	margin:36px 0 30px;
+}
+.item .other > h3, .item .otherafisha > h3 {
 	font-size:24px;
 	line-height:30px;
 	font-weight:normal;
 	padding:0;
 	margin:0 0 16px;
 }
-.item .other ul {
+.item .other ul, .item .otherafisha ul {
 	white-space:nowrap;
 	margin:0;
 }
-.item .other ul li {
+.item .otherafisha ul {
+	width:940px;
+	overflow:hidden;
+	padding:10px;
+	margin:-10px;
+}
+.item .other ul li, .item .otherafisha ul li {
 	display:inline-block;
 	margin:0 17px 0 0;
 }
-.item .other ul li h3 {
+.item .other ul li h3, .item .otherafisha ul li h3 {
 	white-space:normal;
 }
 .catalog .similar {
@@ -6197,6 +6306,50 @@ button::-moz-focus-inner {
 .item .poster ul li > div {
 	margin:21px 0 0;
 }
+.item .description {
+	position:relative;
+	float:right;
+	width:640px;
+	margin:-14px 0 0;
+}
+.item .description div:first-child {
+	clear:both;
+	overflow:hidden;
+	padding:0 0 10px px;
+}
+.item .description .info {
+	clear:both;
+	overflow:hidden;
+	padding:0 0 0 340px;
+	margin:0 0 17px;
+}
+.item .description .info img {
+	float:left;
+	max-width:320px;
+	margin:4px 0 0 -340px;
+}
+.item .description .info p {
+	font-size:15px;
+	line-height:28px;
+	margin:13px 0 0;
+}
+.item .description .info p:first-of-type {
+	margin:0 44px 0 0;
+}
+.item .description .info p strong {
+	display:block;
+	font-size:15px;
+	text-transform:uppercase;
+	margin:0 0 -2px;
+}
+.item .description .text {
+	margin:0 0 -7px;
+}
+.item .description .text p {
+	font-size:15px;
+	line-height:22px;
+	margin:0 0 22px;
+}
 .catalog > div .datefilter {
 	width:100%;
 	padding:6px 0;
@@ -6377,7 +6530,7 @@ button::-moz-focus-inner {
 	width:720px;
 	margin:0;
 }
-.rb .spec .tab > ul li, .rb .reccslide > div .container > div .element, .item .other ul li {
+.rb .spec .tab > ul li, .rb .reccslide.actions > div .container > div .element, .item .other ul li {
 	position:relative;
 	display:inline-block;
 	width:220px;
@@ -6396,7 +6549,7 @@ button::-moz-focus-inner {
 }
 .rb .reccslide > div .container > div .element {
 	float:left;
-	margin:10px;
+	margin:10px !important;
 }
 .rb .spec .tab > ul li:nth-of-type(4n) {
 	margin-right:17px;
@@ -6404,7 +6557,7 @@ button::-moz-focus-inner {
 .rb .spec .tab > ul li:nth-of-type(3n) {
 	margin-right:-3px;
 }
-.rb .spec .tab > ul li h6, .rb .reccslide > div .container > div .element h6, .item .other ul li h6 {
+.rb .spec .tab > ul li h6, .rb .reccslide.actions > div .container > div .element h6, .item .other ul li h6 {
 	position:absolute;
 	left:-9px;
 	top:20px;
@@ -6416,14 +6569,14 @@ button::-moz-focus-inner {
 	margin:0;
 	background:#9b1c61;
 }
-.rb .spec .tab > ul li h6 sup, .rb .reccslide > div .container > div .element h6 sup, .item .other ul li h6 sup {
+.rb .spec .tab > ul li h6 sup, .rb .reccslide.actions > div .container > div .element h6 sup, .item .other ul li h6 sup {
 	display:inline-block;
 	font-size:15px;
 	line-height:15px;
 	vertical-align:top;
 	margin:4px 0 0 1px;
 }
-.rb .spec .tab > ul li h6:before, .rb .reccslide > div .container > div .element h6:before, .item .other ul li h6:before {
+.rb .spec .tab > ul li h6:before, .rb .reccslide.actions > div .container > div .element h6:before, .item .other ul li h6:before {
 	content:'';
 	position:absolute;
 	left:0;
@@ -6431,7 +6584,7 @@ button::-moz-focus-inner {
 	border-left:10px solid transparent;
 	border-top:10px solid #691345;
 }
-.rb .spec .tab > ul li > div, .rb .reccslide > div .container > div .element > div, .item .other ul li > div {
+.rb .spec .tab > ul li > div, .rb .reccslide.actions > div .container > div .element > div, .item .other ul li > div {
 	overflow:hidden;
 	padding:0 0 11px;
 	background:#ffffff;
@@ -6447,27 +6600,27 @@ button::-moz-focus-inner {
 	-moz-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
 	-o-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
 }
-.rb .spec .tab > ul li:hover > div, .rb .reccslide > div .container > div .element:hover > div, .item .other ul li:hover > div {
+.rb .spec .tab > ul li:hover > div, .rb .reccslide.actions > div .container > div .element:hover > div, .item .other ul li:hover > div {
 	border:1px solid #a89df4;
 	-webkit-box-shadow:0 1px 10px rgba(0,0,0,0.5);
 	-moz-box-shadow:0 1px 10px rgba(0,0,0,0.5);
 	box-shadow:0 1px 10px rgba(0,0,0,0.5);
 }
-.rb .spec .tab > ul li div > div, .rb .reccslide > div .container > div .element > div > div, .item .other ul li div > div {
+.rb .spec .tab > ul li div > div, .rb .reccslide.actions > div .container > div .element > div > div, .item .other ul li div > div {
 	overflow:hidden;
 	position:relative;
 	width:218px;
 	height:164px;
 	margin:0 0 12px;
 }
-.rb .spec .tab > ul li div > div img, .rb .reccslide > div .container > div .element > div > div img, .item .other ul li div > div img {
+.rb .spec .tab > ul li div > div img, .rb .reccslide.actions > div .container > div .element > div > div img, .item .other ul li div > div img {
 	position:absolute;
 	left:0;
 	top:0;
 	min-width:218px;
 	min-height:164px;
 }
-.rb .spec .tab > ul li div h3, .rb .reccslide > div .container > div .element > div h3, .item .other ul li > div h3, .item .other ul li div h3 {
+.rb .spec .tab > ul li div h3, .rb .reccslide.actions > div .container > div .element > div h3, .item .other ul li > div h3, .item .other ul li div h3 {
 	overflow:hidden;
 	min-height:48px;
 	max-height:72px;
@@ -6477,7 +6630,7 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 18px 3px;
 }
-.rb .spec .tab > ul > h5 {
+.rb .spec .tab > ul > h5, .rb .afisha .tab > ul > h5 {
 	position:relative;
 	clear:both;
 	overflow:hidden;
@@ -6489,7 +6642,10 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:8px 0 27px;
 }
-.rb .spec .tab > ul > h5:before {
+.rb .afisha .tab > ul > h5 {
+	width:700px;
+}
+.rb .spec .tab > ul > h5:before, .rb .afisha .tab > ul > h5:before {
 	content:'';
 	position:absolute;
 	left:0;
@@ -6497,20 +6653,20 @@ button::-moz-focus-inner {
 	width:100%;
 	border-bottom:1px solid #dbdbdb;
 }
-.rb .spec .tab > ul > h5 span {
+.rb .spec .tab > ul > h5 span, .rb .afisha .tab > ul > h5 span {
 	position:relative;
 	z-index:1;
 	padding:0 11px;
 	background:#f3f3f3;
 }
-.rb .reccslide > div .container > div .element > div h3 {
+.rb .reccslide.actions > div .container > div .element > div h3 {
 	overflow:hidden;
 	max-height:48px;
 }
-.rb .reccslide > div .container > div .element:hover > div h3 {
+.rb .reccslide.actions > div .container > div .element:hover > div h3 {
 	max-height:72px;
 }
-.rb .spec .tab > ul li div h3 a, .rb .reccslide > div .container > div .element > div h3 a {
+.rb .spec .tab > ul li div h3 a, .rb .reccslide.actions > div .container > div .element > div h3 a {
 	color:#6a5acd;
 	text-decoration:none;
 	background:url('../img/a_bg.png') repeat-x bottom;
@@ -6519,7 +6675,7 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 }
-.rb .spec .tab > ul li div h3 a:hover, .rb .reccslide > div .container > div .element > div h3 a:hover {
+.rb .spec .tab > ul li div h3 a:hover, .rb .reccslide.actions > div .container > div .element > div h3 a:hover {
 	color:#9b1c61;
 	background:url('../img/a_bg_hover.png') repeat-x bottom;
 	transition:all 0.25s ease-in-out;
@@ -6527,7 +6683,7 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 }
-.rb .spec .tab > ul li div p, .rb .reccslide > div .container > div .element > div p, .item .other ul li div p {
+.rb .spec .tab > ul li div p, .rb .reccslide.actions > div .container > div .element > div p, .item .other ul li div p {
 	position:relative;
 	overflow:hidden;
 	font-size:15px;
@@ -6536,7 +6692,7 @@ button::-moz-focus-inner {
 	white-space:nowrap;
 	margin:0 19px 3px;
 }
-.rb .spec .tab > ul li div p:after, .rb .reccslide > div .container > div .element > div p:after, .item .other ul li div p:after {
+.rb .spec .tab > ul li div p:after, .rb .reccslide.actions > div .container > div .element > div p:after, .item .other ul li div p:after {
 	content:'';
 	position:absolute;
 	right:0;
@@ -6546,12 +6702,12 @@ button::-moz-focus-inner {
 	height:100%;
 	background:url('../img/list_h2_after.png') repeat-y left;
 }
-.rb .spec .tab > ul li div p a, .rb .reccslide > div .container > div .element > div p a, .item .other ul li div p a {
+.rb .spec .tab > ul li div p a, .rb .reccslide.actions > div .container > div .element > div p a, .item .other ul li div p a {
 	position:relative;
 	color:#888888;
 	text-decoration:none;
 }
-.rb .spec .tab > ul li div p a:after, .rb .reccslide > div .container > div .element > div p a:after, .item .other ul li div p a:after {
+.rb .spec .tab > ul li div p a:after, .rb .reccslide.actions > div .container > div .element > div p a:after, .item .other ul li div p a:after {
 	content:'';
 	position:absolute;
 	left:0;
@@ -6563,10 +6719,10 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 }
-.rb .spec .tab > ul li div p a:hover, .rb .reccslide > div .container > div .element > div p a:hover, .item .other ul li div p a:hover {
+.rb .spec .tab > ul li div p a:hover, .rb .reccslide.actions > div .container > div .element > div p a:hover, .item .other ul li div p a:hover {
 	color:#9b1c61;
 }
-.rb .spec .tab > ul li div p a:hover:after, .rb .reccslide > div .container > div .element > div p a:hover:after, .item .other ul li div p a:hover:after {
+.rb .spec .tab > ul li div p a:hover:after, .rb .reccslide.actions > div .container > div .element > div p a:hover:after, .item .other ul li div p a:hover:after {
 	border-bottom:1px solid #e19ebc;
 }
 .rb .spec .tab > div {
@@ -6775,6 +6931,12 @@ button::-moz-focus-inner {
 	width:720px;
 	margin:0 -10px 0 -10px;
 }
+.rb .reccslide.actions > div {
+	height:320px;
+}
+.rb .reccslide.afisha > div {
+	height:385px;
+}
 .rb .reccslide > div .prev, .rb .reccslide > div .next {
 	display:none;
 }
@@ -6782,7 +6944,12 @@ button::-moz-focus-inner {
 	clear:both;
 	overflow:visible !important;
 	width:720px;
+}
+.rb .reccslide.actions > div > .container {
 	height:285px;
+}
+.rb .reccslide.afisha > div > .container {
+	height:340px;
 }
 .rb .reccslide > div .pagination {
 	width:720px;
@@ -6897,8 +7064,6 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 60px 2px 0;
 }
-
-
 .also ul li h3 {
 	font-size:15px;
 	line-height:22px;
@@ -6941,7 +7106,316 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 18px 10px;
 }
-
+.rb .afisha {
+	margin:0 0 30px;
+}
+.rb .afisha .tab > ul {
+	width:720px;
+	margin:0;
+}
+.rb .afisha .tab > ul li, .rb .reccslide.afisha > div .container > div .element, .item .otherafisha ul li {
+	position:relative;
+	display:inline-block;
+	width:220px;
+	height:320px;
+	vertical-align:top;
+	margin:0 17px 20px 0;
+}
+.rb .afisha .tab > ul li h6, .rb .reccslide.afisha > div .container > div .element h6, .item .otherafisha ul li h6 {
+	position:absolute;
+	left:-9px;
+	top:21px;
+	z-index:5;
+	color:#ffffff;
+	font-size:15px;
+	line-height:22px;
+	font-weight:normal;
+	padding:4px 10px 2px;
+	margin:0;
+	background:#9b1c61;
+}
+.rb .afisha .tab > ul li h6:before, .rb .reccslide.afisha > div .container > div .element h6:before, .item .otherafisha ul li h6:before {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:-10px;
+	border-left:10px solid transparent;
+	border-top:10px solid #691345;
+}
+.rb .afisha .tab > ul li > a, .rb .reccslide.afisha > div .container > div .element > a, .item .otherafisha ul li > a {
+	overflow:hidden;
+	position:relative;
+	display:block;
+	width:218px;
+	height:318px;
+	text-decoration:none;
+	background:#ffffff;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #dbdbdb;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-webkit-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-moz-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-o-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+}
+.rb .afisha .tab > ul li > a:hover, .rb .reccslide.afisha > div .container > div .element a:hover, .item .otherafisha ul li > a:hover {
+	border:1px solid #a89df4;
+	-webkit-box-shadow:0 1px 10px rgba(0,0,0,0.5);
+	-moz-box-shadow:0 1px 10px rgba(0,0,0,0.5);
+	box-shadow:0 1px 10px rgba(0,0,0,0.5);
+}
+.rb .afisha .tab > ul li a > span, .rb .reccslide.afisha > div .container > div .element a > span, .item .otherafisha ul li > a > span {
+	position:absolute;
+	left:50%;
+	bottom:0;
+	z-index:5;
+	width:32px;
+	height:32px;
+	margin-left:-16px;
+	background:url('../img/afisha_like.png') no-repeat left top;
+	-webkit-border-radius:4px 4px 0 0;
+	-moz-border-radius:4px 4px 0 0;
+	border-radius:4px 4px 0 0;
+	transition:opacity 0.25s ease-in-out;
+	-webkit-transition:opacity 0.25s ease-in-out;
+	-moz-transition:opacity 0.25s ease-in-out;
+	-o-transition:opacity 0.25s ease-in-out;
+	opacity:0;
+	display:none\0;
+}
+.rb .afisha .tab > ul li a:hover > span, .rb .reccslide.afisha > div .container > div .element a:hover > span, .item .otherafisha ul li > a:hover > span {
+	opacity:1;
+	display:block\0;
+}
+.rb .afisha .tab > ul li a > span:hover, .rb .reccslide.afisha > div .container > div .element a > span:hover, .item .otherafisha ul li > a > span:hover {
+	background-position:0 -32px;
+}
+.rb .afisha .tab > ul li > a > img, .rb .reccslide.afisha > div .container > div .element a > img, .item .otherafisha ul li > a > img {
+	position:absolute;
+	left:0;
+	top:0;
+	min-width:218px;
+	min-height:318px;
+}
+.rb .afisha .tab > ul li > a > div, .rb .reccslide.afisha > div .container > div .element a > div, .item .otherafisha ul li > a > div {
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:71px;
+	background:rgba(0,0,0,0.8);
+	border-top:1px solid rgba(255,255,255,0.2);
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .afisha .tab > ul li > a:hover > div, .rb .reccslide.afisha > div .container > div .element a:hover > div, .item .otherafisha ul li > a:hover > div {
+	height:100%;
+	border-top-width:0;
+}
+.rb .afisha .tab > ul li > a > div > div, .rb .reccslide.afisha > div .container > div .element a > div > div, .item .otherafisha ul li > a > div > div {
+	text-align:center;
+	padding:13px 17px 12px;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .afisha .tab > ul li > a > div > div h3, .rb .reccslide.afisha > div .container > div .element a > div > div h3, .item .otherafisha ul li > a > div > div h3 {
+	overflow:hidden;
+	color:#b6abfd;
+	font-size:18px;
+	line-height:24px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	padding:0;
+	margin:0;
+}
+.rb .afisha .tab > ul li > a > div > div p, .rb .reccslide.afisha > div .container > div .element a > div > div p, .item .otherafisha ul li > a > div > div p {
+	overflow:hidden;
+	color:#ffffff;
+	font-size:15px;
+	line-height:22px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	margin:0;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .afisha .tab > ul li > a:hover > div > div h3, .rb .afisha .tab > ul li > a:hover > div > div p, .rb .reccslide.afisha > div .container > div .element a:hover > div > div h3, .rb .reccslide.afisha > div .container > div .element a:hover > div > div p, .item .otherafisha ul li > a:hover > div > div h3, .item .otherafisha ul li > a:hover > div > div p {
+	white-space:normal;
+}
+.rb .afisha .tab > ul li > a:hover  > div > div p, .rb .reccslide.afisha > div .container > div .element a:hover > div > div p, .item .otherafisha ul li > a:hover > div > div p {
+	margin:9px 0 0;
+}
+.item > div > .timeline {
+	padding:19px 19px 16px;
+}
+.item > div > .timeline:before {
+	display:none;
+}
+.item > div > .timeline > ul {
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	z-index:1;
+	height:51px;
+	margin:0 0 -1px;
+}
+.item > div > .timeline > ul li {
+	position:relative;
+	float:left;
+	margin:5px -1px 0 0;
+}
+.item > div > .timeline > ul li a, .item > div > .timeline > ul li span {
+	display:block;
+	color:#888888;
+	font-size:15px;
+	line-height:18px;
+	text-decoration:none;
+	padding:14px 19px 12px 18px;
+	background:#f3f3f3;
+	border:1px solid #dbdbdb;
+	transition:background 0.25s ease-in-out;
+	-webkit-transition:background 0.25s ease-in-out;
+	-moz-transition:background 0.25s ease-in-out;
+	-o-transition:background 0.25s ease-in-out;
+}
+.item > div > .timeline > ul li:first-child a {
+	-webkit-border-radius:4px 0 0 0;
+	-moz-border-radius:4px 0 0 0;
+	border-radius:4px 0 0 0;
+}
+.item > div > .timeline > ul li:last-child a, .item > div > .timeline > ul li span {
+	-webkit-border-radius:0 4px 0 0;
+	-moz-border-radius:0 4px 0 0;
+	border-radius:0 4px 0 0;
+}
+.item > div > .timeline > ul li a:hover {
+	background:#ffffff;
+}
+.item > div > .timeline > ul li.active {
+	margin-top:0;
+}
+.item > div > .timeline > ul li.active a {
+	padding-top:19px;
+	background:#ffffff;
+	border-bottom:1px solid #ffffff;
+	-webkit-border-radius:4px 4px 0 0;
+	-moz-border-radius:4px 4px 0 0;
+	border-radius:4px 4px 0 0;
+}
+.item > div > .timeline > ul li.active a span {
+	color:#202020;
+}
+.item > div > .timeline > ul li.active a span:after {
+	opacity:0;
+	display:none\0;
+}
+.item > div > .timeline > ul li span em {
+	display:inline-block;
+	width:8px;
+	height:15px;
+	vertical-align:top;
+	cursor:pointer;
+	margin:1px -1px 2px 3px;
+}
+.item > div > .timeline > ul li span em:first-child {
+	margin-left:1px;
+}
+.item > div > .timeline > ul li span em.prev {
+	background:url('../img/calendar_prev.png') no-repeat left top;
+}
+.item > div > .timeline > ul li span em.next {
+	background:url('../img/calendar_next.png') no-repeat left top;
+}
+.item > div > .timeline > ul li span em:hover {
+	background-position:0 -15px;
+}
+.item > div > .timeline > ul li span em.disabled {
+	cursor:default;
+	background-position:0 0;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+}
+.item > div > .timeline > div {
+	border-top:1px solid #dbdbdb;
+}
+.item > div > .timeline > div > div {
+	clear:both;
+	overflow:hidden;
+	padding:17px 0 0 260px;
+}
+.item > div > .timeline > div > div:nth-child(2n) {
+	background:#f3f3f3;
+}
+.item > div > .timeline > div > div > div {
+	float:left;
+	width:220px;
+	padding:0 20px 15px;
+	margin:0 0 0 -260px;
+}
+.item > div > .timeline > div > div > div h3 {
+	font-size:18px;
+	line-height:24px;
+	padding:0;
+	margin:0;
+}
+.item > div > .timeline > div > div > div h3 a {
+	background:url('../img/a_bg.png') repeat-x bottom;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.item > div > .timeline > div > div > div h3 a:hover {
+	color:#9b1c61;
+	text-decoration:none;
+	background:url('../img/a_bg_hover.png') repeat-x bottom;
+}
+.item > div > .timeline > div > div > div p {
+	color:#888888;
+	font-size:15px;
+	line-height:22px;
+	margin:3px 0 0;
+}
+.item > div > .timeline > div > div > p {
+	float:left;
+	width:70px;
+	color:#888888;
+	font-size:15px;
+	line-height:22px;
+	padding:0 10px 15px 0;
+	margin:0;
+}
+.item > div > .timeline > div > div > p strong {
+	display:block;
+	color:#202020;
+	font-size:18px;
+	line-height:24px;
+	margin:0 0 3px;
+}
+.item > div > .timeline > div > div > p strong sup {
+	display:inline-block;
+	color:#ffffff;
+	font-size:10px;
+	line-height:8px;
+	font-weight:normal;
+	vertical-align:top;
+	padding:3px 2px 0 1px;
+	margin:-1px 0 0 3px;
+	background:#9ab933;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
 
 /* Wide */
 
@@ -7037,18 +7511,36 @@ button::-moz-focus-inner {
 	.item.single > div > div:before {
 		width:900px;
 	}
-	.item.single .other {
+	.item.single .other, .item.single .otherafisha {
 		display:inline-block;
 		width:240px !important;
 		margin:0 -50px 0 17px;
 	}
-	.item.single .other ul {
+	.item.single .other ul, .item.single .otherafisha ul {
 		white-space:normal;
 	}
-	.item.single .other > h3 {
+	.item.single .otherafisha ul {
+		width:240px;
+	}
+	.item.single .other > h3, .item.single .otherafisha > h3 {
 		margin:22px 0 21px;
+	}
+	.item.single .otherafisha ul li:nth-child(3), .item.single .otherafisha ul li:nth-child(4), .item.single .otherafisha ul li:nth-child(5) {
+		display:none;
 	}
 	.item .media .gallery .big {
 		width:600px;
+	}
+	.rb .afisha .tab > ul {
+		width:960px;
+	}
+	.rb .afisha .tab > ul > h5 {
+		width:940px;
+	}
+	.item .otherafisha ul {
+		width:1180px;
+	}
+	.item .description {
+		width:880px;
 	}
 }

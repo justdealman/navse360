@@ -574,7 +574,7 @@ $(document).ready(function() {
 			return false;
 		});
 	});
-	$('.rb .spec > .nav ul li a').bind('click', function() {
+	$('.rb .spec > .nav ul li a, .rb .afisha > .nav ul li a').bind('click', function() {
 		$(this).parent().addClass('active').siblings().removeClass('active');
 		return false;
 	});
@@ -664,6 +664,18 @@ $(document).ready(function() {
 		});
 		$('.also ul li').height(max-21);
 	}
+	$('.rb .afisha .tab > ul li > a, .rb .reccslide.afisha > div .container > div .element > a, .item .otherafisha ul li > a').hover(
+		function() {
+			$(this).children('div').children('div').css({
+				'padding-top': (318-$(this).children('div').children('div').height())/2+10+'px'
+			});
+		},
+		function() {
+			$(this).children('div').children('div').css({
+				'padding-top': '13px'
+			});
+		}
+	);
 	$('input[type="checkbox"], input[type="radio"]').uniform();
 	$('select').selectbox();
 	$('input, textarea').each(function () {
