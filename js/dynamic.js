@@ -205,6 +205,40 @@ function mediavideo() {
 		return false;
 	}).parent().filter(':nth-child(1)').children('a').click();
 }
+function events() {
+	if ( $(window).width() < 1260 || $.browser.msie && parseInt($.browser.version, 10) === 8 ) {
+		var cols = 4;
+	}
+	else {
+		var cols = 5;
+	}
+	for ( var i = 0; i < Math.ceil($('.events > div > ul li').length/cols); i++ ) {
+		var max = 0;
+		for ( var j = 1; j <= cols; j++ ) {
+			$('.events > div > ul li:nth-of-type('+eval(i*cols+j)+')').each(function() {
+				var h = $(this).outerHeight(); 
+				max = h > max ? h : max;
+			});
+		}
+		for ( var j = 1; j <= cols; j++ ) {
+			$('.events > div > ul li:nth-of-type('+eval(i*cols+j)+') > div').outerHeight(max);
+		}
+	}
+}
+function otherevents() {
+	if ( $(window).width() < 1260 || $.browser.msie && parseInt($.browser.version, 10) === 8 ) {
+		$('.otherevents ul li:nth-child(5)').hide();
+	}
+	else {
+		$('.otherevents ul li:nth-child(5)').show();
+	}
+	var max = 0;
+	$('.otherevents ul li').each(function() {
+		var h = $(this).outerHeight(); 
+		max = h > max ? h : max;
+	});
+	$('.otherevents ul li > div').outerHeight(max);
+}
 $(window).resize(function() {
 	if ( $('.slider').length > 0 ) {
 		slider();
@@ -228,13 +262,19 @@ $(window).resize(function() {
 	if ( $('.item .other').length > 0 ) {
 		otheritem();
 	}
+	if ( $('.events').length > 0 ) {
+		events();
+	}
+	if ( $('.otherevents').length > 0 ) {
+		otherevents();
+	}
 });
 $(document).ready(function() {
 	$(['./img/a_bg_hover.png','./img/a_bg_type2_hover.png','./img/map_a_hover.png']).preload();
 	if ( $('.slider').length > 0 ) {
 		$('.slider > div').slides({
 			generatePagination: true,
-			generateNextPrev: false,
+			generateNextPrev: true,
 			container: 'container',
 			effect: 'slide',
 			slideSpeed: 500,
@@ -243,10 +283,10 @@ $(document).ready(function() {
 			pause: 2500
 		});
 		slider();
-		$('.slider').bind('swiperight', function() {
+		$('.slider > div').bind('swiperight', function() {
 			$('.slider .prev').trigger('click');
 		});
-		$('.slider').bind('swipeleft', function() {
+		$('.slider > div').bind('swipeleft', function() {
 			$('.slider .next').trigger('click');
 		});
 	}
@@ -275,6 +315,9 @@ $(document).ready(function() {
 	if ( $('.item .other').length > 0 ) {
 		otheritem();
 	}
+	if ( $('.otherevents').length > 0 ) {
+		otherevents();
+	}
 	$('.header .search h6 span').bind('click', function() {
 		$(this).parent().siblings().find('input').val($(this).text());
 		return false;
@@ -292,6 +335,9 @@ $(document).ready(function() {
 			max = h > max ? h : max;
 		});
 		$('.blog ul li').height(max);
+	}
+	if ( $('.events').length > 0 ) {
+		events();
 	}
 	var la = $('.rb .list > .nav ul li.active').index();
 	$('.rb .list > .nav ul li a').bind('click', function() {
@@ -357,9 +403,9 @@ $(document).ready(function() {
 		$(this).toggleClass('open');
 		return false;
 	});
-	$('.panel .drop, .panel .city > div, .modal, .filterup').append('<span class="close"></span>');
+	$('.panel .drop, .panel .city > div, .modal, .filterup, .sitemap').append('<span class="close"></span>');
 	function panelclose() {
-		$('.panel .drop, .panel .language > li > ul').stop(true,true).fadeOut(250);
+		$('.panel .drop, .panel .language > li > ul, .sitemap').stop(true,true).fadeOut(250);
 		$('.panel .user li, .panel .language > li').removeClass('active');
 		$('.found, .filterup').stop(true,true).fadeOut(250);
 	}
@@ -387,7 +433,7 @@ $(document).ready(function() {
 	$('body').bind('click', function() {
 		panelclose();
 	});
-	$('.panel .drop, .panel .language > li > ul, .found, .lb .filter > div > div ul li input[type="checkbox"], .filterup, .lb .filter > div > div h5').click(function(e) {
+	$('.panel .drop, .panel .language > li > ul, .found, .lb .filter > div > div ul li input[type="checkbox"], .filterup, .lb .filter > div > div h5, .sitemap').click(function(e) {
 		e.stopPropagation();
 	});
 	$('.panel .language > li > ul > li[data-short='+$('.panel .language > li > a').text()+']').addClass('active');
@@ -468,8 +514,8 @@ $(document).ready(function() {
 		}
 		return false;
 	});
-	$('.lb .filter > div > div > ul, .lb .filter > div > div > h5').hide();
-	$('.lb .filter > div > div.active > ul, .lb .filter > div > div.active > h5').show();
+	$('.lb .filter > div > div > ul, .lb .filter > div > div > h5, .lb .filter > div > .streets > div').hide();
+	$('.lb .filter > div > div.active > ul, .lb .filter > div > div.active > h5, .lb .filter > div > .streets.active > div').show();
 	$('.lb .filter > div > div h3 span').bind('click', function() {
 		if ( $(this).parent().parent().hasClass('active') ) {
 			$(this).parent().parent().removeClass('active');
@@ -574,7 +620,7 @@ $(document).ready(function() {
 			return false;
 		});
 	});
-	$('.rb .spec > .nav ul li a, .rb .afisha > .nav ul li a').bind('click', function() {
+	$('.rb .spec > .nav ul li a, .rb .afisha > .nav ul li a, .events > ul li a').bind('click', function() {
 		$(this).parent().addClass('active').siblings().removeClass('active');
 		return false;
 	});
@@ -626,10 +672,34 @@ $(document).ready(function() {
 			}
 		});
 		var rangepricehandle = $(this).find('.filter .range.price > .slide .ui-slider-handle');
-		$('.filter .range.price').find('input.min').val('от '+pricemin);
-		$('.filter .range.price').find('input.max').val('до '+pricemax);
-		rangepricehandle.eq(0).append('<span>'+pricemin+'</span>')
-		rangepricehandle.eq(1).append('<span>'+pricemax+'</span>')
+		$('.filter .range.price').find('input.min').val(pricemin);
+		$('.filter .range.price').find('input.max').val(pricemax);
+		rangepricehandle.eq(0).append('<span>'+pricemin+'</span>');
+		rangepricehandle.eq(1).append('<span>'+pricemax+'</span>');
+		$('.filter .range.price input.min').change(function() {
+			var value1 = $('.filter .range.price input.min').val();
+			var value2 = $('.filter .range.price input.max').val();
+			if ( parseInt(value1) > parseInt(value2) ) {
+				value1 = value2;
+				$('.filter .range.price input.min').val(value1);
+			}
+			$('.filter .range.price > .slide').slider('values',0,value1);	
+			rangepricehandle.eq(0).find('span').empty().text(value1);
+		});
+		$('.filter .range.price input.max').change(function() {
+			var value1 = $('.filter .range.price input.min').val();
+			var value2 = $('.filter .range.price input.max').val();
+			if ( value2 > 50000 ) { 
+				value2 = 50000;
+				$('.filter .range.price input.max').val(50000);
+			}
+			if( parseInt(value1) > parseInt(value2) ) {
+				value2 = value1;
+				$('.filter .range.price input.max').val(value2);
+			}
+			$('.filter .range.price > .slide').slider('values',1,value2);	
+			rangepricehandle.eq(1).find('span').empty().text(value2);
+		});
 	}
 	if ( $('.filter .range.square').length > 0 ) {
 		var squaremin = 50;
@@ -641,29 +711,45 @@ $(document).ready(function() {
 			step: 1,
 			values: [squaremin, squaremax],
 			slide: function(event,ui) {
-				$('.filter .range.square').find('input.min').val('от '+ui.values[0]);
-				$('.filter .range.square').find('input.max').val('до '+ui.values[1]);
+				$('.filter .range.square').find('input.min').val(ui.values[0]);
+				$('.filter .range.square').find('input.max').val(ui.values[1]);
 				rangesquarehandle.eq(0).find('span').empty().text(ui.values[0]);
 				rangesquarehandle.eq(1).find('span').empty().text(ui.values[1]);
 			}
 		});
 		var rangesquarehandle = $(this).find('.filter .range.square > .slide .ui-slider-handle');
-		$('.filter .range.square').find('input.min').val('от '+squaremin);
-		$('.filter .range.square').find('input.max').val('до '+squaremax);
-		rangesquarehandle.eq(0).append('<span>'+squaremin+'</span>')
-		rangesquarehandle.eq(1).append('<span>'+squaremax+'</span>')
+		$('.filter .range.square').find('input.min').val(squaremin);
+		$('.filter .range.square').find('input.max').val(squaremax);
+		rangesquarehandle.eq(0).append('<span>'+squaremin+'</span>');
+		rangesquarehandle.eq(1).append('<span>'+squaremax+'</span>');
+		$('.filter .range.square input.min').change(function() {
+			var value1 = $('.filter .range.square input.min').val();
+			var value2 = $('.filter .range.square input.max').val();
+			if ( parseInt(value1) > parseInt(value2) ) {
+				value1 = value2;
+				$('.filter .range.square input.min').val(value1);
+			}
+			$('.filter .range.square > .slide').slider('values',0,value1);	
+			rangesquarehandle.eq(0).find('span').empty().text(value1);
+		});
+		$('.filter .range.square input.max').change(function() {
+			var value1 = $('.filter .range.square input.min').val();
+			var value2 = $('.filter .range.square input.max').val();
+			if ( value2 > 500 ) { 
+				value2 = 500;
+				$('.filter .range.square input.max').val(500);
+			}
+			if( parseInt(value1) > parseInt(value2) ) {
+				value2 = value1;
+				$('.filter .range.square input.max').val(value2);
+			}
+			$('.filter .range.square > .slide').slider('values',1,value2);	
+			rangesquarehandle.eq(1).find('span').empty().text(value2);
+		});
 	}
 	$('.lb .filter > div > .streets > div > ul li span').each(function() {
 		$(this).append('<em></em>');
 	});
-	if ( $('.also').length > 0 ) {
-		var max = 0;
-		$('.also ul li').each(function() {
-			var h = $(this).height(); 
-			max = h > max ? h : max;
-		});
-		$('.also ul li').height(max-21);
-	}
 	$('.rb .afisha .tab > ul li > a, .rb .reccslide.afisha > div .container > div .element > a, .item .otherafisha ul li > a').hover(
 		function() {
 			$(this).children('div').children('div').css({
@@ -676,6 +762,17 @@ $(document).ready(function() {
 			});
 		}
 	);
+	$('.catalog .introduction .breadcrumbs li.home a').bind('click', function() {
+		$('.sitemap').stop(true,true).fadeIn(250);
+		$('.sitemap').css({
+			'top': $(this).parents().offset().top-20+'px'
+		});
+		return false;
+	});
+	$('.sitemap .close').bind('click', function() {
+		$(this).parent().stop(true,true).fadeOut(250);
+		return false;
+	});
 	$('input[type="checkbox"], input[type="radio"]').uniform();
 	$('select').selectbox();
 	$('input, textarea').each(function () {
@@ -685,6 +782,17 @@ $(document).ready(function() {
 		});
 		$(this).focusout(function(){
 			$(this).attr('placeholder',$(this).data('holder'));
+		});
+	});
+	$('.item > div > .timeline > div > div:nth-child(2n)').css({
+		'background': '#f3f3f3'
+	});
+	$('.rb .list .tab > ul li').bind('tap', function() {
+		$(this).siblings('li').find('h5').css({
+			'opacity': '0'
+		});
+		$(this).find('h5').css({
+			'opacity': '1'
 		});
 	});
 });
@@ -697,4 +805,12 @@ $(window).load(function() {
 			'margin-left': -$(this).outerWidth()+'px'
 		});
 	});
+	if ( $('.also').length > 0 ) {
+		var max = 0;
+		$('.also ul li').each(function() {
+			var h = $(this).height(); 
+			max = h > max ? h : max;
+		});
+		$('.also ul li').height(max);
+	}
 });

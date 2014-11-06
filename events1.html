@@ -1,0 +1,765 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>На все 360°</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
+	<link href="./css/uniform.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jqueryui.js"></script>
+	<script type="text/javascript" src="./js/jquerymobile.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/selectbox.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<script type="text/javascript" src="./js/uniform.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="panel">
+			<div>
+				<ul class="nav">
+					<li class="active"><a href="#">О проекте</a></li>
+					<li><a href="#">Обратная связь</a></li>
+					<li><a href="#">Помощь</a></li>
+				</ul>
+				<ul class="user">
+					<li><a href="enter">Войти</a></li>
+					<li><a href="registration">Регистрация</a></li>
+				</ul>
+				<p class="favorite">
+					<a href="#">Избранное</a>
+				</p>
+				<ul class="language">
+					<li>
+						<a href="#">RU</a>
+						<ul>
+							<li data-short="RU">Русский</li>
+							<li data-short="EN">English</li>
+							<li data-short="EE">Eesti</li>
+							<li data-short="DE">Deutch</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="city">
+					<p><a href="#">Петропавловск-Камчатский</a></p>
+					<h6><span><a href="tel:+74152556677">(4152) 55-66-77</a></span></h6>
+					<div>
+						<h3>Правильно?</h3>
+						<p>ли мы определили Ваш город?</p>
+						<button><span>Да, молодцы</span></button>
+						<h5><a href="#">Сменить город</a></h5>
+					</div>
+				</div>
+				<div class="drop enter">
+					<p class="email"><input type="text" placeholder="E-mail"></p>
+					<p class="password"><input type="password" placeholder="Пароль"></p>
+					<button><span>Войти</span></button>
+					<h5><a href="#">Забыли пароль?</a></h5>
+					<div>
+						<h6>Регистрация через социальные сети:</h6>
+						<ul>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="drop registration">
+					<p class="email"><input type="text" placeholder="Введите e-mail"></p>
+					<p class="password"><input type="password" placeholder="Укажите пароль"><span class="eye"></span></p>
+					<button class="active"><span>Регистрация</span></button>
+					<div>
+						<h6>Регистрация через социальные сети:</h6>
+						<ul>
+							<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+							<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+							<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<img src="./img/logo.png" width="220" height="66" class="logo" alt="">
+			<div class="search">
+				<div>
+					<p><input type="text" placeholder="Поиск по сайту"></p>
+					<button></button>
+				</div>
+				<h6>например, <span>где переночевать</span></h6>
+			</div>
+			<div class="add">
+				<button><span>Добавить заведение</span></button>
+				<p><a href="#">Владельцам заведений</a></p>
+			</div>
+		</div>
+		<div class="catalog">
+			<ul class="menu">
+				<li>
+					<a href="#">
+						<h5><span>Заведения</span></h5>
+						<p>Загляни в заведения города прямо на сайте</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Афиша</span></h5>
+						<p>Будь в курсе грядущих мероприятий города</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Акции</span></h5>
+						<p>Не пропусти выгодные предложения в городе</p>
+					</a>
+				</li>
+				<li class="active">
+					<a href="#">
+						<h5><span>События</span></h5>
+						<p>Посети события, которые были в городе</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h5><span>Недвижимость</span></h5>
+						<p>Раздел не в тему, но пока пусть будет</p>
+					</a>
+				</li>
+			</ul>
+			<div>
+				<div class="events">
+					<ul>
+						<li class="active"><a href="#"><span>Все</span></a></li>
+						<li><a href="#"><span>Flash-мобы</span></a></li>
+						<li><a href="#"><span>Городские мероприятия</span></a></li>
+						<li><a href="#"><span>Разное</span></a></li>
+					</ul>
+					<div>
+						<ul>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event1.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Турнир по боулингу среди работников администрации</a></h3>
+									<p><a href="#">Зенит, боулинг-центр</a></p>
+									<h5>10 сентября 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event2.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Общегородской замес по пейнтболу</a></h3>
+									<p><a href="#">Командо, пейнтбольный клуб</a></p>
+									<h5>05 сентября 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event3.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">День города Барнаула 2014</a></h3>
+									<p><a href="#">Площадь советов</a></p>
+									<h5>31 августа 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>flash-моб</h6>
+								<div>
+									<div>
+										<img src="./pic/event4.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Сердце города Барнаула</a></h3>
+									<p><a href="#">«Нулевой километр», стела</a></p>
+									<h5>15 июля 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>flash-моб</h6>
+								<div>
+									<div>
+										<img src="./pic/event5.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Барнаульские мокрые войны</a></h3>
+									<p><a href="#">«Нулевой километр», стела</a></p>
+									<h5>07 июля 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event6.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Парад невест: праздник красоты</a></h3>
+									<p><a href="#">СИТИ Центр, торговый центр</a></p>
+									<h5>30 июня 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event7.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Октоберфест: праздник пива</a></h3>
+									<p><a href="#">Городской пляж</a></p>
+									<h5>20 июня 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event8.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">День всех влюбленных 2014</a></h3>
+									<p><a href="#">Площадь октября</a></p>
+									<h5>14 февраля 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event9.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное Новый год 2014</a></h3>
+									<p><a href="#">Центральный офис</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event10.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное поздравление с Новым годом 2014</a></h3>
+									<p><a href="#">Офисы в 70 городах</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event11.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное поздравление с Новым годом 2014</a></h3>
+									<p><a href="#">Офисы в 70 городах</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event12.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное поздравление с Новым годом 2014</a></h3>
+									<p><a href="#">Офисы в 70 городах</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event1.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Турнир по боулингу среди работников администрации</a></h3>
+									<p><a href="#">Зенит, боулинг-центр</a></p>
+									<h5>10 сентября 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event2.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Общегородской замес по пейнтболу</a></h3>
+									<p><a href="#">Командо, пейнтбольный клуб</a></p>
+									<h5>05 сентября 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event3.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">День города Барнаула 2014</a></h3>
+									<p><a href="#">Площадь советов</a></p>
+									<h5>31 августа 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>flash-моб</h6>
+								<div>
+									<div>
+										<img src="./pic/event4.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Сердце города Барнаула</a></h3>
+									<p><a href="#">«Нулевой километр», стела</a></p>
+									<h5>15 июля 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>flash-моб</h6>
+								<div>
+									<div>
+										<img src="./pic/event5.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Барнаульские мокрые войны</a></h3>
+									<p><a href="#">«Нулевой километр», стела</a></p>
+									<h5>07 июля 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event6.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Парад невест: праздник красоты</a></h3>
+									<p><a href="#">СИТИ Центр, торговый центр</a></p>
+									<h5>30 июня 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event7.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Октоберфест: праздник пива</a></h3>
+									<p><a href="#">Городской пляж</a></p>
+									<h5>20 июня 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event8.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">День всех влюбленных 2014</a></h3>
+									<p><a href="#">Площадь октября</a></p>
+									<h5>14 февраля 2014</h5>
+								</div>
+							</li>
+							<h5><span>стр. 2 из 4</span></h5>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event9.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное Новый год 2014</a></h3>
+									<p><a href="#">Центральный офис</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event10.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное поздравление с Новым годом 2014</a></h3>
+									<p><a href="#">Офисы в 70 городах</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event11.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное поздравление с Новым годом 2014</a></h3>
+									<p><a href="#">Офисы в 70 городах</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event12.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное поздравление с Новым годом 2014</a></h3>
+									<p><a href="#">Офисы в 70 городах</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event1.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Турнир по боулингу среди работников администрации</a></h3>
+									<p><a href="#">Зенит, боулинг-центр</a></p>
+									<h5>10 сентября 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event2.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Общегородской замес по пейнтболу</a></h3>
+									<p><a href="#">Командо, пейнтбольный клуб</a></p>
+									<h5>05 сентября 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event3.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">День города Барнаула 2014</a></h3>
+									<p><a href="#">Площадь советов</a></p>
+									<h5>31 августа 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>flash-моб</h6>
+								<div>
+									<div>
+										<img src="./pic/event4.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Сердце города Барнаула</a></h3>
+									<p><a href="#">«Нулевой километр», стела</a></p>
+									<h5>15 июля 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>flash-моб</h6>
+								<div>
+									<div>
+										<img src="./pic/event5.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Барнаульские мокрые войны</a></h3>
+									<p><a href="#">«Нулевой километр», стела</a></p>
+									<h5>07 июля 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event6.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Парад невест: праздник красоты</a></h3>
+									<p><a href="#">СИТИ Центр, торговый центр</a></p>
+									<h5>30 июня 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event7.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Октоберфест: праздник пива</a></h3>
+									<p><a href="#">Городской пляж</a></p>
+									<h5>20 июня 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event8.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">День всех влюбленных 2014</a></h3>
+									<p><a href="#">Площадь октября</a></p>
+									<h5>14 февраля 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event9.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное Новый год 2014</a></h3>
+									<p><a href="#">Центральный офис</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event10.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное поздравление с Новым годом 2014</a></h3>
+									<p><a href="#">Офисы в 70 городах</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event11.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное поздравление с Новым годом 2014</a></h3>
+									<p><a href="#">Офисы в 70 городах</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event12.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Корпоративное поздравление с Новым годом 2014</a></h3>
+									<p><a href="#">Офисы в 70 городах</a></p>
+									<h5>30 декабря 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event1.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Турнир по боулингу среди работников администрации</a></h3>
+									<p><a href="#">Зенит, боулинг-центр</a></p>
+									<h5>10 сентября 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>разное</h6>
+								<div>
+									<div>
+										<img src="./pic/event2.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Общегородской замес по пейнтболу</a></h3>
+									<p><a href="#">Командо, пейнтбольный клуб</a></p>
+									<h5>05 сентября 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>городские мероприятия</h6>
+								<div>
+									<div>
+										<img src="./pic/event3.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">День города Барнаула 2014</a></h3>
+									<p><a href="#">Площадь советов</a></p>
+									<h5>31 августа 2014</h5>
+								</div>
+							</li>
+							<li>
+								<h6>flash-моб</h6>
+								<div>
+									<div>
+										<img src="./pic/event4.jpg" width="218" height="164" alt="">
+									</div>
+									<h3><a href="#">Сердце города Барнаула</a></h3>
+									<p><a href="#">«Нулевой километр», стела</a></p>
+									<h5>15 июля 2014</h5>
+								</div>
+							</li>
+						</ul>
+						<button><span>Показать все</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+		<div>
+			<h5>© 2010-2013. «НА ВСЕ 360°»  — 3D-путеводитель по Вашему городу.</h5>
+			<ul>
+				<li>
+					<ul>
+						<li><a href="#">О проекте</a></li>
+						<li><a href="#">Обзоры</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="#">Партнеры</a></li>
+						<li><a href="#">Реклама на сайте</a></li>
+					</ul>
+				</li>
+			</ul>
+			<h6>Размещенный на сайте контент предназначен для просмотра лицами старше 18 лет.</h6>
+			<div>
+				<p>Следите за нами в соцсетях:</p>
+				<ul>
+					<li><a href="#"><img src="./img/facebook_icon.png" width="8" height="16" alt=""></a></li>
+					<li><a href="#"><img src="./img/vkontakte_icon.png" width="12" height="12" alt=""></a></li>
+					<li><a href="#"><img src="./img/odnoklassniki_icon.png" width="10" height="16" alt=""></a></li>
+					<li><a href="#"><img src="./img/twitter_icon.png" width="16" height="14" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="fade"></div>
+	<div class="modal" data-modal="ordercall">
+		<h3>Заказать звонок</h3>
+		<div>
+			<h6>Меня зовут</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Мой телефон</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Я из города</h6>
+			<p><input type="text" placeholder="Петропавловск-Камчатский"></p>
+		</div>
+		<div>
+			<h6>Я по вопросу</h6>
+			<ul>
+				<li><input type="radio" name="r1" checked> создание 3D-тура</li>
+				<li><input type="radio" name="r1"> сотрудничества</li>
+				<li><input type="radio" name="r1"> покупки франшизы</li>
+				<li><input type="radio" name="r1"> хочу на <s>море</s> работу к Вам</li>
+			</ul>
+		</div>
+		<button><span>Жду звонка</span></button>
+	</div>
+	<div class="modal" data-modal="ordercallvalidation">
+		<h3>Заказать звонок</h3>
+		<div class="error">
+			<h6>Меня зовут</h6>
+			<p><input type="text" value="ус"> <em>Неверный формат данных</em></p>
+		</div>
+		<div class="success">
+			<h6>Мой телефон</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Я по вопросу</h6>
+			<ul>
+				<li><input type="radio" name="r1" checked> создание 3D-тура</li>
+				<li><input type="radio" name="r1"> сотрудничества</li>
+				<li><input type="radio" name="r1"> покупки франшизы</li>
+				<li><input type="radio" name="r1"> хочу на <s>море</s> работу к Вам</li>
+			</ul>
+		</div>
+		<button class="active"><span>Жду звонка</span></button>
+	</div>
+	<div class="modal add" data-modal="add">
+		<h3>Заказать звонок</h3>
+		<div>
+			<h6>Меня зовут</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><textarea placeholder="Петропавловск-Камчатский,"></textarea></p>
+		</div>
+		<div>
+			<h6>Телефон заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<button><span>Оставить заявку</span></button>
+	</div>
+	<div class="modal add" data-modal="addvalidation">
+		<h3>Заказать звонок</h3>
+		<div class="error">
+			<h6>Меня зовут</h6>
+			<p><input type="text" value="ус"> <em>Неверный формат данных</em></p>
+		</div>
+		<div class="success">
+			<h6>Название заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<div>
+			<h6>Название заведения</h6>
+			<p><textarea placeholder="Петропавловск-Камчатский,"></textarea></p>
+		</div>
+		<div>
+			<h6>Телефон заведения</h6>
+			<p><input type="text"></p>
+		</div>
+		<button class="active"><span>Оставить заявку</span></button>
+	</div>
+	<div class="modal add" data-modal="addmessage">
+		<h3>Заявка успешно отправлена</h3>
+		<h5>Благодарим за проявленный интерес к нашему сервису.<br>
+		В ближайшее время с Вами свяжется наш менеджер.</h5>
+	</div>
+	<div class="modal" data-modal="registered">
+		<h3>Благодарим за регистрацию</h3>
+		<h5>Теперь Вы стали полноправным пользователем сервиса «НА ВСЕ 360°» и можете воспользоваться всеми доступными сервисами.</h5>
+	</div>
+	<div class="modal recover" data-modal="recover">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div>
+			<h6>E-mail</h6>
+			<p><input type="text"></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recoverrepeat">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div class="repeat">
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"> <span></span></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovervalidation">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div>
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"></p>
+		</div>
+		<button class="active"><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovererror">
+		<h3>Восстановление пароля</h3>
+		<h5>Пожалуйста, введите в поле ниже e-mail, указанный Вами при регистрации. Письмо с инструкциями по восстановлению пароля будет выслано на этот адрес.</h5>
+		<div class="error">
+			<h6>E-mail</h6>
+			<p><input type="text" placeholder="navse360@gmail.com"> <em>Пользователей с данным e-mail в базе не найдено.<br> Проверьте правильность ввода e-mail</em></p>
+		</div>
+		<button><span>Восстановить пароль</span></button>
+	</div>
+	<div class="modal recover" data-modal="recovermessage">
+		<h3>Восстановление пароля</h3>
+		<h5>На указанный e-mail отправлено письмо с дальнейшими инструкциями по восстановлению доступа.</h5>
+		<h5>Если письмо не будет получено в течении 10 минут, пожалуйста, проверьте папку СПАМ в указанном почтовом ящике или повторите процедуру восстановления доступа.</h5>
+	</div>
+</body>
+</html>
