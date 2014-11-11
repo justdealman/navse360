@@ -8049,6 +8049,175 @@ button::-moz-focus-inner {
 	-o-transform:rotate(180deg);
 	transform:rotate(180deg);
 }
+.citysel {
+	background:#f3f3f3;
+}
+.citysel > div {
+	position:relative;
+	width:940px;
+	padding:26px 0 16px;
+	margin:0 auto;
+}
+.citysel > div h2 {
+	font-size:24px;
+	line-height:30px;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 20px;
+}
+.citysel > div > h5 {
+	position:absolute;
+	right:0;
+	top:31px;
+	font-size:18px;
+	line-height:24px;
+	font-weight:normal;
+	white-space:nowrap;
+	padding:0 23px 0 0;
+	margin:0;
+	background:url('../img/citysel_h5.png') no-repeat right 4px;
+}
+.citysel > div > h5 a {
+	color:#9b1c61;
+	font-weight:bold;
+	text-decoration:none;
+    background:url('../img/a_bg_hover.png') repeat-x bottom;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.citysel > div > h5 a:hover {
+	color:#6a5acd;
+    background:url('../img/a_bg.png') repeat-x bottom;
+}
+.citysel > div > ul {
+	height:39px;
+	margin:0 0 20px;
+}
+.citysel > div > ul li {
+	float:left;
+	font-size:15px;
+	line-height:20px;
+}
+.citysel > div > ul li a {
+	position:relative;
+	display:block;
+	color:#888888;
+	padding:8px 10px 5px 9px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	transition:background, color, padding-left 0.25s ease-in-out;
+	-webkit-transition:background, color, padding-left 0.25s ease-in-out;
+	-moz-transition:background, color, padding-left 0.25s ease-in-out;
+	-o-transition:background, color, padding-left 0.25s ease-in-out;
+}
+.citysel > div > ul li a span {
+	position:relative;
+}
+.citysel > div > ul li a span:after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:3px;
+	width:100%;
+	border-bottom:1px dotted #c8c8c8;
+	opacity:1;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.citysel > div > ul li a:after {
+	content:'';
+	position:absolute;
+	left:50%;
+	bottom:-7px;
+	width:11px;
+	height:9px;
+	z-index:100;
+	margin-left:-6px;
+	background:url('../img/list_a_arrow.png') no-repeat left top;
+	opacity:0;
+	display:none\0;
+}
+.citysel > div > ul li a:hover {
+	color:#6a5acd;
+	text-decoration:none;
+}
+.citysel > div > ul li a:hover span:after {
+	border-bottom:1px dotted #bcb6e4;
+}
+.citysel > div > ul li.active a {
+	color:#ffffff;
+	text-decoration:none;
+	padding:8px 19px 5px 18px;
+	margin:0 9px;
+	background:#a0a0a0;
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.75);
+	-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.75);
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.75);
+}
+.citysel > div > ul li:first-child.active a {
+	margin-left:0;
+}
+.citysel > div > ul li.active a:after {
+	opacity:1;
+	display:block\0;
+}
+.citysel > div > ul li.active a span:after {
+	opacity:0;
+	display:none\0;
+}
+
+
+.citysel > div > div .column {
+	width:25% !important;
+	margin:0 !important;
+}
+.citysel > div > div .city {
+	position:relative;
+	width:190px;
+	margin:0 20px 8px 30px;
+}
+.citysel > div > div .city h6 {
+	position:absolute;
+	left:-30px;
+	top:0;
+	color:#888888;
+	font-size:15px;
+	line-height:22px;
+	padding:0;
+	margin:0;
+}
+.citysel > div > div .city h5 {
+	font-size:15px;
+	line-height:22px;
+	font-weight:normal;
+	padding:0;
+	margin:0;
+}
+.citysel > div > div .city h5 a {
+	color:#6a5acd;
+	text-decoration:none;
+    background:url('../img/a_bg.png') repeat-x bottom;
+	transition:color 0.25s ease-in-out;
+	-webkit-transition:color 0.25s ease-in-out;
+	-moz-transition:color 0.25s ease-in-out;
+	-o-transition:color 0.25s ease-in-out;
+}
+.citysel > div > div .city h5 a:hover {
+	color:#9b1c61;
+    background:url('../img/a_bg_hover.png') repeat-x bottom;
+}
+.citysel > div > div .city p {
+	color:#888888;
+	font-size:14px;
+	line-height:18px;
+	margin:0;
+}
+
 
 /* Wide */
 
@@ -8185,5 +8354,8 @@ button::-moz-focus-inner {
 	.sitemap {
 		width:1218px;
 		margin-left:-609px;
+	}
+	.citysel > div {
+		width:1180px;
 	}
 }

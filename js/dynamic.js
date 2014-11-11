@@ -239,6 +239,13 @@ function otherevents() {
 	});
 	$('.otherevents ul li > div').outerHeight(max);
 }
+function removecitycopy() {
+	$('.citysel > div > div .column .city').each(function() {
+		if ( $(this).next().attr('data-start') == $(this).attr('data-start') ) {
+			$(this).next().find('h6').remove();
+		}
+	});
+}
 $(window).resize(function() {
 	if ( $('.slider').length > 0 ) {
 		slider();
@@ -268,8 +275,19 @@ $(window).resize(function() {
 	if ( $('.otherevents').length > 0 ) {
 		otherevents();
 	}
+	if ( $('.citysel').length > 0 ) {
+		removecitycopy();
+	}
 });
 $(document).ready(function() {
+	if ( $('.citysel').length > 0 ) {
+		$('.citysel > div > div .city').each(function() {
+			$(this).attr('data-start', ($(this).find('h5').text().substring(0,1)));
+			$(this).append('<h6>'+$(this).find('h5').text().substring(0,1)+'<h6>');
+		});
+		$('.citysel > div > div').columnize({ columns: 4 });
+		removecitycopy();
+	}
 	$(['./img/a_bg_hover.png','./img/a_bg_type2_hover.png','./img/map_a_hover.png']).preload();
 	if ( $('.slider').length > 0 ) {
 		$('.slider > div').slides({
