@@ -9640,6 +9640,96 @@ button::-moz-focus-inner {
 	text-shadow:0 -1px 0 #000000;
 	background-position:0 -32px;
 }
+.notfound {
+	min-height:100%;
+	background:#f3f3f3;
+}
+.notfound > div {
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	width:940px;
+	padding:167px 0 0;
+	margin:0 auto;
+}
+.notfound .logo {
+	position:absolute;
+	left:0;
+	top:60px;
+}
+.notfound .panorama {
+	float:left;
+	width:700px;
+	height:400px;
+}
+.notfound .message {
+	float:right;
+	width:220px;
+	text-align:center;
+	margin:33px 0 0;
+}
+.notfound .message p {
+	font-size:15px;
+	line-height:22px;
+	margin:0;
+}
+.notfound .message p a {
+	text-decoration:none;
+    background:url('../img/a_bg.png') repeat-x bottom;
+	transition:color 0.25s ease-in-out;
+	-webkit-transition:color 0.25s ease-in-out;
+	-moz-transition:color 0.25s ease-in-out;
+	-o-transition:color 0.25s ease-in-out;
+}
+.notfound .message p a:hover {
+	color:#9b1c61;
+    background:url('../img/a_bg_hover.png') repeat-x bottom;
+}
+.notfound .message > div {
+	position:relative;
+	text-align:center;
+	border:2px solid #c788ac;
+	border-bottom-width:0;
+	margin:0 0 39px;
+	padding:22px 20px 13px;
+}
+.notfound .message > div:after {
+	content:'';
+	position:absolute;
+	left:-2px;
+	bottom:-22px;
+	width:220px;
+	height:22px;
+	background:url('../img/significant_h2_after.png') no-repeat left top;
+}
+.notfound .message > div h3 {
+	position:absolute;
+	left:-2px;
+	top:-38px;
+	width:220px;
+	color:#9b1c61;
+	font-size:72px;
+	line-height:72px;
+	text-align:center;
+	padding:0;
+	margin:0;
+}
+.notfound .message > div h3 span {
+	display:inline-block;
+	color:#9b1c61;
+	vertical-align:top;
+	padding:0 10px;
+	background:#f3f3f3;
+}
+.notfound .message > div h5 {
+	position:relative;
+	z-index:1;
+	font-size:28px;
+	line-height:34px;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 3px;
+}
 
 /* Wide */
 
@@ -9812,5 +9902,11 @@ button::-moz-focus-inner {
 	}
 	.catalog > div > .vacancy > div > ul > li > ul > li {
 		width:340px;
+	}
+	.notfound > div {
+		width:1180px;
+	}
+	.notfound .panorama {
+		width:940px;
 	}
 }
