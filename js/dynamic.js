@@ -288,7 +288,11 @@ $(document).ready(function() {
 		$('.citysel > div > div').columnize({ columns: 4 });
 		removecitycopy();
 	}
-	$(['./img/a_bg_hover.png','./img/a_bg_type2_hover.png','./img/map_a_hover.png']).preload();
+	$('.catalog > div > .vacancy > div > ul > li .preview h3 a').bind('click', function() {
+		$(this).parents('li').toggleClass('active');
+		return false;
+	});
+	$(['./img/a_bg_hover.png','./img/a_bg_type2_hover.png','./img/a_bg_dotted_hover.png','./img/map_a_hover.png']).preload();
 	if ( $('.slider').length > 0 ) {
 		$('.slider > div').slides({
 			generatePagination: true,
@@ -397,7 +401,7 @@ $(document).ready(function() {
 		'Консоль',
 		'Лифт'
 	];
-	$('.catalog .list .tab > ul > li').each(function() {
+	$('.catalog .list .tab > ul > li, .favoritelist > div > ul > li').each(function() {
 		$(this).find('.status.close').hover(
 			function() {
 				console.log($(this).attr('data-timer'));
@@ -520,7 +524,7 @@ $(document).ready(function() {
 			$(this).parent().children('div').stop(true,true).animate({
 				'height': '120px'
 			}, 500);
-			$('.rb .map .ymaps-controls-pane').hide();
+			$('.rb .map .ymaps-2-1-17-controls-pane').hide();
 		}
 		else {
 			$(this).addClass('active');
@@ -528,7 +532,7 @@ $(document).ready(function() {
 			$(this).parent().children('div').stop(true,true).animate({
 				'height': '698px'
 			}, 500);
-			$('.rb .map .ymaps-controls-pane').show();
+			$('.rb .map .ymaps-2-1-17-controls-pane').show();
 		}
 		return false;
 	});
