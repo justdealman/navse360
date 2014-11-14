@@ -687,8 +687,8 @@ $(document).ready(function() {
 			step: 500,
 			values: [pricemin, pricemax],
 			slide: function(event,ui) {
-				$('.filter .range.price').find('input.min').val('от '+ui.values[0]);
-				$('.filter .range.price').find('input.max').val('до '+ui.values[1]);
+				$('.filter .range.price').find('input.min').val(ui.values[0]);
+				$('.filter .range.price').find('input.max').val(ui.values[1]);
 				rangepricehandle.eq(0).find('span').empty().text(ui.values[0]);
 				rangepricehandle.eq(1).find('span').empty().text(ui.values[1]);
 			}
@@ -816,6 +816,17 @@ $(document).ready(function() {
 		$(this).find('h5').css({
 			'opacity': '1'
 		});
+	});
+	$('.citysel > div > ul li a, .catalog > div > .offices .list > ul li a, .catalog > div > .offices .list > div .cities > div ul li a, .favoritelist > ul li a').bind('click', function() {
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		return false;
+	});
+	$('.citysel').hide();
+	$('.panel .city > div h5 a').bind('click', function() {
+		$('.citysel').stop(true,true).slideDown(250);
+		$('.fade, .panel .city > div').stop(true,true).fadeOut(250);
+		enablescroll();
+		return false;
 	});
 });
 $(window).load(function() {
