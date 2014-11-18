@@ -239,11 +239,79 @@ function otherevents() {
 	});
 	$('.otherevents ul li > div').outerHeight(max);
 }
-function removecitycopy() {
-	$('.citysel > div > div .column .city').each(function() {
-		if ( $(this).next().attr('data-start') == $(this).attr('data-start') ) {
-			$(this).next().find('h6').remove();
+function sitemap() {
+	var size = $('.sitemap .temp li').size();
+	if ( $(window).width() < 1260 || $.browser.msie && parseInt($.browser.version, 10) === 8 ) {
+		var cols = 4;
+	}
+	else {
+		var cols = 5;
+	}
+	var colsize = Math.ceil(size/cols);
+	$('.sitemap .nav').empty();
+	for ( var i = 1; i <= cols; i++ ) {
+		$('.sitemap .nav').append('<li><ul></ul></li>');
+		for ( var j = 1; j <= colsize; j++ ) {
+			$('.sitemap .temp li:nth-child('+eval((i-1)*colsize+j)+')').clone().appendTo('.sitemap .nav > li:nth-child('+i+') ul');
 		}
+	}
+}
+function citynav() {
+	var current = 1;
+	var end = 0;
+	$('.catalog > div > .offices .list > div .cities > div span.before').hide();
+	$('.catalog > div > .offices .list > div .cities .prev').addClass('disabled');
+	if ( $(window).width() < 1260 || $.browser.msie && parseInt($.browser.version, 10) === 8 ) {
+		var width = 846;
+	}
+	else {
+		var width = 1086;
+	}
+	$('.catalog > div > .offices .list > div .cities .next').bind('click', function() {
+		if ( $('.catalog > div > .offices .list > div .cities > div ul').width()-($('.catalog > div > .offices .list > div .cities > div ul li:nth-child('+eval(current+1)+')').position().left+26) > $('.catalog > div > .offices .list > div .cities > div').width() ) {
+			current++;
+			$('.catalog > div > .offices .list > div .cities > div ul').stop(true,true).animate({
+				'left': -($('.catalog > div > .offices .list > div .cities > div ul li:nth-child('+current+')').position().left+26)+'px'
+			}, 500);
+			$('.catalog > div > .offices .list > div .cities .prev').removeClass('disabled');
+		}
+		else {
+			end = 1;
+			$('.catalog > div > .offices .list > div .cities > div ul').stop(true,true).animate({
+				'left': -($('.catalog > div > .offices .list > div .cities > div ul').width()-$('.catalog > div > .offices .list > div .cities > div').width())+'px'
+			}, 500);
+			$('.catalog > div > .offices .list > div .cities > div span.after').hide();
+			$('.catalog > div > .offices .list > div .cities > div span.before').show();
+			$('.catalog > div > .offices .list > div .cities .next').addClass('disabled');
+		}
+		return false;
+	});
+	$('.catalog > div > .offices .list > div .cities .prev').bind('click', function() {
+		if ( $('.catalog > div > .offices .list > div .cities > div ul').position().left < 0 ) {
+			if ( end == 1 ) {
+				$('.catalog > div > .offices .list > div .cities > div ul').stop(true,true).animate({
+					'left': -($('.catalog > div > .offices .list > div .cities > div ul li:nth-child('+current+')').position().left+26)+'px'
+				}, 500);
+				$('.catalog > div > .offices .list > div .cities > div span.before').hide();
+				$('.catalog > div > .offices .list > div .cities > div span.after').show();
+				$('.catalog > div > .offices .list > div .cities .next').removeClass('disabled');
+				end = 0;
+			}
+			if ( end == 0 && current > 2 ) {
+				current--;
+				$('.catalog > div > .offices .list > div .cities > div ul').stop(true,true).animate({
+					'left': -($('.catalog > div > .offices .list > div .cities > div ul li:nth-child('+current+')').position().left+26)+'px'
+				}, 500);
+			}
+			if ( current == 2 ) {
+				current = 1;
+				$('.catalog > div > .offices .list > div .cities > div ul').stop(true,true).animate({
+					'left': '0'
+				}, 500);
+				$('.catalog > div > .offices .list > div .cities .prev').addClass('disabled');
+			}
+		}
+		return false;
 	});
 }
 $(window).resize(function() {
@@ -275,21 +343,46 @@ $(window).resize(function() {
 	if ( $('.otherevents').length > 0 ) {
 		otherevents();
 	}
-	if ( $('.citysel').length > 0 ) {
-		removecitycopy();
+	if ( $('.sitemap').length > 0 ) {
+		sitemap();
+	}
+	if ( $('.cities').length > 0 ) {
+		citymap();
 	}
 });
 $(document).ready(function() {
 	if ( $('.citysel').length > 0 ) {
-		$('.citysel > div > div .city').each(function() {
+		var cols = 4;
+		for ( var i = 1; i <= 4; i++ ) {
+			$('.citysel > div > div.listing').append('<div class="col"></div>');
+			$('.citysel > div > div.temp div.city[data-col="'+i+'"]').clone().appendTo('.citysel > div > div.listing > div.col:nth-child('+i+')');
+		}
+		$('.citysel > div > .listing .city').each(function() {
 			$(this).attr('data-start', ($(this).find('h5').text().substring(0,1)));
-			$(this).append('<h6>'+$(this).find('h5').text().substring(0,1)+'<h6>');
+			$(this).find('h6').text($(this).find('h5').text().substring(0,1));
+			if ( $(this).prev().attr('data-start') == $(this).attr('data-start') ) {
+				$(this).find('h6').remove();
+			}
 		});
-		$('.citysel > div > div').columnize({ columns: 4 });
-		removecitycopy();
+	}
+	if ( $('.sitemap').length > 0 ) {
+		sitemap();
+	}
+	if ( $('.cities').length > 0 ) {
+		$('.catalog > div > .offices .list > div .cities > div').append('<span class="before"></span><span class="after"></span>');
+		citynav();
 	}
 	$('.catalog > div > .vacancy > div > ul > li .preview h3 a').bind('click', function() {
-		$(this).parents('li').toggleClass('active');
+		$(this).parents('li').stop(true,true).fadeOut(0).siblings().fadeIn(0);
+		$(this).parents('li').parent().parent().find('.full').remove();
+		$(this).parents('li').parent().before('<div class="full">'+$(this).parents('li').html()+'</div>');
+		$(this).parents('li').parent().parent().find('.full br').remove();
+		$(this).parents('li').parent().parent().find('.full').stop(true,true).slideDown(500);
+		$(this).parents('li').parent().parent().find('.full').find('.preview h3 a').bind('click', function() {
+			$(this).parents('.full').stop(true,true).slideUp(500);
+			$(this).parents('.full').parent().children('ul').find('li').stop(true,true).fadeIn(0);
+			return false;
+		});
 		return false;
 	});
 	$(['./img/a_bg_hover.png','./img/a_bg_type2_hover.png','./img/a_bg_dotted_hover.png','./img/map_a_hover.png']).preload();

@@ -276,7 +276,7 @@
 											myMap = new ymaps.Map('realty', {
 												center: [53.31836929, 83.84016726],
 												zoom: 13
-											}); 
+											});
 											Barnaul = new ymaps.Placemark([53.31836929, 83.84016726], {
 												hintContent: 'ул. Попова, 26' 
 											}, {
@@ -284,6 +284,36 @@
 												iconImageHref: './img/map_baloon.png',
 												iconImageSize: [8, 8],
 												iconImageOffset: [-4, -4]
+											});
+											myMap.geoObjects.add(Barnaul);
+										}
+									</script>
+								</div>
+							</div>
+							<h5><span>развернуть карту<em></em><strong></strong></span></h5>
+						</div>
+						<div class="map">
+							<div>
+								<div id="realty2">
+									<!--<script type="text/javascript" charset="utf-8" src="http://api-maps.yandex.ru/services/constructor/1.0/js/?sid=hi3li2j2gZ7fTEOP4HYTz1iDUHnYGCVx&width=100%&height=698"></script>-->
+									<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+									<script type="text/javascript">
+										ymaps.ready(init);
+										var myMap, Barnaul;
+										function init() {
+											myMap = new ymaps.Map('realty2', {
+												center: [53.31836929, 83.84016726],
+												zoom: 13
+											});
+											Barnaul = new ymaps.Placemark([53.31836929, 83.84016726], {
+												balloonContentHeader: '<img src="./pic/realty2.jpg" width="160" height="120" alt="">',
+												balloonContentBody: '<h2><a href="#">Комсомольский пр-кт, 40</a></h2><p>3 комнаты, 2/10 этаж,<br> 50  м<sup>2</sup>, панельный</p><h6>договорная цена</h6>'
+											}, {
+												iconLayout: 'default#image',
+												iconImageHref: './img/baloon_icon.png',
+												iconImageSize: [33, 44],
+												iconImageOffset: [-16, -44],
+												hideIconOnBalloonOpen: false
 											});
 											myMap.geoObjects.add(Barnaul);
 										}

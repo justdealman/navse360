@@ -3016,6 +3016,116 @@ button::-moz-focus-inner {
 .rb .map .ymaps-2-1-17-controls-pane {
 	display:none;
 }
+.rb .map .ymaps-2-1-17-balloon {
+	margin:279px 0 0 -54px;
+	background:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+.rb .map .ymaps-2-1-17-balloon__layout {
+	background:#ffffff;
+	outline:none;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:0 1px 6px rgba(0,0,0,0.6);
+	-moz-box-shadow:0 1px 6px rgba(0,0,0,0.6);
+	box-shadow:0 1px 6px rgba(0,0,0,0.6);
+}
+.rb .map .ymaps-2-1-17-balloon__content {
+	width:220px;
+	text-align:center;
+	padding:20px 0 15px;
+	margin:0;
+	background:none;
+	border:0;
+}
+.rb .map .ymaps-2-1-17-balloon__content > ymaps {
+	width:220px;
+	height:auto;
+}
+.rb .map .ymaps-2-1-17-balloon-content__header {
+	text-align:center;
+}
+.rb .map .ymaps-2-1-17-balloon-content__header img {
+	margin:0 30px 2px;
+}
+.rb .map .ymaps-2-1-17-balloon__close {
+	right:-4px;
+	top:-7px;
+}
+.rb .map .ymaps-2-1-17-balloon__content h2 {
+	overflow:hidden;
+	position:relative;
+	font-size:15px;
+	line-height:22px;
+    font-family:'PT Sans', sans-serif;
+	white-space:nowrap;
+	text-align:center;
+	padding:0;
+	margin:0 19px 1px;
+}
+.rb .map .ymaps-2-1-17-balloon__content h2:after {
+	content:'';
+	position:absolute;
+	right:0;
+	top:0;
+	z-index:1;
+	width:10px;
+	height:100%;
+	background:url('../img/list_h2_after.png') repeat-y left;
+}
+.rb .map .ymaps-2-1-17-balloon__content h2 a {
+	background:url('../img/a_bg.png') repeat-x bottom;
+	transition:all 0.25s ease-in-out;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+}
+.rb .map .ymaps-2-1-17-balloon__content h2 a:hover {
+	color:#9b1c61;
+	text-decoration:none;
+	background:url('../img/a_bg_hover.png') repeat-x bottom;
+}
+.rb .map .ymaps-2-1-17-balloon__content p {
+	font-size:15px;
+	line-height:22px;
+    font-family:'PT Sans', sans-serif;
+	margin:0 19px;
+}
+.rb .map .ymaps-2-1-17-balloon__content p sup {
+	font-size:10px;
+	line-height:10px;
+}
+.rb .map .ymaps-2-1-17-balloon__content h6 {
+	font-size:15px;
+	line-height:22px;
+    font-family:'PT Sans', sans-serif;
+	padding:0;
+	margin:0 19px;
+}
+.rb .map .ymaps-2-1-17-balloon_to_top .ymaps-2-1-17-balloon__tail {
+	position:absolute;
+	top:-9px;
+	left:50%;
+	z-index:20;
+	width:20px;
+	height:10px;
+	margin-left:-10px;
+	background:url('../img/baloon_arrow.png') no-repeat left top;
+	box-shadow:none;
+	transform:none;
+	-webkit-transform:none;
+	-moz-transform:none;
+	-ms-transform:none;
+	-o-transform:none;
+}
+.rb .map .ymaps-2-1-17-balloon_to_top .ymaps-2-1-17-balloon__tail:after {
+	display:none;
+}
+
+/*aaa*/
 .rb .map h5 {
 	position:absolute;
 	left:50%;
@@ -6370,6 +6480,9 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 }
+.item .poster ul li h2 a:after {
+	display:none;
+}
 .item .poster ul li h2 a:hover {
 	color:#9b1c61;
 	text-decoration:none;
@@ -8034,11 +8147,22 @@ button::-moz-focus-inner {
 	text-align:left;
 	margin:0 0 12px 19px;
 }
+.sitemap > div > div > ul.temp {
+	display:none;
+}
 .sitemap > div > div > ul li {
 	display:inline-block;
 	width:220px;
 	vertical-align:top;
-	margin:0 17px 8px 0;
+	margin:0 17px 0 0;
+}
+.sitemap > div > div > ul li ul {
+	margin:0;
+}
+.sitemap > div > div > ul li ul li {
+	display:block;
+	width:auto;
+	margin:0 0 8px;
 }
 .sitemap > div > div > ul li a {
 	font-size:15px;
@@ -8206,11 +8330,17 @@ button::-moz-focus-inner {
 	opacity:0;
 	display:none\0;
 }
-
-
-.citysel > div > div .column {
-	width:25% !important;
-	margin:0 !important;
+.citysel > div > div.temp {
+	display:none;
+}
+.citysel > div > div.listing {
+	clear:both;
+	overflow:hidden;
+}
+.citysel > div > div .col {
+	float:left;
+	width:25%;
+	margin:0;
 }
 .citysel > div > div .city {
 	position:relative;
@@ -8221,6 +8351,7 @@ button::-moz-focus-inner {
 	position:absolute;
 	left:-30px;
 	top:0;
+	display:block;
 	color:#888888;
 	font-size:15px;
 	line-height:22px;
@@ -8545,16 +8676,28 @@ button::-moz-focus-inner {
 	height:43px;
 	margin:0 27px;
 }
-.catalog > div > .offices .list > div .cities > div:after {
-	content:'';
+.catalog > div > .offices .list > div .cities > div span.before {
+	position:absolute;
+	left:0;
+	top:0;
+	display:block;
+	width:10px;
+	height:22px;
+	background:url('../img/list_h2_before.png') repeat-y right;
+}
+.catalog > div > .offices .list > div .cities > div span.after {
 	position:absolute;
 	right:0;
 	top:0;
+	display:block;
 	width:10px;
 	height:22px;
 	background:url('../img/list_h2_after.png') repeat-y right;
 }
 .catalog > div > .offices .list > div .cities > div ul {
+	position:absolute;
+	left:0;
+	top:0;
 	white-space:nowrap;
 	margin:0;
 }
@@ -9500,20 +9643,36 @@ button::-moz-focus-inner {
 	-moz-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
 	-o-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
 }
+.catalog > div > .vacancy > div > div.full {
+	display:none;
+	margin:0 0 20px;
+	background:#ffffff;
+	border:1px solid #dbdbdb;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	box-shadow:0 1px 2px rgba(0,0,0,0.08);
+	transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-webkit-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-moz-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+	-o-transition:border, -webkit-box-shadow, box-shadow 0.25s ease-in-out;
+}
 .catalog > div > .vacancy > div > ul > li.active {
 	width:940px;
 }
-.catalog > div > .vacancy > div > ul > li:hover {
+.catalog > div > .vacancy > div > ul > li:hover, .catalog > div > .vacancy > div > div.full:hover {
 	border:1px solid #a89df4;
 	-webkit-box-shadow:0 1px 10px rgba(0,0,0,0.5);
 	-moz-box-shadow:0 1px 10px rgba(0,0,0,0.5);
 	box-shadow:0 1px 10px rgba(0,0,0,0.5);
 }
-.catalog > div > .vacancy > div > ul > li .preview {
+.catalog > div > .vacancy > div > ul > li .preview, .catalog > div > .vacancy > div > div.full .preview {
 	height:257px;
 	padding:20px 17px 0;
 }
-.catalog > div > .vacancy > div > ul > li.active .preview {
+.catalog > div > .vacancy > div > ul > li.active .preview, .catalog > div > .vacancy > div > div.full .preview {
 	height:auto;
 	padding-top:26px;
 }
@@ -9523,7 +9682,7 @@ button::-moz-focus-inner {
 	height:60px;
 	margin:0 auto 6px;
 }
-.catalog > div > .vacancy > div > ul > li.active .preview > div {
+.catalog > div > .vacancy > div > ul > li.active .preview > div, .catalog > div > .vacancy > div > div.full .preview > div {
 	display:none;
 }
 .catalog > div > .vacancy > div > ul > li .preview > div img {
@@ -9536,7 +9695,7 @@ button::-moz-focus-inner {
 	max-height:60px;
 	margin:0 auto;
 }
-.catalog > div > .vacancy > div > ul > li .preview h3 {
+.catalog > div > .vacancy > div > ul > li .preview h3, .catalog > div > .vacancy > div > div.full .preview h3 {
 	max-height:48px;
 	font-size:18px;
 	line-height:24px;
@@ -9544,7 +9703,7 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 0 8px;
 }
-.catalog > div > .vacancy > div > ul > li .preview h3 a {
+.catalog > div > .vacancy > div > ul > li .preview h3 a, .catalog > div > .vacancy > div > div.full .preview h3 a {
 	text-decoration:none;
 	background:url('../img/a_bg_dotted.png') repeat-x bottom;
 	transition:all 0.25s ease-in-out;
@@ -9552,7 +9711,7 @@ button::-moz-focus-inner {
 	-moz-transition:all 0.25s ease-in-out;
 	-o-transition:all 0.25s ease-in-out;
 }
-.catalog > div > .vacancy > div > ul > li .preview h3 a:hover {
+.catalog > div > .vacancy > div > ul > li .preview h3 a:hover, .catalog > div > .vacancy > div > div.full .preview h3 a:hover {
 	color:#9b1c61;
 	background:url('../img/a_bg_dotted_hover.png') repeat-x bottom;
 }
@@ -9562,7 +9721,7 @@ button::-moz-focus-inner {
 	line-height:22px;
 	margin:0;
 }
-.catalog > div > .vacancy > div > ul > li.active .preview p {
+.catalog > div > .vacancy > div > ul > li.active .preview p, .catalog > div > .vacancy > div > div.full .preview p {
 	display:none;
 }
 .catalog > div > .vacancy > div > ul > li > h5 {
@@ -9578,25 +9737,28 @@ button::-moz-focus-inner {
 	margin:-13px 17px 0;
 	border-top:1px solid #dbdbdb;
 }
-.catalog > div > .vacancy > div > ul > li.active h5 {
+.catalog > div > .vacancy > div > ul > li.active h5, .catalog > div > .vacancy > div > div.full > h5 {
 	display:none;
 }
-.catalog > div > .vacancy > div > ul > li > ul {
+.catalog > div > .vacancy > div > ul > li > ul, .catalog > div > .vacancy > div > div.full > ul {
 	display:none;
 	clear:both;
 	overflow:hidden;
 	text-align:left;
 	margin:18px 0 17px 39px;
 }
-.catalog > div > .vacancy > div > ul > li.active > ul {
+.catalog > div > .vacancy > div > ul > li.active > ul, .catalog > div > .vacancy > div > div.full > ul {
 	display:block;
 }
-.catalog > div > .vacancy > div > ul > li > ul > li {
+.catalog > div > .vacancy > div > ul > li > ul > li, .catalog > div > .vacancy > div > div.full > ul > li {
 	float:left;
 	width:260px;
 	margin:0 40px 0 0;
 }
-.catalog > div > .vacancy > div > ul > li > ul > li h5 {
+.catalog > div > .vacancy > div > div.full > ul > li:last-child {
+	margin-right:0;
+}
+.catalog > div > .vacancy > div > ul > li > ul > li h5, .catalog > div > .vacancy > div > div.full > ul > li h5 {
 	color:#888888;
 	font-size:15px;
 	line-height:22px;
@@ -9606,17 +9768,17 @@ button::-moz-focus-inner {
 	padding:0;
 	margin:0 0 8px;
 }
-.catalog > div > .vacancy > div > ul > li > ul > li > ul {
+.catalog > div > .vacancy > div > ul > li > ul > li > ul, .catalog > div > .vacancy > div > div.full > ul > li > ul {
 	margin:0;
 }
-.catalog > div > .vacancy > div > ul > li > ul > li > ul > li {
+.catalog > div > .vacancy > div > ul > li > ul > li > ul > li, .catalog > div > .vacancy > div > div.full > ul > li > ul > li {
 	font-size:15px;
 	line-height:22px;
 	padding:0 0 0 20px;
 	margin:0 0 8px;
 	background:url('../img/vacancy_li_arrow.png') no-repeat left 3px;
 }
-.catalog > div > .vacancy > div > ul > li h4 {
+.catalog > div > .vacancy > div > ul > li h4, .catalog > div > .vacancy > div > div.full h4 {
 	display:none;
 	font-size:18px;
 	line-height:24px;
@@ -9625,18 +9787,18 @@ button::-moz-focus-inner {
 	margin:0;
 	border-top:1px solid #dbdbdb;
 }
-.catalog > div > .vacancy > div > ul > li.active h4 {
+.catalog > div > .vacancy > div > ul > li.active h4, .catalog > div > .vacancy > div > div.full h4 {
 	display:block;
 }
-.catalog > div > .vacancy > div > ul > li .controls {
+.catalog > div > .vacancy > div > ul > li .controls, .catalog > div > .vacancy > div > div.full .controls {
 	display:none;
 	text-align:center;
 	padding:0 39px 10px;
 }
-.catalog > div > .vacancy > div > ul > li.active .controls {
+.catalog > div > .vacancy > div > ul > li.active .controls, .catalog > div > .vacancy > div > div.full .controls {
 	display:block;
 }
-.catalog > div > .vacancy > div > ul > li .controls button {
+.catalog > div > .vacancy > div > ul > li .controls button, .catalog > div > .vacancy > div > div.full .controls button {
 	position:relative;
 	color:#9b1c61;
 	font-size:15px;
@@ -9655,7 +9817,7 @@ button::-moz-focus-inner {
 	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.4);
 	box-shadow:0 1px 2px rgba(0,0,0,0.4);
 }
-.catalog > div > .vacancy > div > ul > li .controls button:hover {
+.catalog > div > .vacancy > div > ul > li .controls button:hover, .catalog > div > .vacancy > div > div.full .controls button:hover {
 	color:#ffffff;
 	padding:8px 29px 6px;
 	border:0;
