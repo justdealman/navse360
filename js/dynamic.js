@@ -225,6 +225,26 @@ function events() {
 		}
 	}
 }
+function reviews() {
+	if ( $(window).width() < 1260 || $.browser.msie && parseInt($.browser.version, 10) === 8 ) {
+		var cols = 4;
+	}
+	else {
+		var cols = 5;
+	}
+	for ( var i = 0; i < Math.ceil($('.reviews ul li').length/cols); i++ ) {
+		var max = 0;
+		for ( var j = 1; j <= cols; j++ ) {
+			$('.reviews ul li:nth-of-type('+eval(i*cols+j)+')').each(function() {
+				var h = $(this).outerHeight(); 
+				max = h > max ? h : max;
+			});
+		}
+		for ( var j = 1; j <= cols; j++ ) {
+			$('.reviews ul li:nth-of-type('+eval(i*cols+j)+') > div').outerHeight(max);
+		}
+	}
+}
 function otherevents() {
 	if ( $(window).width() < 1260 || $.browser.msie && parseInt($.browser.version, 10) === 8 ) {
 		$('.otherevents ul li:nth-child(5)').hide();
@@ -238,6 +258,20 @@ function otherevents() {
 		max = h > max ? h : max;
 	});
 	$('.otherevents ul li > div').outerHeight(max);
+}
+function otherposts() {
+	if ( $(window).width() < 1260 || $.browser.msie && parseInt($.browser.version, 10) === 8 ) {
+		$('.otherposts ul li:nth-child(5)').hide();
+	}
+	else {
+		$('.otherposts ul li:nth-child(5)').show();
+	}
+	var max = 0;
+	$('.otherposts ul li').each(function() {
+		var h = $(this).outerHeight(); 
+		max = h > max ? h : max;
+	});
+	$('.otherposts ul li > div').outerHeight(max);
 }
 function sitemap() {
 	var size = $('.sitemap .temp li').size();
@@ -314,6 +348,24 @@ function citynav() {
 		return false;
 	});
 }
+function helpme() {
+	var scroll = $('.helpme > div > div > div').jScrollPane();
+	var api = scroll.data('jsp');
+	$(window).bind('scroll', function() {
+		if ( $('.helpme > div > div').outerWidth() + api.getContentPositionX() >= api.getContentWidth() ) {
+			$('.helpme > div > div .rs').fadeOut(500);
+		}
+		else {
+			$('.helpme > div > div .rs').fadeIn(500);
+		}
+		if ( api.getContentPositionX() > 0 ) {
+			$('.helpme > div > div .ls').fadeIn(500);
+		}
+		else {
+			$('.helpme > div > div .ls').fadeOut(500);
+		}
+	});
+}
 $(window).resize(function() {
 	if ( $('.slider').length > 0 ) {
 		slider();
@@ -340,14 +392,23 @@ $(window).resize(function() {
 	if ( $('.events').length > 0 ) {
 		events();
 	}
+	if ( $('.reviews').length > 0 ) {
+		reviews();
+	}
 	if ( $('.otherevents').length > 0 ) {
 		otherevents();
+	}
+	if ( $('.otherposts').length > 0 ) {
+		otherposts();
 	}
 	if ( $('.sitemap').length > 0 ) {
 		sitemap();
 	}
 	if ( $('.cities').length > 0 ) {
 		citymap();
+	}
+	if ( $('.helpme').length > 0 ) {
+		helpme();
 	}
 });
 $(document).ready(function() {
@@ -378,6 +439,7 @@ $(document).ready(function() {
 		$(this).parents('li').parent().before('<div class="full">'+$(this).parents('li').html()+'</div>');
 		$(this).parents('li').parent().parent().find('.full br').remove();
 		$(this).parents('li').parent().parent().find('.full').stop(true,true).slideDown(500);
+		$('html, body').animate({ scrollTop: $(this).parents('li').parent().parent().find('.full').offset().top-70 }, 500);
 		$(this).parents('li').parent().parent().find('.full').find('.preview h3 a').bind('click', function() {
 			$(this).parents('.full').stop(true,true).slideUp(500);
 			$(this).parents('.full').parent().children('ul').find('li').stop(true,true).fadeIn(0);
@@ -433,6 +495,9 @@ $(document).ready(function() {
 	if ( $('.otherevents').length > 0 ) {
 		otherevents();
 	}
+	if ( $('.otherposts').length > 0 ) {
+		otherposts();
+	}
 	$('.header .search h6 span').bind('click', function() {
 		$(this).parent().siblings().find('input').val($(this).text());
 		return false;
@@ -453,6 +518,9 @@ $(document).ready(function() {
 	}
 	if ( $('.events').length > 0 ) {
 		events();
+	}
+	if ( $('.reviews').length > 0 ) {
+		reviews();
 	}
 	var la = $('.rb .list > .nav ul li.active').index();
 	$('.rb .list > .nav ul li a').bind('click', function() {
@@ -815,6 +883,9 @@ $(document).ready(function() {
 			$('.filter .range.price > .slide').slider('values',1,value2);	
 			rangepricehandle.eq(1).find('span').empty().text(value2);
 		});
+		$('.lb .filter > div > div.range > div p input').bind('click', function() {
+			$(this).val('');
+		});
 	}
 	if ( $('.filter .range.square').length > 0 ) {
 		var squaremin = 50;
@@ -862,6 +933,14 @@ $(document).ready(function() {
 			rangesquarehandle.eq(1).find('span').empty().text(value2);
 		});
 	}
+	$('.lb .filter > div > div.range > div p input').each(function() {
+		var v = this.value;
+		$(this).blur(function() {
+			if (this.value.length == 0) this.value = v;
+		}).focus(function () {
+			this.value = "";
+		}); 
+	});
 	$('.lb .filter > div > .streets > div > ul li span').each(function() {
 		$(this).append('<em></em>');
 	});
@@ -921,6 +1000,27 @@ $(document).ready(function() {
 		enablescroll();
 		return false;
 	});
+	if ( $('.helpme').length > 0 ) {
+		$('.helpme').hide();
+		$('.panel .nav a[href="help"]').bind('click', function() {
+			$('.helpme').slideDown(500);
+			$('.panel').hide();
+			$('.helpme > div > div ul li p').each(function() {
+				$(this).css({
+					'margin-top': (220-$(this).height())/2+1+'px'
+				});
+			});
+			$('.helpme > div > div').append('<span class="ls"></span><span class="rs"></span>');
+			$('.helpme > div > div .ls').hide();
+			helpme();
+			return false;
+		});
+		$('.helpme .close').bind('click', function() {
+			$('.panel').show();
+			$('.helpme').slideUp(500);
+			return false;
+		});
+	}
 });
 $(window).load(function() {
 	$('.item .poster ul li p span').each(function() {
