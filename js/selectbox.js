@@ -52,15 +52,15 @@
 						/* умное позиционирование */
 						var topOffset = selectbox.offset().top;
 						var bottomOffset = $(window).height() - selectHeight - (topOffset - $(window).scrollTop());
-						if (bottomOffset < 0 || bottomOffset < liHeight * 6)	{
+						if (bottomOffset < 0 || bottomOffset < liHeight * 3)	{
 							dropdown.height('auto').css({top: 'auto', bottom: position});
-							if (dropdown.outerHeight() > topOffset - $(window).scrollTop() - 20 ) {
-								dropdown.height(Math.floor((topOffset - $(window).scrollTop() - 20) / liHeight) * liHeight);
+							if (dropdown.outerHeight() > topOffset - $(window).scrollTop() - 10 ) {
+								dropdown.height(Math.floor((topOffset - $(window).scrollTop() - 10) / liHeight) * liHeight);
 							}
-						} else if (bottomOffset > liHeight * 6) {
+						} else if (bottomOffset > liHeight * 3) {
 							dropdown.height('auto').css({bottom: 'auto', top: position});
-							if (dropdown.outerHeight() > bottomOffset - 20 ) {
-								dropdown.height(Math.floor((bottomOffset - 20) / liHeight) * liHeight);
+							if (dropdown.outerHeight() > bottomOffset - 10 ) {
+								dropdown.height(Math.floor((bottomOffset - 10) / liHeight) * liHeight);
 							}
 						}
 						$('span.selectbox').css({zIndex: 1}).removeClass('focused');
